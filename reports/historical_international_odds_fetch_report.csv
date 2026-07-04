@@ -1,0 +1,12 @@
+league_id,competition,season,page,status,message
+1,FIFA World Cup,2022,2,no_odds_data,api_status=200; results=0; rows=0
+1,FIFA World Cup,2023,2,no_odds_data,api_status=200; results=0; rows=0
+1,FIFA World Cup,2024,2,no_odds_data,api_status=200; results=0; rows=0
+29,World Cup - Qualification Africa,2022,2,no_odds_data,api_status=200; results=0; rows=0
+29,World Cup - Qualification Africa,2023,2,no_odds_data,api_status=200; results=0; rows=0
+29,World Cup - Qualification Africa,2024,2,no_odds_data,api_status=200; results=0; rows=0
+30,World Cup - Qualification Asia,2022,2,no_odds_data,api_status=200; results=0; rows=0
+30,World Cup - Qualification Asia,2023,2,no_odds_data,api_status=200; results=0; rows=0
+30,World Cup - Qualification Asia,2024,2,no_odds_data,api_status=200; results=0; rows=0
+31,World Cup - Qualification CONCACAF,2022,2,no_odds_data,api_status=200; results=0; rows=0
+31,World Cup - Qualification CONCACAF,2023,1,quota_or_provider_error,api_football quota_limit: HTTP 429

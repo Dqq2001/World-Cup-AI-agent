@@ -1,0 +1,19 @@
+World Cup Betting Assistant 賽前報告
+日期: 2026-07-03
+小組: nan
+對戰: Switzerland vs Algeria
+Market H/D/A: 0.4741 / 0.2945 / 0.2314
+Model H/D/A: 0.3976 / 0.2255 / 0.3768
+Poisson top scores: 1-1:0.124; 1-0:0.098; 0-1:0.088; 2-1:0.087; 1-2:0.078
+Upset risk: MEDIUM
+Draw risk: HIGH score=5
+Draw risk reasons: Poisson expected goals are very close; Poisson top scorelines include 0-0 or 1-1; Neutral venue; Knockout match: draw risk implies extra-time risk
+Draw risk historical reference: LOW draw rate 20.07%, MEDIUM draw rate 28.89%, HIGH draw rate 30.50%.
+League reference: HIGH score=2
+League reference reasons: Five-league references are auxiliary only due to domain shift.; Transferable pattern: high draw risk means avoid favorite 1X2 exposure.; risk_score>=1 is warning only; it must not override international model.
+League reference uses five-league patterns only as auxiliary risk context; domain shift means it must not override international models.
+Value side: A
+Edge: 0.0602
+Recommended action: WATCH
+Recommended stake: 0.0
+Reason: value=MEDIUM edge=0.060; risk=MEDIUM (Poisson 期望進球差距小); draw_risk=HIGH (Poisson expected goals are very close; Poisson top scorelines include 0-0 or 1-1; Neutral venue; Knockout match: draw risk implies extra-time risk); league_reference=HIGH (Five-league references are auxiliary only due to domain shift.; Transferable pattern: high draw risk means avoid favorite 1X2 exposure.; risk_score>=1 is warning only; it must not override international model.); draw_adjustment=HIGH draw risk historically has higher draw rate and lower favorite accuracy

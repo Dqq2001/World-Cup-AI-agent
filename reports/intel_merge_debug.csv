@@ -1,0 +1,4 @@
+match_key,exists_in_openai_csv,exists_in_daily_csv,merge_success,source_status,last_fetched,reason
+2026-07-04|Canada|Morocco,True,True,True,ok,2026-07-04T08:32:04.630920+00:00,
+2026-07-04|Colombia|Ghana,True,True,True,ok,2026-07-04T08:32:38.604565+00:00,
+2026-07-04|Paraguay|France,True,True,True,ok,2026-07-04T08:32:19.625957+00:00,

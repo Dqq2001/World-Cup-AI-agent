@@ -1,0 +1,2 @@
+data_type,missing_columns,message,required_source
+worldcup_odds,"date, group, home_team, away_team, bookmaker, home_odds, draw_odds, away_odds",NO_PAID_API_MODE=True: paid odds APIs are disabled. Use data/manual/worldcup_odds_manual.csv or OCR/manual import.,data/manual/worldcup_odds_manual.csv

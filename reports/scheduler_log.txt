@@ -1,0 +1,1460 @@
+[2026-06-29 20:48:10] daily refresh started
+[2026-06-29 20:48:10] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh
+[2026-06-29 20:48:44] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 72
+��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 72
+ȱ�ٱ�Ҫ World Cup �Y�ϣ���ݔ��ȱ�Y�ψ��: reports\worldcup_features_missing_data_report.csv
+ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-06-29 20:48:44] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed
+[2026-06-29 20:48:45] World Cup results fetch mode: cache
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 69
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-06-29 20:48:45] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-06-29 20:48:56] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 72
+[2026-06-29 20:48:56] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-06-29 20:49:08] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 72
+[2026-06-29 20:49:08] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-06-29 20:49:09] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-06-29 20:49:09] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-06-29 20:49:10] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-06-29 20:49:10] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_daily_worldcup_intel.py
+[2026-06-29 20:49:10] ��ݔ�� daily intel: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+��ݔ�� missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel_missing_report.csv
+��ݔ�� betting brief: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_betting_brief.md
+upcoming matches: 16
+���Ԅ���ע����ݔ��ֻ�o��ِǰ�Q�ߡ�
+[2026-06-29 20:49:10] daily refresh finished successfully
+[2026-06-30 12:12:51] daily refresh started
+[2026-06-30 12:12:51] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh
+[2026-06-30 12:13:23] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 72
+��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 72
+ȱ�ٱ�Ҫ World Cup �Y�ϣ���ݔ��ȱ�Y�ψ��: reports\worldcup_features_missing_data_report.csv
+ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-06-30 12:13:23] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed
+[2026-06-30 12:15:53] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 69
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-06-30 12:15:53] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-06-30 12:16:03] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 72
+[2026-06-30 12:16:03] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-06-30 12:16:14] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 72
+[2026-06-30 12:16:14] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-06-30 12:16:15] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-06-30 12:16:15] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-06-30 12:16:16] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-06-30 12:16:16] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_daily_worldcup_intel.py
+[2026-06-30 12:16:17] ��ݔ�� daily intel: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+��ݔ�� missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel_missing_report.csv
+��ݔ�� betting brief: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_betting_brief.md
+upcoming matches: 16
+���Ԅ���ע����ݔ��ֻ�o��ِǰ�Q�ߡ�
+[2026-06-30 12:16:17] daily refresh finished successfully
+[2026-06-30 12:24:13] daily refresh started
+[2026-06-30 12:24:13] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh
+[2026-06-30 12:24:45] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 72
+��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 72
+ȱ�ٱ�Ҫ World Cup �Y�ϣ���ݔ��ȱ�Y�ψ��: reports\worldcup_features_missing_data_report.csv
+ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-06-30 12:24:45] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed
+[2026-06-30 12:24:45] World Cup results fetch mode: cache
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 69
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-06-30 12:24:45] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-06-30 12:24:56] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 72
+[2026-06-30 12:24:56] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-06-30 12:25:07] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 72
+[2026-06-30 12:25:07] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-06-30 12:25:09] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-06-30 12:25:09] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-06-30 12:25:09] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-06-30 12:25:09] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_daily_worldcup_intel.py
+[2026-06-30 12:25:10] ��ݔ�� daily intel: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+��ݔ�� missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel_missing_report.csv
+��ݔ�� betting brief: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_betting_brief.md
+upcoming matches: 16
+���Ԅ���ע����ݔ��ֻ�o��ِǰ�Q�ߡ�
+[2026-06-30 12:25:11] daily refresh finished without actual update: no tracked fixtures/results/predictions/intel outputs changed
+[2026-06-30 12:43:37] daily refresh started
+[2026-06-30 12:43:37] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh
+[2026-06-30 12:44:10] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 72
+��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 72
+ȱ�ٱ�Ҫ World Cup �Y�ϣ���ݔ��ȱ�Y�ψ��: reports\worldcup_features_missing_data_report.csv
+ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-06-30 12:44:10] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-06-30 12:44:12] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 16
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-06-30 12:44:12] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed
+[2026-06-30 12:44:13] World Cup results fetch mode: cache
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 69
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-06-30 12:44:13] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-06-30 12:44:23] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 88
+[2026-06-30 12:44:23] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-06-30 12:44:34] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 88
+[2026-06-30 12:44:34] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-06-30 12:44:36] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-06-30 12:44:36] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-06-30 12:44:37] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-06-30 12:44:37] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_daily_worldcup_intel.py
+[2026-06-30 12:44:37] ��ݔ�� daily intel: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+��ݔ�� missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel_missing_report.csv
+��ݔ�� betting brief: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_betting_brief.md
+upcoming matches: 16
+���Ԅ���ע����ݔ��ֻ�o��ِǰ�Q�ߡ�
+[2026-06-30 12:44:38] daily refresh finished with warning: unresolved knockout fallback rows=31
+[2026-06-30 12:47:41] daily refresh started
+[2026-06-30 12:47:41] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-06-30 12:47:51] �яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+[2026-06-30 12:47:51] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-06-30 12:47:53] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 16
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-06-30 12:47:53] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed
+[2026-06-30 12:47:53] World Cup results fetch mode: cache
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 69
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-06-30 12:47:53] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-06-30 12:48:04] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 88
+[2026-06-30 12:48:04] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-06-30 12:48:15] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 88
+[2026-06-30 12:48:15] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-06-30 12:48:16] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-06-30 12:48:16] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-06-30 12:48:17] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-06-30 12:48:17] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_daily_worldcup_intel.py
+[2026-06-30 12:48:18] ��ݔ�� daily intel: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+��ݔ�� missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel_missing_report.csv
+��ݔ�� betting brief: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_betting_brief.md
+upcoming matches: 16
+���Ԅ���ע����ݔ��ֻ�o��ِǰ�Q�ߡ�
+[2026-06-30 12:48:18] daily refresh finished with warning: unresolved knockout fallback rows=15
+[2026-06-30 13:30:08] daily refresh started
+[2026-06-30 13:30:08] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-06-30 13:30:17] �яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+[2026-06-30 13:30:17] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-06-30 13:30:18] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 17
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-06-30 13:30:18] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed --force-refresh
+[2026-06-30 13:32:50] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 73
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-06-30 13:32:50] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-06-30 13:33:01] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 89
+[2026-06-30 13:33:01] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-06-30 13:33:12] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 89
+[2026-06-30 13:33:12] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-06-30 13:33:14] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-06-30 13:33:14] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-06-30 13:33:14] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-06-30 13:33:14] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_daily_worldcup_intel.py
+[2026-06-30 13:33:15] ��ݔ�� daily intel: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+��ݔ�� missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel_missing_report.csv
+��ݔ�� betting brief: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_betting_brief.md
+upcoming matches: 15
+���Ԅ���ע����ݔ��ֻ�o��ِǰ�Q�ߡ�
+[2026-06-30 13:33:15] daily refresh finished with warning: unresolved knockout fallback rows=14
+[2026-06-30 19:48:11] daily refresh started
+[2026-06-30 19:48:11] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-06-30 19:48:22] �яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+[2026-06-30 19:48:22] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-06-30 19:48:23] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 17
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-06-30 19:48:23] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed --force-refresh
+[2026-06-30 19:50:58] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 73
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-06-30 19:50:58] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-06-30 19:51:11] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 89
+[2026-06-30 19:51:11] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-06-30 19:51:22] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 89
+[2026-06-30 19:51:22] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-06-30 19:51:24] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-06-30 19:51:24] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-06-30 19:51:25] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-06-30 19:51:25] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/search_theanalyst_previews.py --max-matches 5
+[2026-06-30 19:51:27] The Analyst intel written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_article_intel.csv
+Rows with content: 3
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\theanalyst_intel_debug.csv
+[2026-06-30 19:51:27] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_daily_worldcup_intel.py
+[2026-06-30 19:51:27] daily refresh started
+[2026-06-30 19:51:27] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-06-30 19:51:28] ��ݔ�� daily intel: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+��ݔ�� missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel_missing_report.csv
+��ݔ�� betting brief: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_betting_brief.md
+��ݔ�� intel merge debug: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\intel_merge_debug.csv
+upcoming matches: 15
+���Ԅ���ע����ݔ��ֻ�o��ِǰ�Q�ߡ�
+[2026-06-30 19:51:28] daily refresh finished with warning: unresolved knockout fallback rows=14
+[2026-06-30 19:51:37] �яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+[2026-06-30 19:51:37] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-06-30 19:51:39] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 17
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-06-30 19:51:39] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed --force-refresh
+[2026-06-30 19:52:24] daily refresh started
+[2026-06-30 19:52:24] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-06-30 19:52:33] �яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+[2026-06-30 19:52:33] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-06-30 19:52:34] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 17
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-06-30 19:52:34] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed --force-refresh
+[2026-06-30 19:54:15] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 73
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-06-30 19:54:15] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-06-30 19:54:26] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 89
+[2026-06-30 19:54:26] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-06-30 19:54:37] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 89
+[2026-06-30 19:54:37] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-06-30 19:54:38] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-06-30 19:54:38] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-06-30 19:54:39] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-06-30 19:54:39] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/search_theanalyst_previews.py --max-matches 5
+[2026-06-30 19:54:40] The Analyst intel written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_article_intel.csv
+Rows with content: 3
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\theanalyst_intel_debug.csv
+[2026-06-30 19:54:40] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_daily_worldcup_intel.py
+[2026-06-30 19:54:41] ��ݔ�� daily intel: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+��ݔ�� missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel_missing_report.csv
+��ݔ�� betting brief: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_betting_brief.md
+��ݔ�� intel merge debug: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\intel_merge_debug.csv
+upcoming matches: 15
+���Ԅ���ע����ݔ��ֻ�o��ِǰ�Q�ߡ�
+[2026-06-30 19:54:41] daily refresh finished with warning: unresolved knockout fallback rows=14
+[2026-06-30 19:54:52] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 73
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-06-30 19:54:52] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-06-30 19:55:03] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 89
+[2026-06-30 19:55:03] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-06-30 19:55:14] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 89
+[2026-06-30 19:55:14] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-06-30 19:55:15] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-06-30 19:55:15] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-06-30 19:55:16] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-06-30 19:55:16] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/search_theanalyst_previews.py --max-matches 5
+[2026-06-30 19:55:17] The Analyst intel written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_article_intel.csv
+Rows with content: 3
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\theanalyst_intel_debug.csv
+[2026-06-30 19:55:17] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_daily_worldcup_intel.py
+[2026-06-30 19:55:17] ��ݔ�� daily intel: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+��ݔ�� missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel_missing_report.csv
+��ݔ�� betting brief: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_betting_brief.md
+��ݔ�� intel merge debug: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\intel_merge_debug.csv
+upcoming matches: 15
+���Ԅ���ע����ݔ��ֻ�o��ِǰ�Q�ߡ�
+[2026-06-30 19:55:18] daily refresh finished with warning: unresolved knockout fallback rows=14
+[2026-06-30 22:34:10] hourly intel refresh started
+[2026-06-30 22:34:10] hourly command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/search_theanalyst_previews.py --max-matches 5
+[2026-06-30 22:34:11] The Analyst intel written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_article_intel.csv
+Rows with content: 3
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\theanalyst_intel_debug.csv
+[2026-06-30 22:34:11] hourly command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_daily_worldcup_intel.py
+[2026-06-30 22:34:12] ��ݔ�� daily intel: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+��ݔ�� missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel_missing_report.csv
+��ݔ�� betting brief: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_betting_brief.md
+��ݔ�� intel merge debug: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\intel_merge_debug.csv
+upcoming matches: 15
+���Ԅ���ע����ݔ��ֻ�o��ِǰ�Q�ߡ�
+[2026-06-30 22:34:12] hourly command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-06-30 22:34:12] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-06-30 22:34:12] hourly intel refresh finished successfully
+[2026-06-30 22:34:17] daily refresh started
+[2026-06-30 22:34:17] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-06-30 22:34:26] �яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+[2026-06-30 22:34:26] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-06-30 22:34:27] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 17
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-06-30 22:34:27] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed --force-refresh
+[2026-06-30 22:36:56] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 73
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-06-30 22:36:56] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-06-30 22:37:08] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 89
+[2026-06-30 22:37:08] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-06-30 22:37:19] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 89
+[2026-06-30 22:37:19] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-06-30 22:37:20] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-06-30 22:37:20] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-06-30 22:37:21] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-06-30 22:37:21] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/search_theanalyst_previews.py --max-matches 5
+[2026-06-30 22:37:21] The Analyst intel written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_article_intel.csv
+Rows with content: 3
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\theanalyst_intel_debug.csv
+[2026-06-30 22:37:21] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_daily_worldcup_intel.py
+[2026-06-30 22:37:22] ��ݔ�� daily intel: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+��ݔ�� missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel_missing_report.csv
+��ݔ�� betting brief: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_betting_brief.md
+��ݔ�� intel merge debug: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\intel_merge_debug.csv
+upcoming matches: 15
+���Ԅ���ע����ݔ��ֻ�o��ِǰ�Q�ߡ�
+[2026-06-30 22:37:22] daily refresh finished with warning: unresolved knockout fallback rows=14
+[2026-07-02 19:41:58] daily refresh started
+[2026-07-02 19:41:58] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-07-02 19:42:11] �яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+[2026-07-02 19:42:11] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-07-02 19:42:13] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 21
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-07-02 19:42:13] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed --force-refresh
+[2026-07-02 19:42:59] daily refresh started
+[2026-07-02 19:42:59] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-07-02 19:43:14] �яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+[2026-07-02 19:43:14] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-07-02 19:43:15] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 21
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-07-02 19:43:15] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed --force-refresh
+[2026-07-02 19:45:16] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 73
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-07-02 19:45:16] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-07-02 19:45:27] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 93
+[2026-07-02 19:45:27] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-07-02 19:45:38] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 93
+[2026-07-02 19:45:38] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-07-02 19:45:39] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-07-02 19:45:39] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-07-02 19:45:39] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-07-02 19:45:39] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/search_theanalyst_previews.py --max-matches 5
+[2026-07-02 19:45:40] The Analyst intel written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_article_intel.csv
+Rows with content: 3
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\theanalyst_intel_debug.csv
+[2026-07-02 19:45:40] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_daily_worldcup_intel.py
+[2026-07-02 19:45:41] ��ݔ�� daily intel: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+��ݔ�� missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel_missing_report.csv
+��ݔ�� betting brief: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_betting_brief.md
+��ݔ�� intel merge debug: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\intel_merge_debug.csv
+upcoming matches: 13
+���Ԅ���ע����ݔ��ֻ�o��ِǰ�Q�ߡ�
+[2026-07-02 19:45:41] daily refresh finished with warning: unresolved knockout fallback rows=10
+[2026-07-02 19:46:17] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 79
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-07-02 19:46:17] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-07-02 19:46:28] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 93
+[2026-07-02 19:46:28] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-07-02 19:46:38] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 93
+[2026-07-02 19:46:38] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-07-02 19:46:40] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-07-02 19:46:40] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-07-02 19:46:40] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-07-02 19:46:40] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/search_theanalyst_previews.py --max-matches 5
+[2026-07-02 19:46:41] The Analyst intel written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_article_intel.csv
+Rows with content: 3
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\theanalyst_intel_debug.csv
+[2026-07-02 19:46:41] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_daily_worldcup_intel.py
+[2026-07-02 19:46:42] ��ݔ�� daily intel: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+��ݔ�� missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel_missing_report.csv
+��ݔ�� betting brief: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_betting_brief.md
+��ݔ�� intel merge debug: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\intel_merge_debug.csv
+upcoming matches: 13
+���Ԅ���ע����ݔ��ֻ�o��ِǰ�Q�ߡ�
+[2026-07-02 19:46:42] daily refresh finished with warning: unresolved knockout fallback rows=10
+[2026-07-02 20:50:46] daily refresh started
+[2026-07-02 20:50:46] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-07-02 20:51:00] �яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+[2026-07-02 20:51:00] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-07-02 20:51:02] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 21
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-07-02 20:51:02] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed --force-refresh
+[2026-07-02 20:53:32] daily refresh started
+[2026-07-02 20:53:32] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-07-02 20:53:33] daily refresh started
+[2026-07-02 20:53:33] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-07-02 20:53:47] �яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+[2026-07-02 20:53:47] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-07-02 20:53:48] �яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+[2026-07-02 20:53:48] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-07-02 20:53:49] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 21
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-07-02 20:53:49] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed --force-refresh
+[2026-07-02 20:53:50] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 21
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-07-02 20:53:50] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed --force-refresh
+[2026-07-02 20:53:56] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 79
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-07-02 20:53:56] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-07-02 20:54:07] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 93
+[2026-07-02 20:54:07] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-07-02 20:54:17] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 93
+[2026-07-02 20:54:17] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-07-02 20:54:19] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-07-02 20:54:19] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-07-02 20:54:19] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-07-02 20:54:19] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/refresh_today_intel_for_website.py
+[2026-07-02 20:56:51] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 79
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-07-02 20:56:51] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-07-02 20:56:58] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 79
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-07-02 20:56:58] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-07-02 20:57:01] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 93
+[2026-07-02 20:57:01] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-07-02 20:57:08] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 93
+[2026-07-02 20:57:08] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-07-02 20:57:12] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 93
+[2026-07-02 20:57:12] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-07-02 20:57:13] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-07-02 20:57:13] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-07-02 20:57:14] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-07-02 20:57:14] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/refresh_today_intel_for_website.py
+[2026-07-02 20:57:19] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 93
+[2026-07-02 20:57:19] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-07-02 20:57:20] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-07-02 20:57:20] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-07-02 20:57:21] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-07-02 20:57:21] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/refresh_today_intel_for_website.py
+[2026-07-02 20:57:27] matches_count=3
+openai_success_count=0
+openai_failed_count=3
+fallback_count=3
+daily_intel_rows_exported=3
+daily_intel_csv=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+website_json=C:\Users\Administrator\Desktop\worldcup-ai-agent\website\public\data\worldcup_daily_intel.json
+debug_report=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\website_refresh_debug.csv
+status_file=C:\Users\Administrator\Desktop\worldcup-ai-agent\data\cache\website_refresh_status.json
+[2026-07-02 20:57:27] daily refresh finished with warning: unresolved knockout fallback rows=10
+[2026-07-02 20:57:44] matches_count=3
+openai_success_count=2
+openai_failed_count=1
+fallback_count=1
+daily_intel_rows_exported=3
+daily_intel_csv=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+website_json=C:\Users\Administrator\Desktop\worldcup-ai-agent\website\public\data\worldcup_daily_intel.json
+debug_report=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\website_refresh_debug.csv
+status_file=C:\Users\Administrator\Desktop\worldcup-ai-agent\data\cache\website_refresh_status.json
+[2026-07-02 20:57:44] daily refresh finished with warning: unresolved knockout fallback rows=10
+[2026-07-02 20:59:42] matches_count=3
+openai_success_count=3
+openai_failed_count=0
+fallback_count=0
+daily_intel_rows_exported=3
+daily_intel_csv=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+website_json=C:\Users\Administrator\Desktop\worldcup-ai-agent\website\public\data\worldcup_daily_intel.json
+debug_report=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\website_refresh_debug.csv
+status_file=C:\Users\Administrator\Desktop\worldcup-ai-agent\data\cache\website_refresh_status.json
+[2026-07-02 20:59:43] daily refresh finished with warning: unresolved knockout fallback rows=10
+[2026-07-02 21:27:01] daily refresh started
+[2026-07-02 21:27:01] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-07-02 21:28:22] �яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+[2026-07-02 21:28:22] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-07-02 21:28:23] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 21
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-07-02 21:28:23] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed --force-refresh
+[2026-07-02 21:32:45] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 79
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-07-02 21:32:45] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-07-02 21:32:56] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 93
+[2026-07-02 21:32:56] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-07-02 21:33:07] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 93
+[2026-07-02 21:33:07] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-07-02 21:33:09] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-07-02 21:33:09] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/search_odds_with_openai.py --date 2026-07-02
+[2026-07-02 21:33:19] OpenAI odds written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_openai_odds.csv
+OpenAI market probabilities written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_openai_market_predictions.csv
+Primary consensus odds filled: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_consensus_odds.csv
+Primary market probabilities filled: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_market_predictions.csv
+Debug report written: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\openai_odds_debug.csv
+matches=3 accepted=0
+[2026-07-02 21:33:19] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-02 21:33:19] Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 433, in <module>
+    main()
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 417, in main
+    features = build_worldcup_features(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 372, in build_worldcup_features
+    schedule = merge_results(schedule, results)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 196, in merge_results
+    return schedule.merge(results, on=merge_keys, how="left", validate="one_to_one")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\frame.py", line 12900, in merge
+    return merge(
+           ^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 385, in merge
+    op = _MergeOperation(
+         ^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 1031, in __init__
+    self._maybe_coerce_merge_keys()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 1839, in _maybe_coerce_merge_keys
+    raise ValueError(msg)
+ValueError: You are trying to merge on datetime64[us] and str columns for key 'date'. If you wish to proceed you should use pd.concat
+[2026-07-02 21:33:19] daily command failed with exit code 1: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-02 21:33:19] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-07-02 21:33:20] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-07-02 21:33:20] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/refresh_today_intel_for_website.py
+[2026-07-02 21:33:28] matches_count=3
+openai_success_count=0
+openai_failed_count=3
+fallback_count=3
+daily_intel_rows_exported=3
+daily_intel_csv=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+website_json=C:\Users\Administrator\Desktop\worldcup-ai-agent\website\public\data\worldcup_daily_intel.json
+debug_report=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\website_refresh_debug.csv
+status_file=C:\Users\Administrator\Desktop\worldcup-ai-agent\data\cache\website_refresh_status.json
+[2026-07-02 21:33:29] daily refresh finished with errors: failed commands: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-02 22:01:37] hourly intel refresh started
+[2026-07-02 22:01:37] hourly command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/refresh_today_intel_for_website.py
+[2026-07-02 22:01:43] matches_count=3
+openai_success_count=0
+openai_failed_count=3
+fallback_count=3
+daily_intel_rows_exported=3
+daily_intel_csv=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+website_json=C:\Users\Administrator\Desktop\worldcup-ai-agent\website\public\data\worldcup_daily_intel.json
+debug_report=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\website_refresh_debug.csv
+status_file=C:\Users\Administrator\Desktop\worldcup-ai-agent\data\cache\website_refresh_status.json
+[2026-07-02 22:01:43] hourly command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-07-02 22:01:43] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-07-02 22:01:43] hourly intel refresh finished successfully
+[2026-07-02 22:01:49] daily refresh started
+[2026-07-02 22:01:49] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-07-02 22:02:02] �яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+[2026-07-02 22:02:02] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-07-02 22:02:04] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 21
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-07-02 22:02:04] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed --force-refresh
+[2026-07-02 22:05:08] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 79
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-07-02 22:05:08] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-07-02 22:05:19] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 93
+[2026-07-02 22:05:19] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-07-02 22:05:30] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 93
+[2026-07-02 22:05:30] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-07-02 22:05:31] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-07-02 22:05:31] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/search_odds_with_openai.py --date 2026-07-02
+[2026-07-02 22:05:33] OpenAI odds written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_openai_odds.csv
+OpenAI market probabilities written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_openai_market_predictions.csv
+Primary consensus odds filled: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_consensus_odds.csv
+Primary market probabilities filled: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_market_predictions.csv
+Debug report written: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\openai_odds_debug.csv
+matches=3 accepted=0
+[2026-07-02 22:05:33] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-02 22:05:34] ȱ�ٱ�Ҫ World Cup �Y�ϣ���ݔ��ȱ�Y�ψ��: reports\worldcup_features_missing_data_report.csv
+[2026-07-02 22:05:34] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-07-02 22:05:35] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-07-02 22:05:35] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/refresh_today_intel_for_website.py
+[2026-07-02 22:05:43] matches_count=3
+openai_success_count=0
+openai_failed_count=3
+fallback_count=3
+daily_intel_rows_exported=3
+daily_intel_csv=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+website_json=C:\Users\Administrator\Desktop\worldcup-ai-agent\website\public\data\worldcup_daily_intel.json
+debug_report=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\website_refresh_debug.csv
+status_file=C:\Users\Administrator\Desktop\worldcup-ai-agent\data\cache\website_refresh_status.json
+[2026-07-02 22:05:44] daily refresh finished with warning: unresolved knockout fallback rows=10
+[2026-07-02 22:14:47] daily refresh started
+[2026-07-02 22:14:47] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-07-02 22:15:14] �e�`: �o��ȡ�� World Cup fixtures����ݔ�� missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_fixtures_missing_report.csv
+[2026-07-02 22:15:14] daily command failed with exit code 1: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-07-02 22:15:14] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-07-02 22:15:16] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 0
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-07-02 22:15:16] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed --force-refresh
+[2026-07-02 22:18:38] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 79
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-07-02 22:18:38] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-07-02 22:18:49] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 72
+[2026-07-02 22:18:49] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-07-02 22:19:00] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 72
+[2026-07-02 22:19:00] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-07-02 22:19:01] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-07-02 22:19:01] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/search_odds_with_openai.py --date 2026-07-02
+[2026-07-02 22:19:02] OpenAI odds written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_openai_odds.csv
+OpenAI market probabilities written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_openai_market_predictions.csv
+Primary consensus odds filled: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_consensus_odds.csv
+Primary market probabilities filled: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_market_predictions.csv
+Debug report written: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\openai_odds_debug.csv
+matches=0 accepted=0
+[2026-07-02 22:19:02] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-02 22:19:02] ȱ�ٱ�Ҫ World Cup �Y�ϣ���ݔ��ȱ�Y�ψ��: reports\worldcup_features_missing_data_report.csv
+[2026-07-02 22:19:02] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-07-02 22:19:03] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-07-02 22:19:03] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/refresh_today_intel_for_website.py
+[2026-07-02 22:19:04] matches_count=0
+openai_success_count=0
+openai_failed_count=0
+fallback_count=0
+daily_intel_rows_exported=2
+daily_intel_csv=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+website_json=C:\Users\Administrator\Desktop\worldcup-ai-agent\website\public\data\worldcup_daily_intel.json
+debug_report=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\website_refresh_debug.csv
+status_file=C:\Users\Administrator\Desktop\worldcup-ai-agent\data\cache\website_refresh_status.json
+[2026-07-02 22:19:05] daily refresh finished with errors: failed commands: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-07-02 23:37:00] daily refresh started
+[2026-07-02 23:37:00] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-07-02 23:37:27] �яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+[2026-07-02 23:37:27] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-07-02 23:37:38] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 21
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-07-02 23:37:38] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed --force-refresh
+[2026-07-02 23:44:13] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 79
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-07-02 23:44:13] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-07-02 23:44:24] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 93
+[2026-07-02 23:44:24] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-07-02 23:44:35] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 93
+[2026-07-02 23:44:35] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-07-02 23:44:36] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-07-02 23:44:36] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/search_odds_with_openai.py --date 2026-07-02
+[2026-07-02 23:47:28] OpenAI odds written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_openai_odds.csv
+OpenAI market probabilities written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_openai_market_predictions.csv
+Primary consensus odds filled: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_consensus_odds.csv
+Primary market probabilities filled: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_market_predictions.csv
+Debug report written: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\openai_odds_debug.csv
+matches=3 accepted=3
+[2026-07-02 23:47:28] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-02 23:47:30] Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 540, in <module>
+    main()
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 524, in main
+    features = build_worldcup_features(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 479, in build_worldcup_features
+    schedule = merge_results(schedule, results)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 289, in merge_results
+    return schedule.merge(results, on=merge_keys, how="left", validate="one_to_one")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\frame.py", line 12900, in merge
+    return merge(
+           ^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 385, in merge
+    op = _MergeOperation(
+         ^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 1031, in __init__
+    self._maybe_coerce_merge_keys()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 1839, in _maybe_coerce_merge_keys
+    raise ValueError(msg)
+ValueError: You are trying to merge on datetime64[us] and str columns for key 'date'. If you wish to proceed you should use pd.concat
+[2026-07-02 23:47:30] daily command failed with exit code 1: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-02 23:47:30] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-07-02 23:47:30] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-07-02 23:47:30] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/refresh_today_intel_for_website.py
+[2026-07-03 00:40:51] daily refresh started
+[2026-07-03 00:40:51] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-07-03 00:41:33] �яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+[2026-07-03 00:41:33] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-07-03 00:41:46] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 21
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-07-03 00:41:46] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed --force-refresh
+[2026-07-03 00:48:29] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 79
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-07-03 00:48:29] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-07-03 00:48:41] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 93
+[2026-07-03 00:48:41] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-07-03 00:48:51] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 93
+[2026-07-03 00:48:51] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-07-03 00:48:53] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-07-03 00:48:53] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/search_odds_with_openai.py --date 2026-07-03
+[2026-07-03 00:49:56] OpenAI odds written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_openai_odds.csv
+OpenAI market probabilities written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_openai_market_predictions.csv
+Primary consensus odds filled: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_consensus_odds.csv
+Primary market probabilities filled: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_market_predictions.csv
+Debug report written: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\openai_odds_debug.csv
+matches=3 accepted=3
+[2026-07-03 00:49:56] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-03 00:49:57] Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 540, in <module>
+    main()
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 524, in main
+    features = build_worldcup_features(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 479, in build_worldcup_features
+    schedule = merge_results(schedule, results)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 289, in merge_results
+    return schedule.merge(results, on=merge_keys, how="left", validate="one_to_one")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\frame.py", line 12900, in merge
+    return merge(
+           ^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 385, in merge
+    op = _MergeOperation(
+         ^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 1031, in __init__
+    self._maybe_coerce_merge_keys()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 1839, in _maybe_coerce_merge_keys
+    raise ValueError(msg)
+ValueError: You are trying to merge on datetime64[us] and str columns for key 'date'. If you wish to proceed you should use pd.concat
+[2026-07-03 00:49:57] daily command failed with exit code 1: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-03 00:49:57] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-07-03 00:49:58] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-07-03 00:49:58] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/refresh_today_intel_for_website.py
+[2026-07-03 00:53:23] matches_count=3
+openai_success_count=3
+openai_failed_count=0
+fallback_count=0
+daily_intel_rows_exported=3
+daily_intel_csv=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+website_json=C:\Users\Administrator\Desktop\worldcup-ai-agent\website\public\data\worldcup_daily_intel.json
+debug_report=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\website_refresh_debug.csv
+status_file=C:\Users\Administrator\Desktop\worldcup-ai-agent\data\cache\website_refresh_status.json
+[2026-07-03 00:53:23] daily refresh finished with errors: failed commands: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-03 15:44:53] hourly intel refresh started
+[2026-07-03 15:44:53] hourly command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/refresh_today_intel_for_website.py
+[2026-07-03 15:48:56] matches_count=3
+openai_success_count=3
+openai_failed_count=0
+fallback_count=0
+daily_intel_rows_exported=3
+daily_intel_csv=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+website_json=C:\Users\Administrator\Desktop\worldcup-ai-agent\website\public\data\worldcup_daily_intel.json
+debug_report=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\website_refresh_debug.csv
+status_file=C:\Users\Administrator\Desktop\worldcup-ai-agent\data\cache\website_refresh_status.json
+[2026-07-03 15:48:56] hourly command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-07-03 15:48:57] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-07-03 15:48:57] hourly intel refresh finished successfully
+[2026-07-03 16:10:18] daily refresh started
+[2026-07-03 16:10:18] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-07-03 16:10:49] �яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+[2026-07-03 16:10:49] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-07-03 16:11:02] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 22
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-07-03 16:11:02] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed --force-refresh
+[2026-07-03 16:15:27] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 82
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-07-03 16:15:27] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-07-03 16:15:38] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 94
+[2026-07-03 16:15:38] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-07-03 16:15:49] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 94
+[2026-07-03 16:15:49] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-07-03 16:15:50] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-07-03 16:15:50] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/search_odds_with_openai.py --date 2026-07-03
+[2026-07-03 16:15:51] OpenAI odds written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_openai_odds.csv
+OpenAI market probabilities written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_openai_market_predictions.csv
+Primary consensus odds filled: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_consensus_odds.csv
+Primary market probabilities filled: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_market_predictions.csv
+Debug report written: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\openai_odds_debug.csv
+matches=3 accepted=0
+[2026-07-03 16:15:51] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-03 16:15:52] Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 540, in <module>
+    main()
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 524, in main
+    features = build_worldcup_features(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 479, in build_worldcup_features
+    schedule = merge_results(schedule, results)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 289, in merge_results
+    return schedule.merge(results, on=merge_keys, how="left", validate="one_to_one")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\frame.py", line 12900, in merge
+    return merge(
+           ^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 385, in merge
+    op = _MergeOperation(
+         ^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 1031, in __init__
+    self._maybe_coerce_merge_keys()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 1839, in _maybe_coerce_merge_keys
+    raise ValueError(msg)
+ValueError: You are trying to merge on datetime64[us] and str columns for key 'date'. If you wish to proceed you should use pd.concat
+[2026-07-03 16:15:52] daily command failed with exit code 1: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-03 16:15:52] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-07-03 16:15:52] ȱ�� World Cup features �n��: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_features.csv
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-07-03 16:15:52] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/refresh_today_intel_for_website.py
+[2026-07-03 16:18:23] matches_count=3
+openai_success_count=3
+openai_failed_count=0
+fallback_count=0
+daily_intel_rows_exported=3
+daily_intel_csv=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+website_json=C:\Users\Administrator\Desktop\worldcup-ai-agent\website\public\data\worldcup_daily_intel.json
+debug_report=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\website_refresh_debug.csv
+status_file=C:\Users\Administrator\Desktop\worldcup-ai-agent\data\cache\website_refresh_status.json
+[2026-07-03 16:18:24] daily refresh finished with errors: failed commands: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-04 16:17:56] daily refresh started
+[2026-07-04 16:17:56] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-07-04 16:18:16] �яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+[2026-07-04 16:18:16] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-07-04 16:18:27] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 24
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-07-04 16:18:27] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed --force-refresh
+[2026-07-04 16:22:01] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 85
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-07-04 16:22:01] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-07-04 16:22:12] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 96
+[2026-07-04 16:22:12] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-07-04 16:22:23] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 96
+[2026-07-04 16:22:23] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-07-04 16:22:26] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-07-04 16:22:26] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/search_odds_with_openai.py --date 2026-07-04
+[2026-07-04 16:22:28] OpenAI odds written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_openai_odds.csv
+OpenAI market probabilities written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_openai_market_predictions.csv
+Primary consensus odds filled: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_consensus_odds.csv
+Primary market probabilities filled: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_market_predictions.csv
+Debug report written: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\openai_odds_debug.csv
+matches=3 accepted=0
+[2026-07-04 16:22:28] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-04 16:22:29] Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 540, in <module>
+    main()
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 524, in main
+    features = build_worldcup_features(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 479, in build_worldcup_features
+    schedule = merge_results(schedule, results)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 289, in merge_results
+    return schedule.merge(results, on=merge_keys, how="left", validate="one_to_one")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\frame.py", line 12900, in merge
+    return merge(
+           ^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 385, in merge
+    op = _MergeOperation(
+         ^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 1031, in __init__
+    self._maybe_coerce_merge_keys()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 1839, in _maybe_coerce_merge_keys
+    raise ValueError(msg)
+ValueError: You are trying to merge on datetime64[us] and str columns for key 'date'. If you wish to proceed you should use pd.concat
+[2026-07-04 16:22:29] daily command failed with exit code 1: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-04 16:22:29] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-07-04 16:22:30] ��ݔ�� World Cup betting predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_betting_predictions.csv
+��ݔ����������Y�ϊA: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_betting_reports
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ݔ���P��: 3
+[2026-07-04 16:22:30] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/evaluate_daily_predictions.py
+[2026-07-04 16:22:31] evaluated matches: 3
+output: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\daily_prediction_vs_result.csv
+summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\daily_prediction_summary.csv
+feedback: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_prediction_feedback.csv
+[2026-07-04 16:22:31] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/refresh_today_intel_for_website.py
+[2026-07-04 16:22:36] matches_count=3
+openai_success_count=0
+openai_failed_count=3
+fallback_count=3
+daily_intel_rows_exported=3
+daily_intel_csv=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+website_json=C:\Users\Administrator\Desktop\worldcup-ai-agent\website\public\data\worldcup_daily_intel.json
+debug_report=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\website_refresh_debug.csv
+status_file=C:\Users\Administrator\Desktop\worldcup-ai-agent\data\cache\website_refresh_status.json
+[2026-07-04 16:22:37] daily refresh finished with errors: failed commands: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-04 16:24:47] daily refresh started
+[2026-07-04 16:24:47] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-07-04 16:25:00] �яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+[2026-07-04 16:25:00] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-07-04 16:25:02] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 24
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-07-04 16:25:02] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed --force-refresh
+[2026-07-04 16:25:05] daily refresh started
+[2026-07-04 16:25:05] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_fixtures.py --include-knockout --force-refresh --skip-downstream
+[2026-07-04 16:25:17] �яĹ��_�Y��Դȡ�� World Cup fixtures: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv (103 rows)
+[2026-07-04 16:25:17] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_knockout_bracket.py
+[2026-07-04 16:25:18] Resolved knockout fixtures written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures_resolved.csv
+Knockout rows: 31
+Actual-team knockout rows: 24
+Debug report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\knockout_bracket_fetch_debug.csv
+[2026-07-04 16:25:18] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/fetch_worldcup_results.py --all-completed --force-refresh
+[2026-07-04 16:28:19] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 85
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-07-04 16:28:19] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-07-04 16:28:28] World Cup results fetch mode: network
+Output: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_results.csv
+Rows: 85
+Missing report: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_results_fetch_missing_report.csv
+[2026-07-04 16:28:28] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_model_predictions.py
+[2026-07-04 16:28:29] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 96
+[2026-07-04 16:28:29] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-07-04 16:28:38] ��ݔ�� World Cup H/D/A ģ���A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_model_predictions.csv
+ݔ���P��: 96
+[2026-07-04 16:28:38] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/export_worldcup_poisson_predictions.py
+[2026-07-04 16:28:40] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 96
+[2026-07-04 16:28:40] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-07-04 16:28:43] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-07-04 16:28:43] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/search_odds_with_openai.py --date 2026-07-04
+[2026-07-04 16:28:49] ��ݔ�� World Cup Poisson �A�y: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_poisson_predictions.csv
+ݔ���P��: 96
+[2026-07-04 16:28:49] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/import_manual_worldcup_odds.py
+[2026-07-04 16:28:52] ��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_model_only_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+�o���R�� manual odds: �Ҳ��� manual odds: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_odds_manual.csv
+���� no-odds mode��
+����: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py --model-only
+[2026-07-04 16:28:52] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/search_odds_with_openai.py --date 2026-07-04
+[2026-07-04 16:29:51] OpenAI odds written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_openai_odds.csv
+OpenAI market probabilities written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_openai_market_predictions.csv
+Primary consensus odds filled: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_consensus_odds.csv
+Primary market probabilities filled: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_market_predictions.csv
+Debug report written: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\openai_odds_debug.csv
+matches=3 accepted=3
+[2026-07-04 16:29:51] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-04 16:29:52] Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 540, in <module>
+    main()
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 524, in main
+    features = build_worldcup_features(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 479, in build_worldcup_features
+    schedule = merge_results(schedule, results)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 289, in merge_results
+    return schedule.merge(results, on=merge_keys, how="left", validate="one_to_one")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\frame.py", line 12900, in merge
+    return merge(
+           ^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 385, in merge
+    op = _MergeOperation(
+         ^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 1031, in __init__
+    self._maybe_coerce_merge_keys()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 1839, in _maybe_coerce_merge_keys
+    raise ValueError(msg)
+ValueError: You are trying to merge on datetime64[us] and str columns for key 'date'. If you wish to proceed you should use pd.concat
+[2026-07-04 16:29:52] daily command failed with exit code 1: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-04 16:29:52] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-07-04 16:29:55] World Cup features ��ȱʧֵ: {'model_H': 3, 'model_D': 3, 'model_A': 3}
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_betting_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-07-04 16:29:55] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/evaluate_daily_predictions.py
+[2026-07-04 16:29:55] evaluated matches: 85
+output: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\daily_prediction_vs_result.csv
+summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\daily_prediction_summary.csv
+feedback: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_prediction_feedback.csv
+[2026-07-04 16:29:55] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/refresh_today_intel_for_website.py
+[2026-07-04 16:30:26] OpenAI odds written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_openai_odds.csv
+OpenAI market probabilities written: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_openai_market_predictions.csv
+Primary consensus odds filled: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_consensus_odds.csv
+Primary market probabilities filled: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_market_predictions.csv
+Debug report written: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\openai_odds_debug.csv
+matches=3 accepted=3
+[2026-07-04 16:30:26] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-04 16:30:27] Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 540, in <module>
+    main()
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 524, in main
+    features = build_worldcup_features(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 479, in build_worldcup_features
+    schedule = merge_results(schedule, results)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\Desktop\worldcup-ai-agent\scripts\build_worldcup_features.py", line 289, in merge_results
+    return schedule.merge(results, on=merge_keys, how="left", validate="one_to_one")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\frame.py", line 12900, in merge
+    return merge(
+           ^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 385, in merge
+    op = _MergeOperation(
+         ^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 1031, in __init__
+    self._maybe_coerce_merge_keys()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\reshape\merge.py", line 1839, in _maybe_coerce_merge_keys
+    raise ValueError(msg)
+ValueError: You are trying to merge on datetime64[us] and str columns for key 'date'. If you wish to proceed you should use pd.concat
+[2026-07-04 16:30:27] daily command failed with exit code 1: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-04 16:30:27] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/run_worldcup_betting_agents.py
+[2026-07-04 16:30:29] World Cup features ��ȱʧֵ: {'model_H': 3, 'model_D': 3, 'model_A': 3}
+ȱ�� odds ������ World Cup features������ no-odds model-only mode��
+��ݔ�� no-odds model-only predictions: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_betting_predictions.csv
+ݔ���P��: 103
+��ݔ�� draw risk summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_draw_risk_summary.csv
+��ݔ�� high draw risk matches: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_high_draw_risk_matches.csv
+ȱ�� odds������Ŀǰ����Ӌ�� value / edge����ģʽֻ���S WATCH �� PASS��
+[2026-07-04 16:30:29] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/evaluate_daily_predictions.py
+[2026-07-04 16:30:30] evaluated matches: 85
+output: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\daily_prediction_vs_result.csv
+summary: C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\daily_prediction_summary.csv
+feedback: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_prediction_feedback.csv
+[2026-07-04 16:30:30] daily command start: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/refresh_today_intel_for_website.py
+[2026-07-04 16:31:43] matches_count=3
+openai_success_count=2
+openai_failed_count=1
+fallback_count=1
+daily_intel_rows_exported=3
+daily_intel_csv=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+website_json=C:\Users\Administrator\Desktop\worldcup-ai-agent\website\public\data\worldcup_daily_intel.json
+debug_report=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\website_refresh_debug.csv
+status_file=C:\Users\Administrator\Desktop\worldcup-ai-agent\data\cache\website_refresh_status.json
+[2026-07-04 16:31:43] daily refresh finished with errors: failed commands: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py
+[2026-07-04 16:32:39] matches_count=3
+openai_success_count=3
+openai_failed_count=0
+fallback_count=0
+daily_intel_rows_exported=3
+daily_intel_csv=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\worldcup_daily_intel.csv
+website_json=C:\Users\Administrator\Desktop\worldcup-ai-agent\website\public\data\worldcup_daily_intel.json
+debug_report=C:\Users\Administrator\Desktop\worldcup-ai-agent\reports\website_refresh_debug.csv
+status_file=C:\Users\Administrator\Desktop\worldcup-ai-agent\data\cache\website_refresh_status.json
+[2026-07-04 16:32:39] daily refresh finished with errors: failed commands: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe scripts/build_worldcup_features.py

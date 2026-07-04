@@ -1,0 +1,11 @@
+date,home_team,away_team,home_goals,away_goals,penalties_home,penalties_away,winner,display_text,shown_in_dashboard,reason_if_not_shown
+2026-07-02,United States,Bosnia-Herzegovina,2.0,0.0,,,United States,United States 2 - 0 Bosnia-Herzegovina,True,
+2026-07-01,Mexico,Ecuador,2.0,0.0,,,Mexico,Mexico 2 - 0 Ecuador,False,outside_today_yesterday_results_panel
+2026-07-01,England,Congo DR,2.0,1.0,,,England,England 2 - 1 Congo DR,False,outside_today_yesterday_results_panel
+2026-07-01,Belgium,Senegal,3.0,2.0,,,Belgium,Belgium 3 - 2 Senegal; After extra time,False,outside_today_yesterday_results_panel
+2026-06-30,Netherlands,Morocco,1.0,1.0,2.0,3.0,Morocco,Netherlands 1 - 1 Morocco; Morocco wins 3 - 2 on penalties,False,outside_today_yesterday_results_panel
+2026-06-30,Ivory Coast,Norway,1.0,2.0,,,Norway,Ivory Coast 1 - 2 Norway,False,outside_today_yesterday_results_panel
+2026-06-30,France,Sweden,3.0,0.0,,,France,France 3 - 0 Sweden,False,outside_today_yesterday_results_panel
+2026-06-29,Germany,Paraguay,1.0,1.0,3.0,4.0,Paraguay,Germany 1 - 1 Paraguay; Paraguay wins 4 - 3 on penalties,False,outside_today_yesterday_results_panel
+2026-06-29,Brazil,Japan,2.0,1.0,,,Brazil,Brazil 2 - 1 Japan,False,outside_today_yesterday_results_panel
+2026-06-28,South Africa,Canada,0.0,1.0,,,Canada,South Africa 0 - 1 Canada,False,outside_today_yesterday_results_panel

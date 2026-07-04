@@ -1,0 +1,3 @@
+data_type,path,missing_columns,message
+market,,"market_H, market_D, market_A",No complete market probabilities found.
+odds,,"home_odds, draw_odds, away_odds",No complete odds found.

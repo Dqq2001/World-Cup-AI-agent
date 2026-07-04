@@ -1,0 +1,7 @@
+{
+  "base_url": "https://api.pixvyn.com/v1",
+  "endpoint": "https://api.pixvyn.com/v1/responses",
+  "model": "gpt-5.5",
+  "tool_type": "web_search",
+  "query": "Search the public web for 1X2 betting odds for this World Cup 2026 match:\ndate: 2026-07-04\nhome_team: Colombia\naway_team: Ghana\n\nUse these queries:\n- \"Colombia vs Ghana odds World Cup 2026\"\n- \"Colombia Ghana betting odds\"\n- \"Colombia vs Ghana 1X2 odds\"\n\nReturn ONLY strict valid JSON:\n{\n  \"date\": \"2026-07-04\",\n  \"home_team\": \"Colombia\",\n  \"away_team\": \"Ghana\",\n  \"home_odds\": null,\n  \"draw_odds\": null,\n  \"away_odds\": null,\n  \"odds_source\": \"...\",\n  \"source_urls\": [\"...\"],\n  \"confidence\": 0.0,\n  \"fetched_at\": \"2026-07-04T08:29:48.295812+00:00\"\n}\n\nRules:\n- Accept decimal odds only, e.g. 1.75, 3.40, 5.20.\n- If a source provides American odds, convert them to decimal odds.\n- Prefer Pinnacle, Bet365, DraftKings, FanDuel, Oddschecker, BetMGM.\n- If home/draw/away are not all supported by source URLs, return null for missing odds.\n- If no public source URL supports the odds, source_urls must be [].\n- Do not invent odds.\n- Do not include markdown or commentary outside the JSON object."
+}

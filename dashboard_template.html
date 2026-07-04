@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Cup 2026 Betting Assistant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            page: "#FFFBF7",
+            sidebar: "#FFF6EA",
+            panel: "#FFFFFF",
+            line: "#EEDCC2",
+            orange: "#FF8A00",
+            ink: "#17202A"
+          },
+          boxShadow: {
+            soft: "0 10px 28px rgba(105, 70, 32, 0.08)"
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-page text-ink font-sans antialiased">
+  <div class="min-h-screen flex bg-page">
+    <!-- Sidebar -->
+    <aside class="w-[240px] min-w-[240px] min-h-screen bg-sidebar border-r border-line px-5 py-7 flex flex-col shadow-[8px_0_24px_rgba(105,70,32,0.05)]">
+      <div class="flex items-start gap-4 mb-10">
+        <i class="fa-solid fa-trophy text-orange text-5xl leading-none"></i>
+        <div>
+          <h1 class="text-2xl font-black leading-tight tracking-tight">WORLD CUP</h1>
+          <div class="text-2xl font-black leading-tight text-orange">2026</div>
+          <p class="mt-3 text-sm text-slate-700">Betting Assistant</p>
+        </div>
+      </div>
+
+      <nav class="space-y-3 text-[15px] font-semibold">
+        <a class="flex items-center gap-4 rounded-xl bg-[#FFF0D9] px-4 py-3 text-orange shadow-sm" href="#">
+          <i class="fa-solid fa-house w-5"></i><span>Today</span>
+        </a>
+        <a class="flex items-center gap-4 rounded-xl px-4 py-3 hover:bg-[#FFF0D9]" href="#">
+          <i class="fa-regular fa-futbol w-5"></i><span>Matches</span>
+        </a>
+        <a class="flex items-center gap-4 rounded-xl px-4 py-3 hover:bg-[#FFF0D9]" href="#">
+          <i class="fa-solid fa-trophy w-5"></i><span>Results</span>
+        </a>
+        <a class="flex items-center gap-4 rounded-xl px-4 py-3 hover:bg-[#FFF0D9]" href="#">
+          <i class="fa-solid fa-chart-column w-5"></i><span>Analysis</span>
+        </a>
+        <a class="flex items-center gap-4 rounded-xl px-4 py-3 hover:bg-[#FFF0D9]" href="#">
+          <i class="fa-regular fa-clipboard w-5"></i><span>Daily Brief</span>
+        </a>
+        <a class="flex items-center gap-4 rounded-xl px-4 py-3 hover:bg-[#FFF0D9]" href="#">
+          <i class="fa-solid fa-triangle-exclamation w-5"></i><span>High Risk</span>
+        </a>
+      </nav>
+
+      <div class="my-8 h-px bg-line"></div>
+
+      <nav class="space-y-3 text-[15px] font-semibold">
+        <a class="flex items-center gap-4 rounded-xl px-4 py-3 hover:bg-[#FFF0D9]" href="#">
+          <i class="fa-solid fa-gear w-5"></i><span>Settings</span>
+        </a>
+        <a class="flex items-center gap-4 rounded-xl px-4 py-3 hover:bg-[#FFF0D9]" href="#">
+          <i class="fa-regular fa-circle-info w-5"></i><span>About</span>
+        </a>
+      </nav>
+
+      <div class="mt-auto rounded-xl border border-line bg-[#FFF2DF] p-5 shadow-soft">
+        <div class="mb-4 text-xs uppercase tracking-wide text-[#704415]">Mode</div>
+        <div class="flex items-start gap-3 font-bold text-orange">
+          <i class="fa-regular fa-shield text-2xl"></i>
+          <div>
+            <div>NO-ODDS MODE</div>
+            <div class="mt-1 text-sm font-medium text-ink">(Safe Mode)</div>
+          </div>
+        </div>
+        <div class="my-4 h-px bg-line"></div>
+        <p class="text-sm leading-6 text-slate-700">
+          No odds available. Recommendations are based on model and risk analysis only.
+        </p>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto bg-page px-10 py-8 pr-12">
+      <header class="mb-7 flex items-center justify-between border-b border-line pb-7">
+        <div class="flex items-center gap-5">
+          <i class="fa-regular fa-calendar text-4xl text-orange"></i>
+          <div>
+            <h2 class="text-3xl font-black tracking-tight">TODAY</h2>
+            <p class="mt-2 text-slate-700">Tuesday, June 24, 2026</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-7 text-sm">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-sun text-2xl text-orange"></i>
+            <span class="font-semibold">28°C</span>
+          </div>
+          <div class="h-8 w-px bg-line"></div>
+          <div class="leading-5">
+            <div class="text-slate-700">Local Time</div>
+            <div class="font-semibold">08:52 PM</div>
+          </div>
+          <div class="h-8 w-px bg-line"></div>
+          <i class="fa-solid fa-rotate-right text-xl text-[#795128]"></i>
+        </div>
+      </header>
+
+      <section class="mb-7 grid grid-cols-7 gap-4">
+        <div class="flex items-center gap-4 rounded-xl border border-line bg-panel/85 p-5 shadow-soft">
+          <i class="fa-regular fa-calendar-check text-3xl text-blue-600"></i>
+          <div><div class="text-3xl font-black">4</div><div class="text-sm">Matches Today</div></div>
+        </div>
+        <div class="flex items-center gap-4 rounded-xl border border-line bg-panel/85 p-5 shadow-soft">
+          <i class="fa-solid fa-bullseye text-3xl text-green-600"></i>
+          <div><div class="text-3xl font-black text-green-700">0</div><div class="text-sm">BET</div></div>
+        </div>
+        <div class="flex items-center gap-4 rounded-xl border border-line bg-panel/85 p-5 shadow-soft">
+          <i class="fa-solid fa-arrow-trend-up text-3xl text-green-600"></i>
+          <div><div class="text-3xl font-black">1</div><div class="text-sm">SMALL BET</div></div>
+        </div>
+        <div class="flex items-center gap-4 rounded-xl border border-line bg-panel/85 p-5 shadow-soft">
+          <i class="fa-solid fa-eye text-3xl text-amber-500"></i>
+          <div><div class="text-3xl font-black text-orange">2</div><div class="text-sm">WATCH</div></div>
+        </div>
+        <div class="flex items-center gap-4 rounded-xl border border-line bg-panel/85 p-5 shadow-soft">
+          <i class="fa-solid fa-circle-minus text-3xl text-gray-500"></i>
+          <div><div class="text-3xl font-black">1</div><div class="text-sm">PASS</div></div>
+        </div>
+        <div class="flex items-center gap-4 rounded-xl border border-line bg-panel/85 p-5 shadow-soft">
+          <i class="fa-solid fa-triangle-exclamation text-3xl text-red-500"></i>
+          <div><div class="text-3xl font-black text-red-600">1</div><div class="text-sm">High Draw Risk</div></div>
+        </div>
+        <div class="flex items-center gap-4 rounded-xl border border-line bg-panel/85 p-5 shadow-soft">
+          <i class="fa-regular fa-shield text-3xl text-orange"></i>
+          <div><div class="text-3xl font-black text-orange">2</div><div class="text-sm">High Intel Risk</div></div>
+        </div>
+      </section>
+
+      <section class="relative mb-7 rounded-xl border border-[#F6E8D6] bg-white/75 p-7 shadow-soft">
+        <div class="mb-6 flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <i class="fa-regular fa-calendar-days text-2xl text-orange"></i>
+            <h3 class="text-2xl font-black">TODAY'S MATCHES</h3>
+          </div>
+          <button class="rounded-lg border border-line bg-white px-5 py-3 font-bold shadow-sm">
+            View All Matches <i class="fa-solid fa-chevron-right ml-3 text-sm"></i>
+          </button>
+        </div>
+        <button class="absolute left-[-18px] top-1/2 h-12 w-12 -translate-y-1/2 rounded-full bg-white text-xl shadow-soft">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="absolute right-[-18px] top-1/2 h-12 w-12 -translate-y-1/2 rounded-full bg-white text-xl shadow-soft">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div class="grid grid-cols-4 gap-6">
+          <article class="rounded-xl border border-line bg-white/90 p-5 text-center shadow-soft">
+            <div class="mb-7 flex justify-between text-xs font-bold text-[#B74D00]"><span>GROUP B</span><span class="text-ink">18:00</span></div>
+            <div class="grid grid-cols-[1fr_40px_1fr] items-start gap-3">
+              <div><img class="mx-auto h-10 w-14 rounded object-cover shadow" src="https://flagcdn.com/w80/ca.png" alt="Canada"><div class="mt-4 font-bold">Canada</div></div>
+              <div class="mt-4 font-black">VS</div>
+              <div><img class="mx-auto h-10 w-14 rounded object-cover shadow" src="https://flagcdn.com/w80/ba.png" alt="Bosnia"><div class="mt-4 font-bold leading-5">Bosnia &<br>Herzegovina</div></div>
+            </div>
+            <div class="mt-5"><span class="rounded-lg bg-[#FFE08B] px-6 py-2 font-black">WATCH</span></div>
+            <div class="mt-6 border-t border-line pt-4 text-sm leading-7">Draw Risk: <b class="text-orange">MEDIUM</b><br>Intel Risk: <b class="text-green-600">LOW</b></div>
+          </article>
+
+          <article class="rounded-xl border border-line bg-white/90 p-5 text-center shadow-soft">
+            <div class="mb-7 flex justify-between text-xs font-bold text-[#B74D00]"><span>GROUP D</span><span class="text-ink">21:00</span></div>
+            <div class="grid grid-cols-[1fr_40px_1fr] items-start gap-3">
+              <div><img class="mx-auto h-10 w-14 rounded object-cover shadow" src="https://flagcdn.com/w80/us.png" alt="United States"><div class="mt-4 font-bold">United States</div></div>
+              <div class="mt-4 font-black">VS</div>
+              <div><img class="mx-auto h-10 w-14 rounded object-cover shadow" src="https://flagcdn.com/w80/py.png" alt="Paraguay"><div class="mt-4 font-bold">Paraguay</div></div>
+            </div>
+            <div class="mt-5"><span class="rounded-lg bg-gray-200 px-6 py-2 font-black">PASS</span></div>
+            <div class="mt-6 border-t border-line pt-4 text-sm leading-7">Draw Risk: <b class="text-red-600">HIGH</b><br>Intel Risk: <b class="text-orange">MEDIUM</b></div>
+          </article>
+
+          <article class="rounded-xl border border-line bg-white/90 p-5 text-center shadow-soft">
+            <div class="mb-7 flex justify-between text-xs font-bold text-[#B74D00]"><span>GROUP C</span><span class="text-ink">00:00</span></div>
+            <div class="grid grid-cols-[1fr_40px_1fr] items-start gap-3">
+              <div><img class="mx-auto h-10 w-14 rounded object-cover shadow" src="https://flagcdn.com/w80/br.png" alt="Brazil"><div class="mt-4 font-bold">Brazil</div></div>
+              <div class="mt-4 font-black">VS</div>
+              <div><img class="mx-auto h-10 w-14 rounded object-cover shadow" src="https://flagcdn.com/w80/ma.png" alt="Morocco"><div class="mt-4 font-bold">Morocco</div></div>
+            </div>
+            <div class="mt-5"><span class="rounded-lg bg-[#FFE08B] px-6 py-2 font-black">WATCH</span></div>
+            <div class="mt-6 border-t border-line pt-4 text-sm leading-7">Draw Risk: <b class="text-orange">MEDIUM</b><br>Intel Risk: <b class="text-green-600">LOW</b></div>
+          </article>
+
+          <article class="rounded-xl border border-line bg-white/90 p-5 text-center shadow-soft">
+            <div class="mb-7 flex justify-between text-xs font-bold text-[#B74D00]"><span>GROUP D</span><span class="text-ink">03:00</span></div>
+            <div class="grid grid-cols-[1fr_40px_1fr] items-start gap-3">
+              <div><img class="mx-auto h-10 w-14 rounded object-cover shadow" src="https://flagcdn.com/w80/au.png" alt="Australia"><div class="mt-4 font-bold">Australia</div></div>
+              <div class="mt-4 font-black">VS</div>
+              <div><img class="mx-auto h-10 w-14 rounded object-cover shadow" src="https://flagcdn.com/w80/tr.png" alt="Turkey"><div class="mt-4 font-bold">Turkey</div></div>
+            </div>
+            <div class="mt-5"><span class="rounded-lg bg-gray-200 px-6 py-2 font-black">PASS</span></div>
+            <div class="mt-6 border-t border-line pt-4 text-sm leading-7">Draw Risk: <b class="text-red-600">HIGH</b><br>Intel Risk: <b class="text-orange">MEDIUM</b></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="relative mb-6 rounded-xl border border-[#F6E8D6] bg-white/75 p-7 shadow-soft">
+        <div class="mb-6 flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <i class="fa-solid fa-trophy text-2xl text-orange"></i>
+            <h3 class="text-2xl font-black">RECENT RESULTS</h3>
+          </div>
+          <button class="rounded-lg border border-line bg-white px-5 py-3 font-bold shadow-sm">
+            View All Results <i class="fa-solid fa-chevron-right ml-3 text-sm"></i>
+          </button>
+        </div>
+        <button class="absolute left-[-18px] top-1/2 h-12 w-12 -translate-y-1/2 rounded-full bg-white text-xl shadow-soft">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="absolute right-[-18px] top-1/2 h-12 w-12 -translate-y-1/2 rounded-full bg-white text-xl shadow-soft">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div class="grid grid-cols-4 gap-5">
+          <article class="overflow-hidden rounded-xl border border-line bg-white/90 text-center shadow-soft">
+            <div class="pt-5 text-sm text-[#704415]">Jun 23, 2026 • Group F</div>
+            <div class="grid grid-cols-[1fr_82px_1fr] items-center gap-3 px-6 py-6">
+              <div><img class="mx-auto h-9 w-12 rounded object-cover shadow" src="https://flagcdn.com/w80/jp.png" alt="Japan"><div class="mt-3 text-sm">Japan</div></div>
+              <div class="rounded-lg border border-green-300 bg-green-50 px-3 py-2 text-2xl font-black text-green-700">2 - 1</div>
+              <div><img class="mx-auto h-9 w-12 rounded object-cover shadow" src="https://flagcdn.com/w80/gh.png" alt="Ghana"><div class="mt-3 text-sm">Ghana</div></div>
+            </div>
+            <div class="border-t border-line py-4 font-semibold">View Analysis <i class="fa-solid fa-chevron-right ml-2 text-xs"></i></div>
+          </article>
+
+          <article class="overflow-hidden rounded-xl border border-line bg-white/90 text-center shadow-soft">
+            <div class="pt-5 text-sm text-[#704415]">Jun 23, 2026 • Group E</div>
+            <div class="grid grid-cols-[1fr_82px_1fr] items-center gap-3 px-6 py-6">
+              <div><img class="mx-auto h-9 w-12 rounded object-cover shadow" src="https://flagcdn.com/w80/de.png" alt="Germany"><div class="mt-3 text-sm">Germany</div></div>
+              <div class="rounded-lg border border-orange-200 bg-orange-50 px-3 py-2 text-2xl font-black text-[#795128]">1 - 0</div>
+              <div><img class="mx-auto h-9 w-12 rounded object-cover shadow" src="https://flagcdn.com/w80/cw.png" alt="Curacao"><div class="mt-3 text-sm">Curaçao</div></div>
+            </div>
+            <div class="border-t border-line py-4 font-semibold">View Analysis <i class="fa-solid fa-chevron-right ml-2 text-xs"></i></div>
+          </article>
+
+          <article class="overflow-hidden rounded-xl border border-line bg-white/90 text-center shadow-soft">
+            <div class="pt-5 text-sm text-[#704415]">Jun 22, 2026 • Group A</div>
+            <div class="grid grid-cols-[1fr_82px_1fr] items-center gap-3 px-6 py-6">
+              <div><img class="mx-auto h-9 w-12 rounded object-cover shadow" src="https://flagcdn.com/w80/mx.png" alt="Mexico"><div class="mt-3 text-sm">Mexico</div></div>
+              <div class="rounded-lg border border-green-300 bg-green-50 px-3 py-2 text-2xl font-black text-green-700">1 - 1</div>
+              <div><img class="mx-auto h-9 w-12 rounded object-cover shadow" src="https://flagcdn.com/w80/za.png" alt="South Africa"><div class="mt-3 text-sm">South Africa</div></div>
+            </div>
+            <div class="border-t border-line py-4 font-semibold">View Analysis <i class="fa-solid fa-chevron-right ml-2 text-xs"></i></div>
+          </article>
+
+          <article class="overflow-hidden rounded-xl border border-line bg-white/90 text-center shadow-soft">
+            <div class="pt-5 text-sm text-[#704415]">Jun 22, 2026 • Group B</div>
+            <div class="grid grid-cols-[1fr_82px_1fr] items-center gap-3 px-6 py-6">
+              <div><img class="mx-auto h-9 w-12 rounded object-cover shadow" src="https://flagcdn.com/w80/ch.png" alt="Switzerland"><div class="mt-3 text-sm">Switzerland</div></div>
+              <div class="rounded-lg border border-green-300 bg-green-50 px-3 py-2 text-2xl font-black text-green-700">0 - 0</div>
+              <div><img class="mx-auto h-9 w-12 rounded object-cover shadow" src="https://flagcdn.com/w80/qa.png" alt="Qatar"><div class="mt-3 text-sm">Qatar</div></div>
+            </div>
+            <div class="border-t border-line py-4 font-semibold">View Analysis <i class="fa-solid fa-chevron-right ml-2 text-xs"></i></div>
+          </article>
+        </div>
+      </section>
+
+      <footer class="pb-4 text-center text-sm text-slate-700">
+        <i class="fa-solid fa-chart-simple mr-3 text-orange"></i>
+        Model: Poisson + WDL&nbsp;&nbsp; • &nbsp;&nbsp;Risk: Draw Risk + League Reference + Intel
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

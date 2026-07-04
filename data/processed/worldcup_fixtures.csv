@@ -1,0 +1,104 @@
+date,group,stage,round,match_id,home_team,away_team,home_slot,away_slot,neutral_venue,status,source,source_url,fetched_at,home_goals,away_goals,aet,penalties_home,penalties_away,winner,source_event_date,source_event_id
+2026-06-11,A,Group Stage,Group Stage,,Mexico,South Africa,,,True,scheduled,,,,,,,,,,,
+2026-06-11,A,Group Stage,Group Stage,,South Korea,Czech Republic,,,True,scheduled,,,,,,,,,,,
+2026-06-12,B,Group Stage,Group Stage,,Canada,Bosnia and Herzegovina,,,True,scheduled,,,,,,,,,,,
+2026-06-12,D,Group Stage,Group Stage,,United States,Paraguay,,,True,scheduled,,,,,,,,,,,
+2026-06-13,B,Group Stage,Group Stage,,Qatar,Switzerland,,,True,scheduled,,,,,,,,,,,
+2026-06-13,C,Group Stage,Group Stage,,Brazil,Morocco,,,True,scheduled,,,,,,,,,,,
+2026-06-13,C,Group Stage,Group Stage,,Haiti,Scotland,,,True,scheduled,,,,,,,,,,,
+2026-06-13,D,Group Stage,Group Stage,,Australia,Turkey,,,True,scheduled,,,,,,,,,,,
+2026-06-14,E,Group Stage,Group Stage,,Germany,Curaçao,,,True,scheduled,,,,,,,,,,,
+2026-06-14,E,Group Stage,Group Stage,,Ivory Coast,Ecuador,,,True,scheduled,,,,,,,,,,,
+2026-06-14,F,Group Stage,Group Stage,,Netherlands,Japan,,,True,scheduled,,,,,,,,,,,
+2026-06-14,F,Group Stage,Group Stage,,Sweden,Tunisia,,,True,scheduled,,,,,,,,,,,
+2026-06-15,G,Group Stage,Group Stage,,Belgium,Egypt,,,True,scheduled,,,,,,,,,,,
+2026-06-15,G,Group Stage,Group Stage,,Iran,New Zealand,,,True,scheduled,,,,,,,,,,,
+2026-06-15,H,Group Stage,Group Stage,,Saudi Arabia,Uruguay,,,True,scheduled,,,,,,,,,,,
+2026-06-15,H,Group Stage,Group Stage,,Spain,Cape Verde,,,True,scheduled,,,,,,,,,,,
+2026-06-16,I,Group Stage,Group Stage,,France,Senegal,,,True,scheduled,,,,,,,,,,,
+2026-06-16,I,Group Stage,Group Stage,,Iraq,Norway,,,True,scheduled,,,,,,,,,,,
+2026-06-16,J,Group Stage,Group Stage,,Argentina,Algeria,,,True,scheduled,,,,,,,,,,,
+2026-06-16,J,Group Stage,Group Stage,,Austria,Jordan,,,True,scheduled,,,,,,,,,,,
+2026-06-17,K,Group Stage,Group Stage,,Portugal,DR Congo,,,True,scheduled,,,,,,,,,,,
+2026-06-17,K,Group Stage,Group Stage,,Uzbekistan,Colombia,,,True,scheduled,,,,,,,,,,,
+2026-06-17,L,Group Stage,Group Stage,,England,Croatia,,,True,scheduled,,,,,,,,,,,
+2026-06-17,L,Group Stage,Group Stage,,Ghana,Panama,,,True,scheduled,,,,,,,,,,,
+2026-06-18,A,Group Stage,Group Stage,,Czech Republic,South Africa,,,True,scheduled,,,,,,,,,,,
+2026-06-18,A,Group Stage,Group Stage,,Mexico,South Korea,,,True,scheduled,,,,,,,,,,,
+2026-06-18,B,Group Stage,Group Stage,,Canada,Qatar,,,True,scheduled,,,,,,,,,,,
+2026-06-18,B,Group Stage,Group Stage,,Switzerland,Bosnia and Herzegovina,,,True,scheduled,,,,,,,,,,,
+2026-06-19,C,Group Stage,Group Stage,,Brazil,Haiti,,,True,scheduled,,,,,,,,,,,
+2026-06-19,C,Group Stage,Group Stage,,Scotland,Morocco,,,True,scheduled,,,,,,,,,,,
+2026-06-19,D,Group Stage,Group Stage,,Turkey,Paraguay,,,True,scheduled,,,,,,,,,,,
+2026-06-19,D,Group Stage,Group Stage,,United States,Australia,,,True,scheduled,,,,,,,,,,,
+2026-06-20,E,Group Stage,Group Stage,,Ecuador,Curaçao,,,True,scheduled,,,,,,,,,,,
+2026-06-20,E,Group Stage,Group Stage,,Germany,Ivory Coast,,,True,scheduled,,,,,,,,,,,
+2026-06-20,F,Group Stage,Group Stage,,Netherlands,Sweden,,,True,scheduled,,,,,,,,,,,
+2026-06-20,F,Group Stage,Group Stage,,Tunisia,Japan,,,True,scheduled,,,,,,,,,,,
+2026-06-21,G,Group Stage,Group Stage,,Belgium,Iran,,,True,scheduled,,,,,,,,,,,
+2026-06-21,G,Group Stage,Group Stage,,New Zealand,Egypt,,,True,scheduled,,,,,,,,,,,
+2026-06-21,H,Group Stage,Group Stage,,Spain,Saudi Arabia,,,True,scheduled,,,,,,,,,,,
+2026-06-21,H,Group Stage,Group Stage,,Uruguay,Cape Verde,,,True,scheduled,,,,,,,,,,,
+2026-06-22,I,Group Stage,Group Stage,,France,Iraq,,,True,scheduled,,,,,,,,,,,
+2026-06-22,I,Group Stage,Group Stage,,Norway,Senegal,,,True,scheduled,,,,,,,,,,,
+2026-06-22,J,Group Stage,Group Stage,,Argentina,Austria,,,True,scheduled,,,,,,,,,,,
+2026-06-22,J,Group Stage,Group Stage,,Jordan,Algeria,,,True,scheduled,,,,,,,,,,,
+2026-06-23,K,Group Stage,Group Stage,,Colombia,DR Congo,,,True,scheduled,,,,,,,,,,,
+2026-06-23,K,Group Stage,Group Stage,,Portugal,Uzbekistan,,,True,scheduled,,,,,,,,,,,
+2026-06-23,L,Group Stage,Group Stage,,England,Ghana,,,True,scheduled,,,,,,,,,,,
+2026-06-23,L,Group Stage,Group Stage,,Panama,Croatia,,,True,scheduled,,,,,,,,,,,
+2026-06-24,A,Group Stage,Group Stage,,Czech Republic,Mexico,,,True,scheduled,,,,,,,,,,,
+2026-06-24,A,Group Stage,Group Stage,,South Africa,South Korea,,,True,scheduled,,,,,,,,,,,
+2026-06-24,B,Group Stage,Group Stage,,Bosnia and Herzegovina,Qatar,,,True,scheduled,,,,,,,,,,,
+2026-06-24,B,Group Stage,Group Stage,,Switzerland,Canada,,,True,scheduled,,,,,,,,,,,
+2026-06-24,C,Group Stage,Group Stage,,Morocco,Haiti,,,True,scheduled,,,,,,,,,,,
+2026-06-24,C,Group Stage,Group Stage,,Scotland,Brazil,,,True,scheduled,,,,,,,,,,,
+2026-06-25,D,Group Stage,Group Stage,,Paraguay,Australia,,,True,scheduled,,,,,,,,,,,
+2026-06-25,D,Group Stage,Group Stage,,Turkey,United States,,,True,scheduled,,,,,,,,,,,
+2026-06-25,E,Group Stage,Group Stage,,Curaçao,Ivory Coast,,,True,scheduled,,,,,,,,,,,
+2026-06-25,E,Group Stage,Group Stage,,Ecuador,Germany,,,True,scheduled,,,,,,,,,,,
+2026-06-25,F,Group Stage,Group Stage,,Japan,Sweden,,,True,scheduled,,,,,,,,,,,
+2026-06-25,F,Group Stage,Group Stage,,Tunisia,Netherlands,,,True,scheduled,,,,,,,,,,,
+2026-06-26,G,Group Stage,Group Stage,,Egypt,Iran,,,True,scheduled,,,,,,,,,,,
+2026-06-26,G,Group Stage,Group Stage,,New Zealand,Belgium,,,True,scheduled,,,,,,,,,,,
+2026-06-26,H,Group Stage,Group Stage,,Cape Verde,Saudi Arabia,,,True,scheduled,,,,,,,,,,,
+2026-06-26,H,Group Stage,Group Stage,,Uruguay,Spain,,,True,scheduled,,,,,,,,,,,
+2026-06-26,I,Group Stage,Group Stage,,Norway,France,,,True,scheduled,,,,,,,,,,,
+2026-06-26,I,Group Stage,Group Stage,,Senegal,Iraq,,,True,scheduled,,,,,,,,,,,
+2026-06-27,J,Group Stage,Group Stage,,Algeria,Austria,,,True,scheduled,,,,,,,,,,,
+2026-06-27,J,Group Stage,Group Stage,,Jordan,Argentina,,,True,scheduled,,,,,,,,,,,
+2026-06-27,K,Group Stage,Group Stage,,Colombia,Portugal,,,True,scheduled,,,,,,,,,,,
+2026-06-27,K,Group Stage,Group Stage,,DR Congo,Uzbekistan,,,True,scheduled,,,,,,,,,,,
+2026-06-27,L,Group Stage,Group Stage,,Croatia,Ghana,,,True,scheduled,,,,,,,,,,,
+2026-06-27,L,Group Stage,Group Stage,,Panama,England,,,True,scheduled,,,,,,,,,,,
+2026-06-28,,Round of 32,Round of 32,R32_01,South Africa,Canada,2nd Group A,2nd Group B,True,completed,espn,https://www.espn.com/soccer/match/_/gameId/760486/canada-south-africa,2026-07-04T08:25:18+00:00,0.0,1.0,False,,,Canada,2026-06-28 19:00:00+00:00,760486
+2026-06-29,,Round of 32,Round of 32,R32_02,Brazil,Japan,1st Group C,3rd Group D/E/F,True,completed,espn,https://www.espn.com/soccer/match/_/gameId/760487/japan-brazil,2026-07-04T08:25:18+00:00,2.0,1.0,False,,,Brazil,2026-06-29 17:00:00+00:00,760487
+2026-06-29,,Round of 32,Round of 32,R32_03,Germany,Paraguay,1st Group E,3rd Group A/B/C/D,True,completed,espn,https://www.espn.com/soccer/match/_/gameId/760489/paraguay-germany,2026-07-04T08:25:18+00:00,1.0,1.0,False,3,4,Paraguay,2026-06-29 20:30:00+00:00,760489
+2026-06-30,,Round of 32,Round of 32,R32_04,Netherlands,Morocco,1st Group I,3rd Group C/D/F/G/H,True,completed,espn,https://www.espn.com/soccer/match/_/gameId/760488/morocco-netherlands,2026-07-04T08:25:18+00:00,1.0,1.0,False,2,3,Morocco,2026-06-30 01:00:00+00:00,760488
+2026-06-30,,Round of 32,Round of 32,R32_05,Ivory Coast,Norway,1st Group A,3rd Group C/E/F/H/I,True,completed,espn,https://www.espn.com/soccer/match/_/gameId/760490/norway-ivory-coast,2026-07-04T08:25:18+00:00,1.0,2.0,False,,,Norway,2026-06-30 17:00:00+00:00,760490
+2026-06-30,,Round of 32,Round of 32,R32_06,France,Sweden,2nd Group E,2nd Group I,True,completed,espn,https://www.espn.com/soccer/match/_/gameId/760492/sweden-france,2026-07-04T08:25:18+00:00,3.0,0.0,False,,,France,2026-06-30 21:00:00+00:00,760492
+2026-07-01,,Round of 32,Round of 32,R32_07,Mexico,Ecuador,1st Group G,3rd Group A/E/H/I/J,True,completed,espn,https://www.espn.com/soccer/match/_/gameId/760491/ecuador-mexico,2026-07-04T08:25:18+00:00,2.0,0.0,False,,,Mexico,2026-07-01 02:00:00+00:00,760491
+2026-07-01,,Round of 32,Round of 32,R32_08,England,Congo DR,2nd Group C,2nd Group F,True,completed,espn,https://www.espn.com/soccer/match/_/gameId/760495/congo-dr-england,2026-07-04T08:25:18+00:00,2.0,1.0,False,,,England,2026-07-01 16:00:00+00:00,760495
+2026-07-01,,Round of 32,Round of 32,R32_09,Belgium,Senegal,1st Group B,3rd Group E/F/G/I/J,True,completed,espn,https://www.espn.com/soccer/match/_/gameId/760493/senegal-belgium,2026-07-04T08:25:18+00:00,3.0,2.0,True,,,Belgium,2026-07-01 20:00:00+00:00,760493
+2026-07-02,,Round of 32,Round of 32,R32_10,United States,Bosnia-Herzegovina,1st Group F,2nd Group L,True,completed,espn,https://www.espn.com/soccer/match/_/gameId/760494/bosnia-herzegovina-united-states,2026-07-04T08:25:18+00:00,2.0,0.0,False,,,United States,2026-07-02 00:00:00+00:00,760494
+2026-07-02,,Round of 32,Round of 32,R32_11,Spain,Austria,1st Group D,2nd Group K,True,completed,espn,https://www.espn.com/soccer/match/_/gameId/760497/austria-spain,2026-07-04T08:25:18+00:00,3.0,0.0,False,,,Spain,2026-07-02 19:00:00+00:00,760497
+2026-07-02,,Round of 32,Round of 32,R32_12,Portugal,Croatia,1st Group H,2nd Group J,True,completed,espn,https://www.espn.com/soccer/match/_/gameId/760496/croatia-portugal,2026-07-04T08:25:18+00:00,2.0,1.0,False,,,Portugal,2026-07-02 23:00:00+00:00,760496
+2026-07-03,,Round of 32,Round of 32,R32_13,Switzerland,Algeria,1st Group J,2nd Group H,True,completed,espn,https://www.espn.com/soccer/match/_/gameId/760498/algeria-switzerland,2026-07-04T08:25:18+00:00,2.0,0.0,False,,,Switzerland,2026-07-03 03:00:00+00:00,760498
+2026-07-03,,Round of 32,Round of 32,R32_14,Australia,Egypt,1st Group K,3rd Group B/C/D/F/G,True,completed,espn,https://www.espn.com/soccer/match/_/gameId/760499/egypt-australia,2026-07-04T08:25:18+00:00,1.0,1.0,False,2,4,Egypt,2026-07-03 18:00:00+00:00,760499
+2026-07-03,,Round of 32,Round of 32,R32_15,Argentina,Cape Verde,1st Group L,3rd Group E/H/I/J/K,True,completed,espn,https://www.espn.com/soccer/match/_/gameId/760500/cape-verde-argentina,2026-07-04T08:25:18+00:00,3.0,2.0,True,,,Argentina,2026-07-03 22:00:00+00:00,760500
+2026-07-04,,Round of 16,Round of 16,R16_01,Canada,Morocco,Winner R32_01,Winner R32_02,True,scheduled,espn,https://www.espn.com/soccer/match/_/gameId/760502/morocco-canada,2026-07-04T08:25:18+00:00,,,,,,,2026-07-04 17:00:00+00:00,760502
+2026-07-04,,Round of 16,Round of 16,R16_02,Paraguay,France,Winner R32_03,Winner R32_04,True,scheduled,espn,https://www.espn.com/soccer/match/_/gameId/760503/france-paraguay,2026-07-04T08:25:18+00:00,,,,,,,2026-07-04 21:00:00+00:00,760503
+2026-07-04,,Round of 32,Round of 32,R32_16,Colombia,Ghana,2nd Group D,2nd Group G,True,completed,espn,https://www.espn.com/soccer/match/_/gameId/760501/ghana-colombia,2026-07-04T08:25:18+00:00,1.0,0.0,False,,,Colombia,2026-07-04 01:30:00+00:00,760501
+2026-07-05,,Round of 16,Round of 16,R16_03,Brazil,Norway,Winner R32_05,Winner R32_06,True,scheduled,espn,https://www.espn.com/soccer/match/_/gameId/760504/norway-brazil,2026-07-04T08:25:18+00:00,,,,,,,2026-07-05 20:00:00+00:00,760504
+2026-07-06,,Round of 16,Round of 16,R16_04,Mexico,England,Winner R32_07,Winner R32_08,True,scheduled,espn,https://www.espn.com/soccer/match/_/gameId/760505/england-mexico,2026-07-04T08:25:18+00:00,,,,,,,2026-07-06 00:00:00+00:00,760505
+2026-07-06,,Round of 16,Round of 16,R16_05,Portugal,Spain,Winner R32_09,Winner R32_10,True,scheduled,espn,https://www.espn.com/soccer/match/_/gameId/760506/spain-portugal,2026-07-04T08:25:18+00:00,,,,,,,2026-07-06 19:00:00+00:00,760506
+2026-07-07,,Round of 16,Round of 16,R16_06,United States,Belgium,Winner R32_11,Winner R32_12,True,scheduled,espn,https://www.espn.com/soccer/match/_/gameId/760507/belgium-united-states,2026-07-04T08:25:18+00:00,,,,,,,2026-07-07 00:00:00+00:00,760507
+2026-07-07,,Round of 16,Round of 16,R16_07,Argentina,Egypt,Winner R32_13,Winner R32_14,True,scheduled,espn,https://www.espn.com/soccer/match/_/gameId/760509/egypt-argentina,2026-07-04T08:25:18+00:00,,,,,,,2026-07-07 16:00:00+00:00,760509
+2026-07-07,,Round of 16,Round of 16,R16_08,Switzerland,Colombia,Winner R32_15,Winner R32_16,True,scheduled,espn,https://www.espn.com/soccer/match/_/gameId/760508/colombia-switzerland,2026-07-04T08:25:18+00:00,,,,,,,2026-07-07 20:00:00+00:00,760508
+2026-07-11,,Quarter Final,Quarter Final,QF_01,TBD,TBD,Winner R16_01,Winner R16_02,True,waiting_for_teams,static_slot_fallback,,2026-07-04T08:25:18+00:00,,,,,,,,
+2026-07-11,,Quarter Final,Quarter Final,QF_02,TBD,TBD,Winner R16_03,Winner R16_04,True,waiting_for_teams,static_slot_fallback,,2026-07-04T08:25:18+00:00,,,,,,,,
+2026-07-12,,Quarter Final,Quarter Final,QF_03,TBD,TBD,Winner R16_05,Winner R16_06,True,waiting_for_teams,static_slot_fallback,,2026-07-04T08:25:18+00:00,,,,,,,,
+2026-07-12,,Quarter Final,Quarter Final,QF_04,TBD,TBD,Winner R16_07,Winner R16_08,True,waiting_for_teams,static_slot_fallback,,2026-07-04T08:25:18+00:00,,,,,,,,
+2026-07-14,,Semi Final,Semi Final,SF_01,TBD,TBD,Winner QF_01,Winner QF_02,True,waiting_for_teams,static_slot_fallback,,2026-07-04T08:25:18+00:00,,,,,,,,
+2026-07-15,,Semi Final,Semi Final,SF_02,TBD,TBD,Winner QF_03,Winner QF_04,True,waiting_for_teams,static_slot_fallback,,2026-07-04T08:25:18+00:00,,,,,,,,
+2026-07-19,,Final,Final,FINAL,TBD,TBD,Winner SF_01,Winner SF_02,True,waiting_for_teams,static_slot_fallback,,2026-07-04T08:25:18+00:00,,,,,,,,

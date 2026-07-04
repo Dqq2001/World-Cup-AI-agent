@@ -1,0 +1,97 @@
+date,group,stage,round,match_id,home_team,away_team,home_slot,away_slot,status,model_H,model_D,model_A
+2026-06-11,A,Group Stage,Group Stage,,Mexico,South Africa,,,scheduled,0.66001904,0.21998835,0.11999266
+2026-06-11,A,Group Stage,Group Stage,,South Korea,Czech Republic,,,scheduled,0.46048042,0.26607364,0.2734459
+2026-06-12,B,Group Stage,Group Stage,,Canada,Bosnia and Herzegovina,,,scheduled,0.62612885,0.25730783,0.116563305
+2026-06-12,D,Group Stage,Group Stage,,United States,Paraguay,,,scheduled,0.37255862,0.27175266,0.35568875
+2026-06-13,B,Group Stage,Group Stage,,Qatar,Switzerland,,,scheduled,0.156717,0.20612063,0.6371623
+2026-06-13,C,Group Stage,Group Stage,,Brazil,Morocco,,,scheduled,0.42932048,0.20259114,0.36808836
+2026-06-13,C,Group Stage,Group Stage,,Haiti,Scotland,,,scheduled,0.20519617,0.28465205,0.51015174
+2026-06-13,D,Group Stage,Group Stage,,Australia,Turkey,,,scheduled,0.29223678,0.2860963,0.42166692
+2026-06-14,F,Group Stage,Group Stage,,Sweden,Tunisia,,,scheduled,0.48488995,0.24602558,0.26908448
+2026-06-14,F,Group Stage,Group Stage,,Netherlands,Japan,,,scheduled,0.31673253,0.2943622,0.38890523
+2026-06-14,E,Group Stage,Group Stage,,Germany,Curaçao,,,scheduled,0.8827513,0.0703387,0.046910025
+2026-06-14,E,Group Stage,Group Stage,,Ivory Coast,Ecuador,,,scheduled,0.2459828,0.25135905,0.5026581
+2026-06-15,G,Group Stage,Group Stage,,Belgium,Egypt,,,scheduled,0.70668995,0.15108432,0.14222576
+2026-06-15,G,Group Stage,Group Stage,,Iran,New Zealand,,,scheduled,0.6955699,0.18393739,0.12049277
+2026-06-15,H,Group Stage,Group Stage,,Saudi Arabia,Uruguay,,,scheduled,0.18908341,0.22688821,0.58402836
+2026-06-15,H,Group Stage,Group Stage,,Spain,Cape Verde,,,scheduled,0.79925394,0.16223028,0.038515788
+2026-06-16,J,Group Stage,Group Stage,,Austria,Jordan,,,scheduled,0.6819991,0.15753415,0.16046676
+2026-06-16,I,Group Stage,Group Stage,,France,Senegal,,,scheduled,0.6348496,0.224958,0.14019239
+2026-06-16,I,Group Stage,Group Stage,,Iraq,Norway,,,scheduled,0.24993375,0.27279097,0.4772753
+2026-06-16,J,Group Stage,Group Stage,,Argentina,Algeria,,,scheduled,0.7074825,0.18031676,0.11220075
+2026-06-17,L,Group Stage,Group Stage,,Ghana,Panama,,,scheduled,0.18803729,0.23092698,0.58103573
+2026-06-17,L,Group Stage,Group Stage,,England,Croatia,,,scheduled,0.42285195,0.2867431,0.29040495
+2026-06-17,K,Group Stage,Group Stage,,Portugal,DR Congo,,,scheduled,0.7603564,0.15434608,0.085297465
+2026-06-17,K,Group Stage,Group Stage,,Uzbekistan,Colombia,,,scheduled,0.16075358,0.22562775,0.6136187
+2026-06-18,A,Group Stage,Group Stage,,Czech Republic,South Africa,,,scheduled,0.5642468,0.23354296,0.20221026
+2026-06-18,A,Group Stage,Group Stage,,Mexico,South Korea,,,scheduled,0.4431234,0.250827,0.3060496
+2026-06-18,B,Group Stage,Group Stage,,Canada,Qatar,,,scheduled,0.603648,0.25676343,0.13958852
+2026-06-18,B,Group Stage,Group Stage,,Switzerland,Bosnia and Herzegovina,,,scheduled,0.61159676,0.2696586,0.118744604
+2026-06-19,D,Group Stage,Group Stage,,United States,Australia,,,scheduled,0.3030323,0.2581637,0.43880394
+2026-06-19,C,Group Stage,Group Stage,,Brazil,Haiti,,,scheduled,0.78156555,0.16679703,0.05163744
+2026-06-19,C,Group Stage,Group Stage,,Scotland,Morocco,,,scheduled,0.19037907,0.22823794,0.581383
+2026-06-19,D,Group Stage,Group Stage,,Turkey,Paraguay,,,scheduled,0.4162767,0.28664762,0.29707572
+2026-06-20,F,Group Stage,Group Stage,,Tunisia,Japan,,,scheduled,0.10560901,0.14855823,0.7458328
+2026-06-20,F,Group Stage,Group Stage,,Netherlands,Sweden,,,scheduled,0.55327386,0.26113647,0.18558964
+2026-06-20,E,Group Stage,Group Stage,,Germany,Ivory Coast,,,scheduled,0.72241426,0.11524528,0.16234048
+2026-06-20,E,Group Stage,Group Stage,,Ecuador,Curaçao,,,scheduled,0.8783612,0.09950688,0.02213187
+2026-06-21,H,Group Stage,Group Stage,,Uruguay,Cape Verde,,,scheduled,0.6523479,0.22963311,0.11801897
+2026-06-21,G,Group Stage,Group Stage,,Belgium,Iran,,,scheduled,0.52322245,0.20462066,0.27215692
+2026-06-21,G,Group Stage,Group Stage,,New Zealand,Egypt,,,scheduled,0.18799026,0.25152233,0.5604874
+2026-06-21,H,Group Stage,Group Stage,,Spain,Saudi Arabia,,,scheduled,0.76801705,0.19406718,0.03791577
+2026-06-22,J,Group Stage,Group Stage,,Argentina,Austria,,,scheduled,0.7386401,0.15415384,0.10720603
+2026-06-22,J,Group Stage,Group Stage,,Jordan,Algeria,,,scheduled,0.14156543,0.19921724,0.65921736
+2026-06-22,I,Group Stage,Group Stage,,France,Iraq,,,scheduled,0.70403427,0.20144206,0.09452362
+2026-06-22,I,Group Stage,Group Stage,,Norway,Senegal,,,scheduled,0.337599,0.26267156,0.39972946
+2026-06-23,L,Group Stage,Group Stage,,England,Ghana,,,scheduled,0.7822142,0.18044856,0.037337214
+2026-06-23,L,Group Stage,Group Stage,,Panama,Croatia,,,scheduled,0.18473788,0.23846447,0.57679766
+2026-06-23,K,Group Stage,Group Stage,,Colombia,DR Congo,,,scheduled,0.68684745,0.19897701,0.11417555
+2026-06-23,K,Group Stage,Group Stage,,Portugal,Uzbekistan,,,scheduled,0.6005076,0.2681529,0.13133952
+2026-06-24,A,Group Stage,Group Stage,,Czech Republic,Mexico,,,scheduled,0.18528312,0.24190883,0.572808
+2026-06-24,A,Group Stage,Group Stage,,South Africa,South Korea,,,scheduled,0.17887542,0.22362047,0.59750414
+2026-06-24,B,Group Stage,Group Stage,,Bosnia and Herzegovina,Qatar,,,scheduled,0.4793028,0.24592203,0.27477515
+2026-06-24,B,Group Stage,Group Stage,,Switzerland,Canada,,,scheduled,0.44054502,0.25269428,0.30676076
+2026-06-24,C,Group Stage,Group Stage,,Morocco,Haiti,,,scheduled,0.7737599,0.175519,0.050721135
+2026-06-24,C,Group Stage,Group Stage,,Scotland,Brazil,,,scheduled,0.16432859,0.07264482,0.76302665
+2026-06-25,F,Group Stage,Group Stage,,Tunisia,Netherlands,,,scheduled,0.095077105,0.12988928,0.7750336
+2026-06-25,F,Group Stage,Group Stage,,Japan,Sweden,,,scheduled,0.67142254,0.17606805,0.15250939
+2026-06-25,E,Group Stage,Group Stage,,Ecuador,Germany,,,scheduled,0.22449899,0.17155522,0.6039458
+2026-06-25,E,Group Stage,Group Stage,,Curaçao,Ivory Coast,,,scheduled,0.07620531,0.124854416,0.79894024
+2026-06-25,D,Group Stage,Group Stage,,Paraguay,Australia,,,scheduled,0.2787998,0.28591555,0.43528467
+2026-06-25,D,Group Stage,Group Stage,,Turkey,United States,,,scheduled,0.3314772,0.27121928,0.39730358
+2026-06-26,G,Group Stage,Group Stage,,Egypt,Iran,,,scheduled,0.2671413,0.2579066,0.4749521
+2026-06-26,G,Group Stage,Group Stage,,New Zealand,Belgium,,,scheduled,0.0990083,0.14917015,0.7518216
+2026-06-26,H,Group Stage,Group Stage,,Cape Verde,Saudi Arabia,,,scheduled,0.3070691,0.28885338,0.40407747
+2026-06-26,H,Group Stage,Group Stage,,Uruguay,Spain,,,scheduled,0.15833081,0.19211283,0.64955634
+2026-06-26,I,Group Stage,Group Stage,,Norway,France,,,scheduled,0.18811889,0.15425637,0.6576247
+2026-06-26,I,Group Stage,Group Stage,,Senegal,Iraq,,,scheduled,0.49384168,0.31928614,0.18687214
+2026-06-27,L,Group Stage,Group Stage,,Panama,England,,,scheduled,0.08970978,0.07449458,0.8357957
+2026-06-27,K,Group Stage,Group Stage,,DR Congo,Uzbekistan,,,scheduled,0.29804468,0.2707831,0.43117222
+2026-06-27,L,Group Stage,Group Stage,,Croatia,Ghana,,,scheduled,0.6439074,0.23201688,0.12407569
+2026-06-27,J,Group Stage,Group Stage,,Jordan,Argentina,,,scheduled,0.038131498,0.047016826,0.91485167
+2026-06-27,J,Group Stage,Group Stage,,Algeria,Austria,,,scheduled,0.40820956,0.23122248,0.36056793
+2026-06-27,K,Group Stage,Group Stage,,Colombia,Portugal,,,scheduled,0.3248036,0.17663722,0.49855918
+2026-06-28,,Round of 32,Round of 32,R32_01,South Africa,Canada,2nd Group A,2nd Group B,completed,0.19165716,0.25772458,0.55061823
+2026-06-29,,Round of 32,Round of 32,R32_02,Brazil,Japan,1st Group C,3rd Group D/E/F,completed,0.42499804,0.17259838,0.40240356
+2026-06-29,,Round of 32,Round of 32,R32_03,Germany,Paraguay,1st Group E,3rd Group A/B/C/D,completed,0.7763255,0.12115144,0.10252304
+2026-06-30,,Round of 32,Round of 32,R32_06,France,Sweden,2nd Group E,2nd Group I,completed,0.75472546,0.1373785,0.10789609
+2026-06-30,,Round of 32,Round of 32,R32_05,Ivory Coast,Norway,1st Group A,3rd Group C/E/F/H/I,completed,0.3021716,0.2859417,0.41188678
+2026-06-30,,Round of 32,Round of 32,R32_04,Netherlands,Morocco,1st Group I,3rd Group C/D/F/G/H,completed,0.36842105,0.22232807,0.40925094
+2026-07-01,,Round of 32,Round of 32,R32_09,Belgium,Senegal,1st Group B,3rd Group E/F/G/I/J,completed,0.5367074,0.23238437,0.2309082
+2026-07-01,,Round of 32,Round of 32,R32_08,England,Congo DR,2nd Group C,2nd Group F,completed,0.89910275,0.072271906,0.028625289
+2026-07-01,,Round of 32,Round of 32,R32_07,Mexico,Ecuador,1st Group G,3rd Group A/E/H/I/J,completed,0.435074,0.2806173,0.28430867
+2026-07-02,,Round of 32,Round of 32,R32_10,United States,Bosnia-Herzegovina,1st Group F,2nd Group L,completed,0.8830728,0.086352035,0.030575138
+2026-07-02,,Round of 32,Round of 32,R32_11,Spain,Austria,1st Group D,2nd Group K,completed,0.5664451,0.263786,0.16976888
+2026-07-02,,Round of 32,Round of 32,R32_12,Portugal,Croatia,1st Group H,2nd Group J,completed,0.43742204,0.3072208,0.25535715
+2026-07-03,,Round of 32,Round of 32,R32_15,Argentina,Cape Verde,1st Group L,3rd Group E/H/I/J/K,completed,0.8241648,0.12917376,0.04666151
+2026-07-03,,Round of 32,Round of 32,R32_14,Australia,Egypt,1st Group K,3rd Group B/C/D/F/G,completed,0.3788234,0.32277268,0.29840395
+2026-07-03,,Round of 32,Round of 32,R32_13,Switzerland,Algeria,1st Group J,2nd Group H,completed,0.3976419,0.225518,0.37684008
+2026-07-04,,Round of 16,Round of 16,R16_01,Canada,Morocco,Winner R32_01,Winner R32_02,scheduled,0.22068004,0.2280419,0.5512781
+2026-07-04,,Round of 16,Round of 16,R16_02,Paraguay,France,Winner R32_03,Winner R32_04,scheduled,0.15663119,0.10652327,0.73684555
+2026-07-04,,Round of 32,Round of 32,R32_16,Colombia,Ghana,2nd Group D,2nd Group G,completed,0.7929794,0.1633054,0.043715224
+2026-07-05,,Round of 16,Round of 16,R16_03,Brazil,Norway,Winner R32_05,Winner R32_06,scheduled,0.68566716,0.16184163,0.15249126
+2026-07-06,,Round of 16,Round of 16,R16_04,Mexico,England,Winner R32_07,Winner R32_08,scheduled,0.27931944,0.20230179,0.5183788
+2026-07-06,,Round of 16,Round of 16,R16_05,Portugal,Spain,Winner R32_09,Winner R32_10,scheduled,0.24485952,0.2004056,0.5547349
+2026-07-07,,Round of 16,Round of 16,R16_08,Switzerland,Colombia,Winner R32_15,Winner R32_16,scheduled,0.22390242,0.24202989,0.5340677
+2026-07-07,,Round of 16,Round of 16,R16_07,Argentina,Egypt,Winner R32_13,Winner R32_14,scheduled,0.7510923,0.15058073,0.09832701
+2026-07-07,,Round of 16,Round of 16,R16_06,United States,Belgium,Winner R32_11,Winner R32_12,scheduled,0.29426768,0.22452067,0.48121166

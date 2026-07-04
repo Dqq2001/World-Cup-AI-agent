@@ -1,0 +1,2 @@
+strong_favorite_count,original_strong_favorite_accuracy,pass_count,pass_upset_rate,allow_count,allow_accuracy,accuracy_lift_after_filter,coverage_kept_rate,coverage_pass_rate
+752,0.711436170212766,256,0.3671875,496,0.7540322580645161,0.042596087851750175,0.6595744680851063,0.3404255319148936

@@ -1,0 +1,7 @@
+event_id,date,home_team,away_team,espn_status,has_score,display_mode,source,reason
+760502.0,2026-07-04,Canada,Morocco,scheduled,False,prediction,espn,scheduled_without_final_score
+760503.0,2026-07-04,Paraguay,France,scheduled,False,prediction,espn,scheduled_without_final_score
+760498.0,2026-07-03,Switzerland,Algeria,completed,True,result,espn,score_or_completed_status
+760499.0,2026-07-03,Australia,Egypt,completed,True,result,espn,score_or_completed_status
+760500.0,2026-07-03,Argentina,Cape Verde,completed,True,result,espn,score_or_completed_status
+760501.0,2026-07-04,Colombia,Ghana,completed,True,result,espn,score_or_completed_status

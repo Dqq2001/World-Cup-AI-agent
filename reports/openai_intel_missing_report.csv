@@ -1,0 +1,2 @@
+base_url,model,status_code,error_type,error_message
+https://api.pixvyn.com,gpt-5.5,429,unknown_error,"{""code"":""API_KEY_QUOTA_EXHAUSTED"",""message"":""API key 额度已用完""}"

@@ -1,0 +1,1 @@
+NO_PAID_API_MODE = True

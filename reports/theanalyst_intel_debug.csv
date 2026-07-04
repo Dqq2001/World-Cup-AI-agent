@@ -1,0 +1,4 @@
+match_key,query_or_slug,url,status_code,fetch_success,parser_success,intel_has_content,confidence,error_message
+2026-07-02|Portugal|Croatia,direct_slug_home_away,https://theanalyst.com/articles/portugal-vs-croatia-prediction-world-cup-2026-match-preview,200,True,True,True,0.99,cached_theanalyst_intel
+2026-07-02|Spain|Austria,direct_slug_home_away,https://theanalyst.com/articles/spain-vs-austria-prediction-world-cup-2026-match-preview,200,True,True,True,0.99,cached_theanalyst_intel
+2026-07-02|United States|Bosnia-Herzegovina,direct_slug_home_away,https://theanalyst.com/articles/usa-vs-bosnia-herzegovina-prediction-world-cup-2026-match-preview,200,True,True,True,0.99,cached_theanalyst_intel

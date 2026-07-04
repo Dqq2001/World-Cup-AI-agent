@@ -1,0 +1,8 @@
+analysis_type,bucket,matches,accuracy,errors
+odds_status,,85,0.6352941176470588,31
+intel_risk,,85,0.6352941176470588,31
+action,PASS,19,0.3684210526315789,12
+action,WATCH,66,0.7121212121212122,19
+prediction_accuracy_by_draw_risk,HIGH,18,0.3888888888888889,11
+prediction_accuracy_by_draw_risk,LOW,38,0.6842105263157895,12
+prediction_accuracy_by_draw_risk,MEDIUM,29,0.7241379310344828,8

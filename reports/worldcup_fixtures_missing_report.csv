@@ -1,0 +1,2 @@
+data_type,output_path,missing_columns,message
+worldcup_fixtures,C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fixtures.csv,"date, home_team, away_team, neutral_venue",無法取得 World Cup fixtures: 公開資料源只取得 36 筆 fixtures，少於預期 72 筆。

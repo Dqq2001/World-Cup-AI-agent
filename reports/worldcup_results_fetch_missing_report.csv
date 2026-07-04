@@ -1,0 +1,25 @@
+status,message,source_url
+fetched,date=20260611; espn_events=2; completed=2; parsed=2; matched_worldcup_2026=2,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611
+fetched,date=20260612; espn_events=2; completed=2; parsed=2; matched_worldcup_2026=2,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260612
+fetched,date=20260613; espn_events=3; completed=3; parsed=3; matched_worldcup_2026=3,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260613
+fetched,date=20260614; espn_events=5; completed=5; parsed=5; matched_worldcup_2026=4,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260614
+fetched,date=20260615; espn_events=4; completed=4; parsed=4; matched_worldcup_2026=4,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260615
+fetched,date=20260616; espn_events=3; completed=3; parsed=3; matched_worldcup_2026=3,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260616
+fetched,date=20260617; espn_events=5; completed=5; parsed=5; matched_worldcup_2026=5,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260617
+fetched,date=20260618; espn_events=4; completed=4; parsed=4; matched_worldcup_2026=4,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260618
+fetched,date=20260619; espn_events=4; completed=4; parsed=4; matched_worldcup_2026=3,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260619
+fetched,date=20260620; espn_events=3; completed=3; parsed=3; matched_worldcup_2026=3,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260620
+fetched,date=20260621; espn_events=5; completed=5; parsed=5; matched_worldcup_2026=5,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260621
+fetched,date=20260622; espn_events=4; completed=4; parsed=4; matched_worldcup_2026=4,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260622
+fetched,date=20260623; espn_events=4; completed=4; parsed=4; matched_worldcup_2026=4,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260623
+fetched,date=20260624; espn_events=6; completed=6; parsed=6; matched_worldcup_2026=6,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260624
+fetched,date=20260625; espn_events=6; completed=6; parsed=6; matched_worldcup_2026=5,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260625
+fetched,date=20260626; espn_events=6; completed=6; parsed=6; matched_worldcup_2026=6,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260626
+fetched,date=20260627; espn_events=6; completed=6; parsed=6; matched_worldcup_2026=6,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260627
+fetched,date=20260628; espn_events=1; completed=1; parsed=1; matched_worldcup_2026=1,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260628
+fetched,date=20260629; espn_events=3; completed=3; parsed=3; matched_worldcup_2026=3,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260629
+fetched,date=20260630; espn_events=3; completed=3; parsed=3; matched_worldcup_2026=3,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260630
+fetched,date=20260701; espn_events=3; completed=3; parsed=3; matched_worldcup_2026=3,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260701
+fetched,date=20260702; espn_events=3; completed=3; parsed=3; matched_worldcup_2026=3,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260702
+fetched,date=20260703; espn_events=3; completed=3; parsed=3; matched_worldcup_2026=3,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260703
+fetched,date=20260704; espn_events=2; completed=0; parsed=0; matched_worldcup_2026=0,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260704

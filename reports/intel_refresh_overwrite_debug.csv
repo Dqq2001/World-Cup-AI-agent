@@ -1,0 +1,10 @@
+match_key,old_source_type,old_intel_has_content,new_openai_status,new_source_urls_count,action,reason
+2026-07-02|United States|Bosnia-Herzegovina,unknown,False,openai_failed_or_no_sources,0,write_unknown,no_previous_valid_intel
+2026-07-02|Spain|Austria,unknown,False,openai_failed_or_no_sources,0,write_unknown,no_previous_valid_intel
+2026-07-02|Portugal|Croatia,unknown,False,openai_failed_or_no_sources,0,write_unknown,no_previous_valid_intel
+2026-07-03|Switzerland|Algeria,openai,False,ok,7,replace_with_new,new_openai_has_sources_and_content
+2026-07-03|Australia|Egypt,openai,False,ok,6,replace_with_new,new_openai_has_sources_and_content
+2026-07-03|Argentina|Cape Verde,openai,False,ok,6,replace_with_new,new_openai_has_sources_and_content
+2026-07-04|Canada|Morocco,openai,False,ok,8,replace_with_new,new_openai_has_sources_and_content
+2026-07-04|Paraguay|France,unknown,False,ok,6,replace_with_new,new_openai_has_sources_and_content
+2026-07-04|Colombia|Ghana,openai,False,ok,5,replace_with_new,new_openai_has_sources_and_content

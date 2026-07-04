@@ -1,0 +1,4 @@
+date,home_team,away_team,query,message
+2026-06-30,France,Sweden,"""France"" ""Sweden"" World Cup team news injuries lineup",HTTP 429 encountered; used cached/structured fallback. Use manual intel if urgent.
+2026-06-30,,,,ESPN team news fallback unavailable: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_espn_team_news.csv
+2026-06-30,,,,FIFA match centre fallback unavailable: C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_fifa_match_centre_intel.csv

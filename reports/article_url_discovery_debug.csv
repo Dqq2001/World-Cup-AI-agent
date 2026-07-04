@@ -1,0 +1,15 @@
+match_key,source_name,strategy,query,url_found,candidate_url,http_status,error_message
+2026-07-02|United States|Bosnia-Herzegovina,The Analyst,direct_slug,direct The Analyst slug,True,https://theanalyst.com/articles/usa-vs-bosnia-herzegovina-prediction-world-cup-2026-match-preview,200,
+2026-07-02|United States|Bosnia-Herzegovina,ESPN Soccer,source_site_search,"""United States"" ""Bosnia-Herzegovina"" ""World Cup 2026"" ""preview""",True,https://www.espn.com/soccer/worldcup/,200,
+2026-07-02|United States|Bosnia-Herzegovina,BBC Sport Football,source_site_search,"""United States"" ""Bosnia-Herzegovina"" ""World Cup 2026"" ""preview""",True,https://www.bbc.co.uk/search?q=%22United+States%22+%22Bosnia-Herzegovina%22+%22World+Cup+2026%22+%22preview%22#main-heading,200,
+2026-07-02|United States|Bosnia-Herzegovina,Sky Sports Football,source_site_search,"""United States"" ""Bosnia-Herzegovina"" ""World Cup 2026"" ""preview""",False,,403,HTTP Error 403: Forbidden
+2026-07-02|United States|Bosnia-Herzegovina,Sky Sports Football,source_site_search,"""United States"" ""Bosnia-Herzegovina"" ""predicted lineup""",False,,403,HTTP Error 403: Forbidden
+2026-07-02|United States|Bosnia-Herzegovina,90min,source_site_search,"""United States"" ""Bosnia-Herzegovina"" ""World Cup 2026"" ""preview""",True,https://www.90min.com/posts/the-tottenham-predicted-lineup-xi-wolfsberger,200,
+2026-07-02|United States|Bosnia-Herzegovina,Sports Mole,source_site_search,"""United States"" ""Bosnia-Herzegovina"" ""World Cup 2026"" ""preview""",True,https://www.sportsmole.co.uk/football/,200,
+2026-07-02|United States|Bosnia-Herzegovina,Goal.com,source_site_search,"""United States"" ""Bosnia-Herzegovina"" ""World Cup 2026"" ""preview""",False,,410,HTTP Error 410: Gone
+2026-07-02|United States|Bosnia-Herzegovina,Goal.com,source_site_search,"""United States"" ""Bosnia-Herzegovina"" ""predicted lineup""",False,,410,HTTP Error 410: Gone
+2026-07-02|United States|Bosnia-Herzegovina,Yahoo Sports,source_site_search,"""United States"" ""Bosnia-Herzegovina"" ""World Cup 2026"" ""preview""",False,,404,HTTP Error 404: Not Found
+2026-07-02|United States|Bosnia-Herzegovina,Yahoo Sports,source_site_search,"""United States"" ""Bosnia-Herzegovina"" ""predicted lineup""",False,,404,HTTP Error 404: Not Found
+2026-07-02|United States|Bosnia-Herzegovina,Reuters,source_site_search,"""United States"" ""Bosnia-Herzegovina"" ""World Cup 2026"" ""preview""",False,,401,HTTP Error 401: HTTP Forbidden
+2026-07-02|United States|Bosnia-Herzegovina,Reuters,source_site_search,"""United States"" ""Bosnia-Herzegovina"" ""predicted lineup""",False,,401,HTTP Error 401: HTTP Forbidden
+2026-07-02|United States|Bosnia-Herzegovina,GDELT,gdelt_fallback,"""United States"" ""Bosnia-Herzegovina"" ""team news""",False,,429,gdelt_status=rate_limited

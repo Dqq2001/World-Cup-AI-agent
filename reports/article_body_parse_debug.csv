@@ -1,0 +1,2 @@
+url,status_code,html_length,body_char_count,fetch_success,parser_success,intel_has_content,confidence,failure_reason
+https://theanalyst.com/articles/usa-vs-bosnia-herzegovina-prediction-world-cup-2026-match-preview,200,275905,6334,True,True,True,0.9,

@@ -1,0 +1,5 @@
+date,home_team,away_team,team_news_home,team_news_away,injuries_home,injuries_away,suspensions_home,suspensions_away,expected_lineup_home,expected_lineup_away,coach_comments_home,coach_comments_away,source_url,source_type,source_status,intel_has_content,intel_confidence_level,confidence,fetched_at
+2026-06-11,Mexico,South Africa,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,search,rate_limited,False,LOW,low,2026-06-30T09:11:57.620907+00:00
+2026-06-29,TBD,TBD,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,search,,,,low,2026-06-29T12:37:18.916988+00:00
+2026-06-30,France,Sweden,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,search,rate_limited_cached_no_content,False,LOW,low,2026-06-30T08:54:56.370754+00:00
+2026-06-30,Netherlands,Morocco,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,search,rate_limited_cached_no_content,False,LOW,low,2026-06-30T06:13:49.662180+00:00

@@ -1,0 +1,19 @@
+World Cup Betting Assistant 賽前報告
+日期: 2026-07-03
+小組: nan
+對戰: Australia vs Egypt
+Market H/D/A: 0.2753 / 0.3349 / 0.3898
+Model H/D/A: 0.3788 / 0.3228 / 0.2984
+Poisson top scores: 1-1:0.130; 1-0:0.121; 0-1:0.098; 0-0:0.092; 2-1:0.086
+Upset risk: HIGH
+Draw risk: HIGH score=6
+Draw risk reasons: Poisson expected goals are close; Model draw probability is high; Poisson top scorelines include 0-0 or 1-1; Neutral venue; Knockout match: draw risk implies extra-time risk
+Draw risk historical reference: LOW draw rate 20.07%, MEDIUM draw rate 28.89%, HIGH draw rate 30.50%.
+League reference: HIGH score=2
+League reference reasons: Five-league references are auxiliary only due to domain shift.; Transferable pattern: high draw risk means avoid favorite 1X2 exposure.; risk_score>=1 is warning only; it must not override international model.
+League reference uses five-league patterns only as auxiliary risk context; domain shift means it must not override international models.
+Value side: H
+Edge: 0.0595
+Recommended action: PASS
+Recommended stake: 0.0
+Reason: value=MEDIUM edge=0.059; risk=HIGH (市場信心偏低; 市場機率接近，屬於五五波; Poisson 期望進球差距小); draw_risk=HIGH (Poisson expected goals are close; Model draw probability is high; Poisson top scorelines include 0-0 or 1-1; Neutral venue; Knockout match: draw risk implies extra-time risk); league_reference=HIGH (Five-league references are auxiliary only due to domain shift.; Transferable pattern: high draw risk means avoid favorite 1X2 exposure.; risk_score>=1 is warning only; it must not override international model.)

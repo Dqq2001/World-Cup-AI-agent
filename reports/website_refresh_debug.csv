@@ -1,0 +1,4 @@
+match_key,home_team,away_team,provider_used,source_status,intel_has_content,source_urls_count,error_message
+2026-07-04|Canada|Morocco,Canada,Morocco,openai,ok,True,8,
+2026-07-04|Paraguay|France,Paraguay,France,openai,ok,True,6,
+2026-07-04|Colombia|Ghana,Colombia,Ghana,openai,ok,True,5,

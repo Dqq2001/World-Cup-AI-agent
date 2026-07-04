@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn
+joblib
+pytest
+xgboost
+lxml
+streamlit
+APScheduler
+certifi
+beautifulsoup4
+requests

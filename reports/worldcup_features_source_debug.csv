@@ -1,0 +1,2 @@
+source_dataframe,rows,columns,saved_to_worldcup_features,missing_columns
+run_daily_worldcup_intel.result_data,3,86,True,

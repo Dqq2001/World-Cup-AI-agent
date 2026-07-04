@@ -1,0 +1,97 @@
+match_key,query,openai_status,json_parse_success,home_odds,draw_odds,away_odds,source_urls_count,accepted,reject_reason
+2026-07-04|Canada|Morocco,"Search the public web for 1X2 betting odds for this World Cup 2026 match:
+date: 2026-07-04
+home_team: Canada
+away_team: Morocco
+
+Use these queries:
+- ""Canada vs Morocco odds World Cup 2026""
+- ""Canada Morocco betting odds""
+- ""Canada vs Morocco 1X2 odds""
+
+Return ONLY strict valid JSON:
+{
+  ""date"": ""2026-07-04"",
+  ""home_team"": ""Canada"",
+  ""away_team"": ""Morocco"",
+  ""home_odds"": null,
+  ""draw_odds"": null,
+  ""away_odds"": null,
+  ""odds_source"": ""..."",
+  ""source_urls"": [""...""],
+  ""confidence"": 0.0,
+  ""fetched_at"": ""2026-07-04T08:29:14.214095+00:00""
+}
+
+Rules:
+- Accept decimal odds only, e.g. 1.75, 3.40, 5.20.
+- If a source provides American odds, convert them to decimal odds.
+- Prefer Pinnacle, Bet365, DraftKings, FanDuel, Oddschecker, BetMGM.
+- If home/draw/away are not all supported by source URLs, return null for missing odds.
+- If no public source URL supports the odds, source_urls must be [].
+- Do not invent odds.
+- Do not include markdown or commentary outside the JSON object.",ok,True,5.0,3.42,1.88,1,True,
+2026-07-04|Paraguay|France,"Search the public web for 1X2 betting odds for this World Cup 2026 match:
+date: 2026-07-04
+home_team: Paraguay
+away_team: France
+
+Use these queries:
+- ""Paraguay vs France odds World Cup 2026""
+- ""Paraguay France betting odds""
+- ""Paraguay vs France 1X2 odds""
+
+Return ONLY strict valid JSON:
+{
+  ""date"": ""2026-07-04"",
+  ""home_team"": ""Paraguay"",
+  ""away_team"": ""France"",
+  ""home_odds"": null,
+  ""draw_odds"": null,
+  ""away_odds"": null,
+  ""odds_source"": ""..."",
+  ""source_urls"": [""...""],
+  ""confidence"": 0.0,
+  ""fetched_at"": ""2026-07-04T08:29:48.292241+00:00""
+}
+
+Rules:
+- Accept decimal odds only, e.g. 1.75, 3.40, 5.20.
+- If a source provides American odds, convert them to decimal odds.
+- Prefer Pinnacle, Bet365, DraftKings, FanDuel, Oddschecker, BetMGM.
+- If home/draw/away are not all supported by source URLs, return null for missing odds.
+- If no public source URL supports the odds, source_urls must be [].
+- Do not invent odds.
+- Do not include markdown or commentary outside the JSON object.",ok,True,19.0,7.6,1.2,1,True,
+2026-07-04|Colombia|Ghana,"Search the public web for 1X2 betting odds for this World Cup 2026 match:
+date: 2026-07-04
+home_team: Colombia
+away_team: Ghana
+
+Use these queries:
+- ""Colombia vs Ghana odds World Cup 2026""
+- ""Colombia Ghana betting odds""
+- ""Colombia vs Ghana 1X2 odds""
+
+Return ONLY strict valid JSON:
+{
+  ""date"": ""2026-07-04"",
+  ""home_team"": ""Colombia"",
+  ""away_team"": ""Ghana"",
+  ""home_odds"": null,
+  ""draw_odds"": null,
+  ""away_odds"": null,
+  ""odds_source"": ""..."",
+  ""source_urls"": [""...""],
+  ""confidence"": 0.0,
+  ""fetched_at"": ""2026-07-04T08:30:26.084862+00:00""
+}
+
+Rules:
+- Accept decimal odds only, e.g. 1.75, 3.40, 5.20.
+- If a source provides American odds, convert them to decimal odds.
+- Prefer Pinnacle, Bet365, DraftKings, FanDuel, Oddschecker, BetMGM.
+- If home/draw/away are not all supported by source URLs, return null for missing odds.
+- If no public source URL supports the odds, source_urls must be [].
+- Do not invent odds.
+- Do not include markdown or commentary outside the JSON object.",ok,True,1.5,3.96,7.25,1,True,

@@ -1,0 +1,13 @@
+data_type,path,missing_count,message
+manual_intelligence,C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_intel_manual.csv,3,Manual intelligence CSV not found; manual fields set to unknown unless search source has data.
+odds,C:\Users\Administrator\Desktop\worldcup-ai-agent\data\processed\worldcup_odds.csv,3,Odds file not found; only WATCH / PASS allowed.
+team_news_home,C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_intel_manual.csv,3,team_news_home unknown for 3 upcoming matches.
+team_news_away,C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_intel_manual.csv,3,team_news_away unknown for 3 upcoming matches.
+injuries_home,C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_intel_manual.csv,1,injuries_home unknown for 1 upcoming matches.
+injuries_away,C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_intel_manual.csv,1,injuries_away unknown for 1 upcoming matches.
+suspensions_home,C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_intel_manual.csv,3,suspensions_home unknown for 3 upcoming matches.
+suspensions_away,C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_intel_manual.csv,3,suspensions_away unknown for 3 upcoming matches.
+expected_lineup_home,C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_intel_manual.csv,1,expected_lineup_home unknown for 1 upcoming matches.
+expected_lineup_away,C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_intel_manual.csv,1,expected_lineup_away unknown for 1 upcoming matches.
+coach_comments_home,C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_intel_manual.csv,2,coach_comments_home unknown for 2 upcoming matches.
+coach_comments_away,C:\Users\Administrator\Desktop\worldcup-ai-agent\data\manual\worldcup_intel_manual.csv,1,coach_comments_away unknown for 1 upcoming matches.

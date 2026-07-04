@@ -1,0 +1,3 @@
+source,http_status,matches_found,actual_team_matches,fallback_slot_matches,error_message
+espn,200,32,24,7,saved_completed_results=16
+local_results,,16,11,0,skipped because ESPN returned actual knockout teams

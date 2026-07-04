@@ -1,0 +1,4 @@
+match_key,openai_status,source_urls_count,json_parse_success,intel_has_content,included_in_daily_brief,exclude_reason
+2026-07-04|Canada|Morocco,ok,8,True,True,True,
+2026-07-04|Colombia|Ghana,ok,5,True,True,True,
+2026-07-04|Paraguay|France,ok,6,True,True,True,

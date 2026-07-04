@@ -1,0 +1,19 @@
+World Cup Betting Assistant 賽前報告
+日期: 2026-07-03
+小組: nan
+對戰: Argentina vs Cape Verde
+Market H/D/A: 0.8316 / 0.1185 / 0.0499
+Model H/D/A: 0.8242 / 0.1292 / 0.0467
+Poisson top scores: 2-0:0.137; 3-0:0.115; 1-0:0.109; 2-1:0.092; 3-1:0.077
+Upset risk: LOW
+Draw risk: LOW score=1
+Draw risk reasons: Neutral venue
+Draw risk historical reference: LOW draw rate 20.07%, MEDIUM draw rate 28.89%, HIGH draw rate 30.50%.
+League reference: LOW score=0
+League reference reasons: Five-league references are auxiliary only due to domain shift.; Transferable pattern: risk_score=0 favorite was comparatively steadier.
+League reference uses five-league patterns only as auxiliary risk context; domain shift means it must not override international models.
+Value side: D
+Edge: 0.0214
+Recommended action: PASS
+Recommended stake: 0.0
+Reason: value=LOW edge=0.021; risk=LOW (主要風險訊號不明顯); draw_risk=LOW (Neutral venue); league_reference=LOW (Five-league references are auxiliary only due to domain shift.; Transferable pattern: risk_score=0 favorite was comparatively steadier.)

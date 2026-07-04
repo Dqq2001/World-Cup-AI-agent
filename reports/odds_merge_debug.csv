@@ -1,0 +1,104 @@
+match_key,manual_odds_found,api_odds_found,openai_odds_found,home_odds,draw_odds,away_odds,final_odds_status,reason
+2026-06-11|Mexico|South Africa,False,False,False,,,,missing,no_complete_odds
+2026-06-11|South Korea|Czech Republic,False,False,False,,,,missing,no_complete_odds
+2026-06-12|Canada|Bosnia and Herzegovina,False,False,False,,,,missing,no_complete_odds
+2026-06-12|United States|Paraguay,False,False,False,,,,missing,no_complete_odds
+2026-06-13|Qatar|Switzerland,False,False,False,,,,missing,no_complete_odds
+2026-06-13|Brazil|Morocco,False,False,False,,,,missing,no_complete_odds
+2026-06-13|Haiti|Scotland,False,False,False,,,,missing,no_complete_odds
+2026-06-13|Australia|Turkey,False,False,False,,,,missing,no_complete_odds
+2026-06-14|Germany|Curaçao,False,False,False,,,,missing,no_complete_odds
+2026-06-14|Ivory Coast|Ecuador,False,False,False,,,,missing,no_complete_odds
+2026-06-14|Netherlands|Japan,False,False,False,,,,missing,no_complete_odds
+2026-06-14|Sweden|Tunisia,False,False,False,,,,missing,no_complete_odds
+2026-06-15|Belgium|Egypt,False,False,False,,,,missing,no_complete_odds
+2026-06-15|Iran|New Zealand,False,False,False,,,,missing,no_complete_odds
+2026-06-15|Saudi Arabia|Uruguay,False,False,False,,,,missing,no_complete_odds
+2026-06-15|Spain|Cape Verde,False,False,False,,,,missing,no_complete_odds
+2026-06-16|France|Senegal,False,False,False,,,,missing,no_complete_odds
+2026-06-16|Iraq|Norway,False,False,False,,,,missing,no_complete_odds
+2026-06-16|Argentina|Algeria,False,False,False,,,,missing,no_complete_odds
+2026-06-16|Austria|Jordan,False,False,False,,,,missing,no_complete_odds
+2026-06-17|Portugal|DR Congo,False,False,False,,,,missing,no_complete_odds
+2026-06-17|Uzbekistan|Colombia,False,False,False,,,,missing,no_complete_odds
+2026-06-17|England|Croatia,False,False,False,,,,missing,no_complete_odds
+2026-06-17|Ghana|Panama,False,False,False,,,,missing,no_complete_odds
+2026-06-18|Czech Republic|South Africa,False,False,False,,,,missing,no_complete_odds
+2026-06-18|Mexico|South Korea,False,False,False,,,,missing,no_complete_odds
+2026-06-18|Canada|Qatar,False,False,False,,,,missing,no_complete_odds
+2026-06-18|Switzerland|Bosnia and Herzegovina,False,False,False,,,,missing,no_complete_odds
+2026-06-19|Brazil|Haiti,False,False,False,,,,missing,no_complete_odds
+2026-06-19|Scotland|Morocco,False,False,False,,,,missing,no_complete_odds
+2026-06-19|Turkey|Paraguay,False,False,False,,,,missing,no_complete_odds
+2026-06-19|United States|Australia,False,False,False,,,,missing,no_complete_odds
+2026-06-20|Ecuador|Curaçao,False,False,False,,,,missing,no_complete_odds
+2026-06-20|Germany|Ivory Coast,False,False,False,,,,missing,no_complete_odds
+2026-06-20|Netherlands|Sweden,False,False,False,,,,missing,no_complete_odds
+2026-06-20|Tunisia|Japan,False,False,False,,,,missing,no_complete_odds
+2026-06-21|Belgium|Iran,False,False,False,,,,missing,no_complete_odds
+2026-06-21|New Zealand|Egypt,False,False,False,,,,missing,no_complete_odds
+2026-06-21|Spain|Saudi Arabia,False,False,False,,,,missing,no_complete_odds
+2026-06-21|Uruguay|Cape Verde,False,False,False,,,,missing,no_complete_odds
+2026-06-22|France|Iraq,False,False,False,,,,missing,no_complete_odds
+2026-06-22|Norway|Senegal,False,False,False,,,,missing,no_complete_odds
+2026-06-22|Argentina|Austria,False,False,False,,,,missing,no_complete_odds
+2026-06-22|Jordan|Algeria,False,False,False,,,,missing,no_complete_odds
+2026-06-23|Colombia|DR Congo,False,False,False,,,,missing,no_complete_odds
+2026-06-23|Portugal|Uzbekistan,False,False,False,,,,missing,no_complete_odds
+2026-06-23|England|Ghana,False,False,False,,,,missing,no_complete_odds
+2026-06-23|Panama|Croatia,False,False,False,,,,missing,no_complete_odds
+2026-06-24|Czech Republic|Mexico,False,False,False,,,,missing,no_complete_odds
+2026-06-24|South Africa|South Korea,False,False,False,,,,missing,no_complete_odds
+2026-06-24|Bosnia and Herzegovina|Qatar,False,False,False,,,,missing,no_complete_odds
+2026-06-24|Switzerland|Canada,False,False,False,,,,missing,no_complete_odds
+2026-06-24|Morocco|Haiti,False,False,False,,,,missing,no_complete_odds
+2026-06-24|Scotland|Brazil,False,False,False,,,,missing,no_complete_odds
+2026-06-25|Paraguay|Australia,False,False,False,,,,missing,no_complete_odds
+2026-06-25|Turkey|United States,False,False,False,,,,missing,no_complete_odds
+2026-06-25|Curaçao|Ivory Coast,False,False,False,,,,missing,no_complete_odds
+2026-06-25|Ecuador|Germany,False,False,False,,,,missing,no_complete_odds
+2026-06-25|Japan|Sweden,False,False,False,,,,missing,no_complete_odds
+2026-06-25|Tunisia|Netherlands,False,False,False,,,,missing,no_complete_odds
+2026-06-26|Egypt|Iran,False,False,False,,,,missing,no_complete_odds
+2026-06-26|New Zealand|Belgium,False,False,False,,,,missing,no_complete_odds
+2026-06-26|Cape Verde|Saudi Arabia,False,False,False,,,,missing,no_complete_odds
+2026-06-26|Uruguay|Spain,False,False,False,,,,missing,no_complete_odds
+2026-06-26|Norway|France,False,False,False,,,,missing,no_complete_odds
+2026-06-26|Senegal|Iraq,False,False,False,,,,missing,no_complete_odds
+2026-06-27|Algeria|Austria,False,False,False,,,,missing,no_complete_odds
+2026-06-27|Jordan|Argentina,False,False,False,,,,missing,no_complete_odds
+2026-06-27|Colombia|Portugal,False,False,False,,,,missing,no_complete_odds
+2026-06-27|DR Congo|Uzbekistan,False,False,False,,,,missing,no_complete_odds
+2026-06-27|Croatia|Ghana,False,False,False,,,,missing,no_complete_odds
+2026-06-27|Panama|England,False,False,False,,,,missing,no_complete_odds
+2026-06-28|South Africa|Canada,False,False,False,,,,missing,no_complete_odds
+2026-06-29|Brazil|Japan,False,False,False,,,,missing,no_complete_odds
+2026-06-29|Germany|Paraguay,False,False,False,,,,missing,no_complete_odds
+2026-06-30|Netherlands|Morocco,False,False,False,,,,missing,no_complete_odds
+2026-06-30|Ivory Coast|Norway,False,False,False,,,,missing,no_complete_odds
+2026-06-30|France|Sweden,False,False,False,,,,missing,no_complete_odds
+2026-07-01|Mexico|Ecuador,False,False,False,,,,missing,no_complete_odds
+2026-07-01|England|Congo DR,False,False,False,,,,missing,no_complete_odds
+2026-07-01|Belgium|Senegal,False,False,False,,,,missing,no_complete_odds
+2026-07-02|United States|Bosnia-Herzegovina,True,False,True,1.36,5.0,9.0,manual_or_api,complete_odds_found
+2026-07-02|Spain|Austria,True,False,True,1.3,5.2,10.5,manual_or_api,complete_odds_found
+2026-07-02|Portugal|Croatia,True,False,True,1.74,3.77,5.09,manual_or_api,complete_odds_found
+2026-07-03|Switzerland|Algeria,True,False,True,2.05,3.3,4.2,manual_or_api,complete_odds_found
+2026-07-03|Australia|Egypt,True,False,True,3.54,2.91,2.5,manual_or_api,complete_odds_found
+2026-07-03|Argentina|Cape Verde,True,False,True,1.14,8.0,19.0,manual_or_api,complete_odds_found
+2026-07-04|Canada|Morocco,True,False,True,5.0,3.4,1.8,manual_or_api,complete_odds_found
+2026-07-04|Paraguay|France,True,False,True,18.0,7.0,1.1667,manual_or_api,complete_odds_found
+2026-07-04|Colombia|Ghana,True,False,True,1.53,4.0,7.5,manual_or_api,complete_odds_found
+2026-07-05|Brazil|Norway,False,False,False,,,,missing,no_complete_odds
+2026-07-06|Mexico|England,False,False,False,,,,missing,no_complete_odds
+2026-07-06|Portugal|Spain,False,False,False,,,,missing,no_complete_odds
+2026-07-07|United States|Belgium,False,False,False,,,,missing,no_complete_odds
+2026-07-07|Argentina|Egypt,False,False,False,,,,missing,no_complete_odds
+2026-07-07|Switzerland|Colombia,False,False,False,,,,missing,no_complete_odds
+2026-07-11|TBD|TBD,False,False,False,,,,missing,no_complete_odds
+2026-07-11|TBD|TBD,False,False,False,,,,missing,no_complete_odds
+2026-07-12|TBD|TBD,False,False,False,,,,missing,no_complete_odds
+2026-07-12|TBD|TBD,False,False,False,,,,missing,no_complete_odds
+2026-07-14|TBD|TBD,False,False,False,,,,missing,no_complete_odds
+2026-07-15|TBD|TBD,False,False,False,,,,missing,no_complete_odds
+2026-07-19|TBD|TBD,False,False,False,,,,missing,no_complete_odds

@@ -1,0 +1,2 @@
+source_dataframe,rows,columns,missing_columns
+load_worldcup_results,85,"date,group,stage,round,match_id,home_team,away_team,home_goals,away_goals,status,aet,penalties_home,penalties_away,winner,source_url,source_event_date,matched_date_source,fetched_at,date_dt,competition",

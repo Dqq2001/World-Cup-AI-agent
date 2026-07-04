@@ -1,0 +1,4 @@
+match_key,source,http_status,success,has_content,error_message
+2026-06-30|France|Sweden,sofascore,403,False,False,source_blocked
+2026-06-30|France|Sweden,fotmob,404,False,False,HTTP Error 404: Not Found
+2026-06-30|France|Sweden,flashscore,404,False,False,HTTP Error 404: Not Found

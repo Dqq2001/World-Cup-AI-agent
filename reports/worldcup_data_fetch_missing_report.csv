@@ -1,0 +1,3 @@
+data_type,missing,message
+schedule,worldcup_schedule.csv,無法取得 World Cup schedule: Unable to fetch World Cup schedule from public sources. 
+odds,ODDS_API_KEY,缺少 odds API key，無法取得賠率。
