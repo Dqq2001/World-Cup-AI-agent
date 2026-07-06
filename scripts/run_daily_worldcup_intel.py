@@ -23,6 +23,7 @@ DEFAULT_ODDS = PROCESSED_DATA_DIR / "worldcup_odds.csv"
 CONSENSUS_ODDS = PROCESSED_DATA_DIR / "worldcup_consensus_odds.csv"
 OPENAI_ODDS = PROCESSED_DATA_DIR / "worldcup_openai_odds.csv"
 DEFAULT_POISSON = PROCESSED_DATA_DIR / "worldcup_poisson_predictions.csv"
+DEFAULT_MODEL_PREDICTIONS = PROCESSED_DATA_DIR / "worldcup_model_predictions.csv"
 DEFAULT_MODEL_ONLY = PROJECT_ROOT / "reports" / "worldcup_model_only_predictions.csv"
 DEFAULT_BETTING = PROJECT_ROOT / "reports" / "worldcup_betting_predictions.csv"
 INTEL_OUTPUT = PROJECT_ROOT / "reports" / "worldcup_daily_intel.csv"
@@ -35,6 +36,7 @@ WORLDCUP_FEATURES_OUTPUT = PROCESSED_DATA_DIR / "worldcup_features.csv"
 FEATURES_SOURCE_DEBUG_OUTPUT = PROJECT_ROOT / "reports" / "worldcup_features_source_debug.csv"
 POISSON_MERGE_DEBUG_OUTPUT = PROJECT_ROOT / "reports" / "poisson_merge_debug.csv"
 INTEL_RISK_DEBUG_OUTPUT = PROJECT_ROOT / "reports" / "intel_risk_debug.csv"
+MODEL_MISSING_REPORT_OUTPUT = PROJECT_ROOT / "reports" / "worldcup_model_missing_report.csv"
 
 
 def choose_predictions_path() -> Path | None:
@@ -363,6 +365,65 @@ def add_poisson_columns(data: pd.DataFrame, poisson_path: Path = DEFAULT_POISSON
     return merged.drop(columns=drop_columns)
 
 
+def add_model_columns(data: pd.DataFrame, model_path: Path = DEFAULT_MODEL_PREDICTIONS) -> pd.DataFrame:
+    output = data.copy()
+    if output.empty:
+        write_model_missing_report(output.iloc[0:0])
+        return output
+    if not model_path.exists():
+        write_model_missing_report(output)
+        print("MODEL_PREDICTIONS_ROWS=0")
+        print("MODEL_PREDICTIONS_COLUMNS=")
+        print(f"MODEL_MISSING_ROWS={len(output)}")
+        return output
+    model = pd.read_csv(model_path, encoding="utf-8")
+    print(f"MODEL_PREDICTIONS_ROWS={len(model)}")
+    print(f"MODEL_PREDICTIONS_COLUMNS={','.join(model.columns)}")
+    required = ["date", "home_team", "away_team", "model_H", "model_D", "model_A"]
+    if model.empty or not all(column in model.columns for column in required):
+        write_model_missing_report(output)
+        print(f"MODEL_MISSING_ROWS={len(output)}")
+        return output
+    keyed = add_merge_keys(output)
+    model_keyed = add_merge_keys(model)
+    model_subset = model_keyed[["_match_key", "model_H", "model_D", "model_A"]].drop_duplicates("_match_key", keep="last")
+    merged = keyed.merge(model_subset, on="_match_key", how="left", suffixes=("", "_model_file"))
+    for column in ["model_H", "model_D", "model_A"]:
+        source = f"{column}_model_file"
+        if source in merged.columns:
+            current_missing = merged[column].isna() if column in merged.columns else pd.Series(True, index=merged.index)
+            if column not in merged.columns:
+                merged[column] = pd.NA
+            merged.loc[current_missing, column] = merged.loc[current_missing, source]
+    missing_mask = (
+        merged["home_team"].fillna("").astype(str).str.strip().str.upper().ne("TBD")
+        & merged["away_team"].fillna("").astype(str).str.strip().str.upper().ne("TBD")
+        & merged[["model_H", "model_D", "model_A"]].isna().any(axis=1)
+    )
+    missing = merged.loc[missing_mask].copy()
+    write_model_missing_report(missing)
+    print(f"FEATURE_ROWS_AFTER_MODEL_MERGE={len(merged)}")
+    print(f"MODEL_MISSING_ROWS={len(missing)}")
+    example = merged[
+        (merged["home_team"].astype(str).str.casefold() == "portugal")
+        & (merged["away_team"].astype(str).str.casefold() == "spain")
+    ]
+    if not example.empty:
+        print(f"MODEL_EXAMPLE_PORTUGAL_VS_SPAIN={example.iloc[-1][['date', 'home_team', 'away_team', 'model_H', 'model_D', 'model_A']].to_dict()}")
+    drop_columns = [column for column in merged.columns if column.startswith("_") or column.endswith("_model_file")]
+    return merged.drop(columns=drop_columns)
+
+
+def write_model_missing_report(rows: pd.DataFrame) -> None:
+    MODEL_MISSING_REPORT_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    columns = ["date", "group", "home_team", "away_team", "status", "model_H", "model_D", "model_A"]
+    output = rows.copy()
+    for column in columns:
+        if column not in output.columns:
+            output[column] = pd.NA
+    output[columns].to_csv(MODEL_MISSING_REPORT_OUTPUT, index=False, encoding="utf-8")
+
+
 def write_poisson_merge_debug(rows: list[dict]) -> None:
     POISSON_MERGE_DEBUG_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     pd.DataFrame(
@@ -676,6 +737,7 @@ def main() -> None:
     result["data"] = today_only(all_data, args.as_of_date)
     result["data"] = add_odds_columns(result["data"], args.odds)
     result["data"] = add_poisson_columns(result["data"])
+    result["data"] = add_model_columns(result["data"])
     if not result["data"].empty:
         odds_available = result["data"].apply(odds_values_available, axis=1)
         result["data"].loc[odds_available, "odds_status"] = result["data"].loc[odds_available, "odds_status"].replace({"missing": "available"})

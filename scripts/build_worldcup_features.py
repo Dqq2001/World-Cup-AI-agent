@@ -8,6 +8,7 @@ import pandas as pd
 DATA_DIRS = [Path("data/processed"), Path("data/raw")]
 DEFAULT_OUTPUT_PATH = Path("data/processed/worldcup_features.csv")
 DEFAULT_MISSING_REPORT_PATH = Path("reports/worldcup_features_missing_data_report.csv")
+MODEL_MISSING_REPORT_PATH = Path("reports/worldcup_model_missing_report.csv")
 ODDS_MERGE_DEBUG_PATH = Path("reports/odds_merge_debug.csv")
 MATCH_KEYS = ["date", "home_team", "away_team"]
 MATCH_ID_KEY = ["match_id"]
@@ -176,11 +177,50 @@ def read_optional_csv(path: Path, required: list[str]) -> pd.DataFrame:
 def normalize_keys(data: pd.DataFrame) -> pd.DataFrame:
     data = data.copy()
     if "date" in data.columns:
-        data["date"] = pd.to_datetime(data["date"], errors="coerce").dt.strftime("%Y-%m-%d")
+        data["date"] = pd.to_datetime(data["date"], errors="coerce").dt.date.astype(str)
     for column in ["group", "stage", "round", "match_id", "home_team", "away_team"]:
         if column in data.columns:
             data[column] = data[column].astype(str).str.strip()
     return data
+
+
+def resolved_non_tbd_mask(data: pd.DataFrame) -> pd.Series:
+    home = data.get("home_team", pd.Series("", index=data.index)).fillna("").astype(str).str.strip().str.upper()
+    away = data.get("away_team", pd.Series("", index=data.index)).fillna("").astype(str).str.strip().str.upper()
+    status = data.get("status", pd.Series("", index=data.index)).fillna("").astype(str).str.strip().str.lower()
+    return home.ne("TBD") & away.ne("TBD") & status.ne("waiting_for_teams")
+
+
+def write_model_missing_report(rows: pd.DataFrame) -> None:
+    MODEL_MISSING_REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    columns = ["date", "group", "home_team", "away_team", "status", "model_H", "model_D", "model_A"]
+    output = rows.copy()
+    for column in columns:
+        if column not in output.columns:
+            output[column] = pd.NA
+    output[columns].to_csv(MODEL_MISSING_REPORT_PATH, index=False, encoding="utf-8")
+
+
+def merge_model_predictions(base: pd.DataFrame, model: pd.DataFrame) -> pd.DataFrame:
+    base = normalize_keys(base)
+    model = normalize_keys(model)
+    required = MATCH_KEYS + ["model_H", "model_D", "model_A"]
+    model = model[required].drop_duplicates(MATCH_KEYS, keep="first")
+    merged = base.merge(model, on=MATCH_KEYS, how="left", validate="many_to_one")
+    missing_mask = resolved_non_tbd_mask(merged) & merged[["model_H", "model_D", "model_A"]].isna().any(axis=1)
+    missing = merged.loc[missing_mask].copy()
+    write_model_missing_report(missing)
+    print(f"FEATURE_ROWS_AFTER_MODEL_MERGE={len(merged)}")
+    print(f"MODEL_MISSING_ROWS={len(missing)}")
+    example = merged[
+        (merged["home_team"].astype(str).str.casefold() == "portugal")
+        & (merged["away_team"].astype(str).str.casefold() == "spain")
+    ]
+    if not example.empty:
+        print(f"MODEL_EXAMPLE_PORTUGAL_VS_SPAIN={example.iloc[-1][['date', 'home_team', 'away_team', 'model_H', 'model_D', 'model_A']].to_dict()}")
+    if not missing.empty:
+        raise ValueError(f"model 合併後仍有 {len(missing)} 筆 resolved non-TBD fixtures 缺少 model_H/D/A。")
+    return merged
 
 
 def choose_merge_keys(base: pd.DataFrame, other: pd.DataFrame) -> list[str]:
@@ -447,6 +487,15 @@ def build_worldcup_features(
         if market.empty:
             report_rows.append(missing_report_row("market", None, REQUIRED_COLUMNS["market"], "No complete market probabilities found."))
     model = read_required_csv("model", paths["model"], report_rows)
+    print(f"MODEL_PREDICTIONS_ROWS={len(model)}")
+    print(f"MODEL_PREDICTIONS_COLUMNS={','.join(model.columns) if not model.empty else ''}")
+    if not model.empty and {"home_team", "away_team"}.issubset(model.columns):
+        example_model = model[
+            (model["home_team"].astype(str).str.casefold() == "portugal")
+            & (model["away_team"].astype(str).str.casefold() == "spain")
+        ]
+        if not example_model.empty:
+            print(f"MODEL_EXAMPLE_PORTUGAL_VS_SPAIN={example_model.iloc[-1].to_dict()}")
     poisson = read_required_csv("poisson", paths["poisson"], report_rows)
     if odds_path:
         odds = read_required_csv("odds", paths["odds"], report_rows)
@@ -487,6 +536,7 @@ def build_worldcup_features(
     features = pd.concat([schedule.reset_index(drop=True), context], axis=1)
     features["date"] = features["date"].dt.strftime("%Y-%m-%d")
 
+    features = merge_model_predictions(features, model)
     try:
         features = merge_required(features, market, "market", ["market_H", "market_D", "market_A"])
     except ValueError as exc:
@@ -494,7 +544,6 @@ def build_worldcup_features(
         write_missing_report(report_rows, missing_report_path)
         print(f"World Cup market data is incomplete; falling back to no-odds mode. {missing_report_path}")
         return None
-    features = merge_required(features, model, "model", ["model_H", "model_D", "model_A"])
     features = merge_required(features, poisson, "poisson", ["poisson_home_xg", "poisson_away_xg"])
     try:
         features = merge_required(features, odds, "odds", ["home_odds", "draw_odds", "away_odds"])

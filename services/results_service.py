@@ -12,6 +12,7 @@ from services.script_runner import python_command, run_command
 PREDICTION_CANDIDATES = [
     REPORTS_DIR / "worldcup_betting_predictions.csv",
     REPORTS_DIR / "worldcup_model_only_predictions.csv",
+    PROCESSED_DIR / "worldcup_features.csv",
 ]
 DAILY_INTEL_PATH = REPORTS_DIR / "worldcup_daily_intel.csv"
 FIXTURES_PATH = PROCESSED_DIR / "worldcup_fixtures.csv"
@@ -126,11 +127,30 @@ def add_dashboard_merge_key(data: pd.DataFrame) -> pd.DataFrame:
 
 
 def load_predictions() -> pd.DataFrame:
+    frames = []
     for path in PREDICTION_CANDIDATES:
         data = normalize_keys(read_csv_safe(path))
         if not data.empty:
-            return data
-    return pd.DataFrame()
+            data = add_dashboard_merge_key(data)
+            data["_prediction_priority"] = len(frames)
+            frames.append(data)
+    if not frames:
+        return pd.DataFrame()
+    combined = pd.concat(frames, ignore_index=True, sort=False).sort_values("_prediction_priority")
+    rows = []
+    for _, group in combined.groupby("_dashboard_merge_key", sort=False):
+        row = group.iloc[0].copy()
+        for _, candidate in group.iloc[1:].iterrows():
+            for column in combined.columns:
+                if column in {"_prediction_priority", "_dashboard_merge_key"}:
+                    continue
+                value = row.get(column, pd.NA)
+                candidate_value = candidate.get(column, pd.NA)
+                if (pd.isna(value) or str(value).strip().lower() in {"", "unknown", "nan", "none", "<na>"}) and pd.notna(candidate_value):
+                    row[column] = candidate_value
+        rows.append(row)
+    output = pd.DataFrame(rows).drop(columns=["_prediction_priority"], errors="ignore")
+    return output.drop(columns=["_dashboard_merge_key"], errors="ignore")
 
 
 def load_latest_fixtures() -> pd.DataFrame:
