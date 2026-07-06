@@ -160,6 +160,21 @@ def parse_poisson_scores(value) -> str:
     return text
 
 
+def odds_available(row: pd.Series) -> bool:
+    values = [row.get(column, pd.NA) for column in ["home_odds", "draw_odds", "away_odds"]]
+    try:
+        odds = [float(value) for value in values]
+    except (TypeError, ValueError):
+        return False
+    return all(value > 1 for value in odds)
+
+
+def model_only_reason(row: pd.Series) -> str:
+    if odds_available(row):
+        return "Odds are available; value edge remains disabled in model-only fallback because complete feature generation was unavailable."
+    return NO_ODDS_REASON
+
+
 def load_optional_csv(path: Path) -> pd.DataFrame:
     if not path.exists():
         return pd.DataFrame()
@@ -211,12 +226,26 @@ def add_odds_and_intel(data: pd.DataFrame) -> pd.DataFrame:
         data,
         intel,
         [
+            "home_injuries",
+            "away_injuries",
+            "home_suspensions",
+            "away_suspensions",
+            "home_expected_lineup",
+            "away_expected_lineup",
+            "home_coach_comments",
+            "away_coach_comments",
             "injuries_home",
             "injuries_away",
             "suspensions_home",
             "suspensions_away",
+            "expected_lineup_home",
+            "expected_lineup_away",
+            "coach_comments_home",
+            "coach_comments_away",
             "rest_days_home",
             "rest_days_away",
+            "intel_risk",
+            "intel_updated_at",
             "confidence",
             "source_urls",
             "source_url",
@@ -485,7 +514,7 @@ def run_model_only_agents(output_csv: Path = MODEL_ONLY_OUTPUT_CSV) -> pd.DataFr
                 "edge": pd.NA,
                 "recommended_action": action,
                 "recommended_stake": 0.0,
-                "reason": NO_ODDS_REASON,
+                "reason": model_only_reason(row),
             }
         )
     output = pd.DataFrame(rows)

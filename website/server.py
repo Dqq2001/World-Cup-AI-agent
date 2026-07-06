@@ -11,9 +11,11 @@ from pathlib import Path
 from backend import api as backend_api
 
 
-PROJECT_ROOT = Path("C:/Users/Administrator/Desktop/worldcup-ai-agent")
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 PUBLIC_DIR = PROJECT_ROOT / "website" / "public"
 STATUS_PATH = PROJECT_ROOT / "data" / "cache" / "website_refresh_status.json"
+DAILY_INTEL_PATH = PROJECT_ROOT / "reports" / "worldcup_daily_intel.csv"
+OPENAI_MISSING_PATH = PROJECT_ROOT / "reports" / "openai_intel_missing_report.csv"
 
 
 class WebsiteHandler(SimpleHTTPRequestHandler):
@@ -56,6 +58,12 @@ class WebsiteHandler(SimpleHTTPRequestHandler):
             status=200 if success else 500,
         )
 
+    def do_GET(self) -> None:
+        if self.path.rstrip("/") != "/api/debug-intel":
+            super().do_GET()
+            return
+        self.send_json(debug_intel_payload())
+
     def read_credentials(self) -> tuple[str | None, str | None]:
         auth_header = self.headers.get("Authorization", "")
         if auth_header.startswith("Basic "):
@@ -82,6 +90,44 @@ class WebsiteHandler(SimpleHTTPRequestHandler):
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
         self.wfile.write(body)
+
+
+def debug_intel_payload() -> dict:
+    status_payload = {}
+    if STATUS_PATH.exists():
+        try:
+            status_payload = json.loads(STATUS_PATH.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            status_payload = {}
+    intel_row_count = 0
+    if DAILY_INTEL_PATH.exists():
+        try:
+            import pandas as pd
+
+            intel_row_count = len(pd.read_csv(DAILY_INTEL_PATH, encoding="utf-8"))
+        except Exception:
+            intel_row_count = 0
+    latest_error = ""
+    if OPENAI_MISSING_PATH.exists():
+        try:
+            import pandas as pd
+
+            report = pd.read_csv(OPENAI_MISSING_PATH, encoding="utf-8")
+            if not report.empty:
+                latest_error = str(report.iloc[-1].get("error_message", ""))
+        except Exception as exc:
+            latest_error = str(exc)
+    return {
+        "env": {
+            "OPENAI_API_KEY": bool(__import__("os").environ.get("OPENAI_API_KEY", "").strip()),
+            "OPENAI_BASE_URL": bool(__import__("os").environ.get("OPENAI_BASE_URL", "").strip()),
+            "OPENAI_INTEL_MODEL": bool(__import__("os").environ.get("OPENAI_INTEL_MODEL", "").strip()),
+        },
+        "last_intel_refresh_time": status_payload.get("last_refresh_at", ""),
+        "intel_csv_exists": DAILY_INTEL_PATH.exists(),
+        "intel_row_count": intel_row_count,
+        "latest_openai_pixvyn_error": latest_error,
+    }
 
 
 def main() -> None:

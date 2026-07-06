@@ -8,7 +8,7 @@ from pathlib import Path
 import pandas as pd
 import requests
 
-PROJECT_ROOT = Path("C:/Users/Administrator/Desktop/worldcup-ai-agent")
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
@@ -294,7 +294,8 @@ def normalize_result(date: str, home_team: str, away_team: str, data: dict, inte
 def call_openai(date: str, home_team: str, away_team: str) -> dict:
     api_key = os.environ.get("OPENAI_API_KEY", "").strip()
     if not api_key:
-        return empty_row(date, home_team, away_team, "openai_failed_or_no_sources", error_type="missing_env", error_message="Missing OPENAI_API_KEY")
+        write_missing_report(base_url(), os.environ.get("OPENAI_INTEL_MODEL", DEFAULT_MODEL).strip() or DEFAULT_MODEL, "", "missing_env", "OpenAI/Pixvyn API key missing")
+        return empty_row(date, home_team, away_team, "openai_failed_or_no_sources", error_type="missing_env", error_message="OpenAI/Pixvyn API key missing")
     base_url_value = base_url()
     model = os.environ.get("OPENAI_INTEL_MODEL", DEFAULT_MODEL).strip() or DEFAULT_MODEL
     endpoint = responses_url(base_url_value)
@@ -330,6 +331,7 @@ def call_openai(date: str, home_team: str, away_team: str) -> dict:
             error_message=response.text[:1000],
         )
 
+    print(f"OpenAI/Pixvyn status_code: {response.status_code}")
     status_meta = {
         "request_success": True,
         "status_code": response.status_code,
@@ -341,6 +343,7 @@ def call_openai(date: str, home_team: str, away_team: str) -> dict:
     except ValueError:
         return empty_row(date, home_team, away_team, "openai_failed_or_no_sources", **status_meta, error_type="invalid_json_response", error_message=response.text[:1000])
 
+    print(f"response.status: {payload.get('status', '')}")
     web_search_success, has_final_message, final_text_success, web_search_status = response_status_flags(payload)
     status_meta.update(
         {
@@ -509,8 +512,11 @@ def main() -> None:
     write_debug(row)
     print(f"OpenAI intel written: {OUTPUT_PATH}")
     print(f"match: {match_date} {home_team} vs {away_team}")
+    print(f"status_code: {row.get('status_code', '')}")
     print(f"source_status: {row.get('source_status', 'unknown')}")
     print(f"intel_has_content: {row.get('intel_has_content', False)}")
+    print(f"response.status: {row.get('source_status', 'unknown')}")
+    print(f"source_urls_count: {urls_count(row)}")
     print(f"source_urls: {row.get('source_urls', 'unknown')}")
 
 

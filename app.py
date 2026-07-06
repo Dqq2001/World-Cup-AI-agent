@@ -1,6 +1,7 @@
 ﻿from __future__ import annotations
 
 import json
+import os
 import sys
 from datetime import timedelta
 from difflib import SequenceMatcher
@@ -637,6 +638,32 @@ def openai_proxy_warning() -> str:
     return ""
 
 
+def debug_intel_payload() -> dict:
+    status = {}
+    website_status_path = CACHE_DIR / "website_refresh_status.json"
+    if website_status_path.exists():
+        try:
+            status = json.loads(website_status_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            status = {}
+    intel = load_csv(DAILY_INTEL_PATH)
+    missing = load_csv(OPENAI_INTEL_MISSING_REPORT_PATH)
+    latest_error = ""
+    if not missing.empty:
+        latest_error = str(missing.iloc[-1].get("error_message", ""))
+    return {
+        "env": {
+            "OPENAI_API_KEY": bool(os.getenv("OPENAI_API_KEY", "").strip()),
+            "OPENAI_BASE_URL": bool(os.getenv("OPENAI_BASE_URL", "").strip()),
+            "OPENAI_INTEL_MODEL": bool(os.getenv("OPENAI_INTEL_MODEL", "").strip()),
+        },
+        "last_intel_refresh_time": status.get("last_refresh_at", ""),
+        "intel_csv_exists": DAILY_INTEL_PATH.exists(),
+        "intel_row_count": int(len(intel)),
+        "latest_openai_pixvyn_error": latest_error,
+    }
+
+
 def normalize_keys(data: pd.DataFrame) -> pd.DataFrame:
     data = data.copy()
     if "date" in data.columns:
@@ -803,6 +830,11 @@ def action_class(action: str) -> str:
 
 
 def odds_missing(data: pd.DataFrame) -> bool:
+    odds_value_cols = ["home_odds", "draw_odds", "away_odds"]
+    if all(column in data.columns for column in odds_value_cols):
+        odds_values = data[odds_value_cols].apply(pd.to_numeric, errors="coerce")
+        if ((odds_values > 1).all(axis=1)).any():
+            return False
     odds_cols = ["market_H", "market_D", "market_A"]
     if not all(column in data.columns for column in odds_cols):
         return True
@@ -1695,6 +1727,10 @@ def page_settings() -> None:
         st.info("Manual results file is missing. Use the template below.")
     if MANUAL_RESULTS_TEMPLATE_PATH.exists():
         st.dataframe(load_csv(MANUAL_RESULTS_TEMPLATE_PATH), use_container_width=True)
+
+    st.subheader("Intel Debug")
+    if st.button("Debug Intel", key="debug_intel"):
+        st.json(debug_intel_payload())
 
 
 def render_sidebar(data: pd.DataFrame) -> str:

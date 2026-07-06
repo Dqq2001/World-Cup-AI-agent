@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -46,6 +47,22 @@ OPENAI_COLUMNS = [
     "fetched_at",
     "source_url",
     "source_urls",
+]
+STABLE_DAILY_INTEL_COLUMNS = [
+    "date",
+    "home_team",
+    "away_team",
+    "home_injuries",
+    "away_injuries",
+    "home_suspensions",
+    "away_suspensions",
+    "home_expected_lineup",
+    "away_expected_lineup",
+    "home_coach_comments",
+    "away_coach_comments",
+    "intel_risk",
+    "source_urls",
+    "intel_updated_at",
 ]
 
 
@@ -117,7 +134,63 @@ def run_command(command: list[str]) -> tuple[bool, str]:
     return result.returncode == 0, output
 
 
+def source_urls_count(value) -> int:
+    text = str(value).strip()
+    if text.lower() in {"", "unknown", "nan", "none", "<na>"}:
+        return 0
+    return len([part for part in text.replace(",", ";").split(";") if part.strip().startswith(("http://", "https://"))])
+
+
+def parse_child_output(output: str, prefix: str) -> str:
+    for line in output.splitlines():
+        if line.strip().startswith(prefix):
+            return line.split(":", 1)[1].strip() if ":" in line else line.split("=", 1)[-1].strip()
+    return ""
+
+
+def ensure_stable_daily_intel_schema() -> int:
+    if DAILY_INTEL_CSV.exists():
+        try:
+            data = pd.read_csv(DAILY_INTEL_CSV, encoding="utf-8")
+        except pd.errors.EmptyDataError:
+            data = pd.DataFrame()
+    else:
+        data = pd.DataFrame()
+    if data.empty:
+        output = pd.DataFrame(columns=STABLE_DAILY_INTEL_COLUMNS)
+    else:
+        aliases = {
+            "home_injuries": "injuries_home",
+            "away_injuries": "injuries_away",
+            "home_suspensions": "suspensions_home",
+            "away_suspensions": "suspensions_away",
+            "home_expected_lineup": "expected_lineup_home",
+            "away_expected_lineup": "expected_lineup_away",
+            "home_coach_comments": "coach_comments_home",
+            "away_coach_comments": "coach_comments_away",
+            "intel_updated_at": "fetched_at",
+        }
+        output = data.copy()
+        for target, source in aliases.items():
+            if target not in output.columns:
+                output[target] = output[source] if source in output.columns else ""
+            elif source in output.columns:
+                output[target] = output[target].fillna(output[source])
+        if "source_urls" in output.columns and "source_url" in output.columns:
+            empty_sources = output["source_urls"].isna() | output["source_urls"].astype(str).str.strip().isin(["", "unknown", "nan", "None", "<NA>"])
+            output.loc[empty_sources, "source_urls"] = output.loc[empty_sources, "source_url"]
+        for column in STABLE_DAILY_INTEL_COLUMNS:
+            if column not in output.columns:
+                output[column] = ""
+        ordered = STABLE_DAILY_INTEL_COLUMNS + [column for column in output.columns if column not in STABLE_DAILY_INTEL_COLUMNS]
+        output = output[ordered]
+    DAILY_INTEL_CSV.parent.mkdir(parents=True, exist_ok=True)
+    output.to_csv(DAILY_INTEL_CSV, index=False, encoding="utf-8")
+    return len(output)
+
+
 def export_daily_intel_json() -> int:
+    ensure_stable_daily_intel_schema()
     if not DAILY_INTEL_CSV.exists():
         data = pd.DataFrame()
     else:
@@ -167,6 +240,15 @@ def write_debug(rows: list[dict]) -> None:
 
 
 def main() -> int:
+    print("INTEL_REFRESH_START")
+    if not os.environ.get("OPENAI_API_KEY", "").strip() and not (PROJECT_ROOT / ".env").exists():
+        message = "OpenAI/Pixvyn API key missing"
+        write_debug([])
+        write_status("failed", 0, 0, 0, 0, message)
+        print(message)
+        print("INTEL_REFRESH_DONE")
+        return 1
+
     fixtures = load_today_fixtures()
     debug_rows: list[dict] = []
     openai_success_count = 0
@@ -174,6 +256,7 @@ def main() -> int:
 
     for fixture in fixtures.itertuples(index=False):
         key = match_key(fixture)
+        print(f"match: {fixture.home_team} vs {fixture.away_team}")
         ok, output = run_command(
             [
                 sys.executable,
@@ -192,6 +275,13 @@ def main() -> int:
         source_urls = str(row.get("source_urls", "unknown"))
         source_urls_count = 0 if source_urls.lower() in {"", "unknown", "nan", "none", "<na>"} else len([url for url in source_urls.split(";") if url.strip()])
         has_content = str(row.get("intel_has_content", "False")).lower() in {"true", "1", "yes"}
+        status_code = parse_child_output(output, "status_code:")
+        if not status_code:
+            status_code = str(row.get("status_code", ""))
+        print(f"OpenAI/Pixvyn status_code: {status_code}")
+        api_response_status = parse_child_output(output, "response.status:")
+        print(f"response.status: {api_response_status or source_status}")
+        print(f"source_urls_count: {source_urls_count}")
         if ok and source_status in {"ok", "cached_previous_openai"} and has_content and source_urls_count > 0:
             openai_success_count += 1
             debug_rows.append(
@@ -225,6 +315,7 @@ def main() -> int:
     daily_ok, daily_output = run_command(
         [sys.executable, "scripts/run_daily_worldcup_intel.py", "--openai-intel", "--as-of-date", today, "--days-ahead", "0"]
     )
+    ensure_stable_daily_intel_schema()
     exported_count = export_daily_intel_json()
 
     fallback_count = openai_failed_count
@@ -244,8 +335,10 @@ def main() -> int:
     print(f"website_json={WEBSITE_INTEL_JSON}")
     print(f"debug_report={DEBUG_PATH}")
     print(f"status_file={REFRESH_STATUS_PATH}")
+    print(f"output_file={DAILY_INTEL_CSV}")
     if error_message:
         print(error_message.strip())
+    print("INTEL_REFRESH_DONE")
     return 0 if daily_ok else 1
 
 

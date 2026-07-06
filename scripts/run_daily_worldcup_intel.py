@@ -1,4 +1,5 @@
 ﻿import argparse
+import json
 import sys
 from datetime import date
 from pathlib import Path
@@ -114,6 +115,75 @@ def format_source_links(value, limit: int = 2) -> str:
     if remaining > 0:
         links.append(f"+ {remaining} more sources")
     return " · ".join(links)
+
+
+def format_poisson_scores(value) -> str:
+    if pd.isna(value):
+        return "unknown"
+    text = str(value).strip()
+    if text.lower() in {"", "unknown", "nan", "none", "<na>"}:
+        return "unknown"
+    try:
+        parsed = json.loads(text)
+    except (TypeError, json.JSONDecodeError):
+        return text
+    if not isinstance(parsed, list):
+        return text
+    rows = []
+    for item in parsed[:5]:
+        if not isinstance(item, dict):
+            continue
+        scoreline = str(item.get("scoreline", "")).strip()
+        try:
+            probability = float(item.get("probability", 0))
+        except (TypeError, ValueError):
+            continue
+        if scoreline:
+            rows.append(f"{scoreline}:{probability:.3f}")
+    return "; ".join(rows) if rows else "unknown"
+
+
+def odds_values_available(row) -> bool:
+    try:
+        odds = [float(getattr(row, column, pd.NA)) for column in ["home_odds", "draw_odds", "away_odds"]]
+    except (TypeError, ValueError):
+        return False
+    return all(value > 1 for value in odds)
+
+
+def refresh_reason_after_odds(row) -> str:
+    reason = format_text(getattr(row, "reason", ""))
+    if not odds_values_available(row):
+        return reason
+    blocked = "No odds available; only WATCH / PASS is allowed."
+    reason = reason.replace(blocked, "").strip()
+    return reason or "Odds and pre-match intel are available."
+
+
+def ensure_daily_intel_alias_columns(data: pd.DataFrame) -> pd.DataFrame:
+    output = data.copy()
+    aliases = {
+        "home_injuries": "injuries_home",
+        "away_injuries": "injuries_away",
+        "home_suspensions": "suspensions_home",
+        "away_suspensions": "suspensions_away",
+        "home_expected_lineup": "expected_lineup_home",
+        "away_expected_lineup": "expected_lineup_away",
+        "home_coach_comments": "coach_comments_home",
+        "away_coach_comments": "coach_comments_away",
+        "intel_updated_at": "fetched_at",
+    }
+    for target, source in aliases.items():
+        if target not in output.columns:
+            output[target] = output[source] if source in output.columns else ""
+        elif source in output.columns:
+            output[target] = output[target].fillna(output[source])
+    if "source_urls" not in output.columns:
+        output["source_urls"] = output["source_url"] if "source_url" in output.columns else ""
+    if "source_url" in output.columns:
+        empty_sources = output["source_urls"].isna() | output["source_urls"].astype(str).str.strip().isin(["", "unknown", "nan", "None", "<NA>"])
+        output.loc[empty_sources, "source_urls"] = output.loc[empty_sources, "source_url"]
+    return output
 
 
 def today_only(data: pd.DataFrame, as_of_date: str) -> pd.DataFrame:
@@ -500,18 +570,18 @@ def write_brief(data: pd.DataFrame, output_path: Path, as_of_date: str) -> None:
                 f"- Market H/D/A: {market_h} / {market_d} / {market_a}",
                 f"- Value side / edge: {format_text(getattr(row, 'value_side', 'unknown'))} / {format_optional(getattr(row, 'edge', pd.NA))}",
                 f"- Model H/D/A: {format_optional(row.model_H)} / {format_optional(row.model_D)} / {format_optional(row.model_A)}",
-                f"- Poisson top scores: {row.poisson_top_scores}",
-                f"- Intel risk: {row.intel_risk}",
-                f"- Home injuries: {row.injuries_home}",
-                f"- Away injuries: {row.injuries_away}",
-                f"- Home suspensions: {row.suspensions_home}",
-                f"- Away suspensions: {row.suspensions_away}",
-                f"- Home expected lineup: {row.expected_lineup_home}",
-                f"- Away expected lineup: {row.expected_lineup_away}",
-                f"- Home coach comments: {row.coach_comments_home}",
-                f"- Away coach comments: {row.coach_comments_away}",
+                f"- Poisson top scores: {format_poisson_scores(getattr(row, 'poisson_top_scores', pd.NA))}",
+                f"- Intel risk: {format_text(getattr(row, 'intel_risk', 'unknown'))}",
+                f"- Home injuries: {format_text(getattr(row, 'home_injuries', getattr(row, 'injuries_home', 'unknown')))}",
+                f"- Away injuries: {format_text(getattr(row, 'away_injuries', getattr(row, 'injuries_away', 'unknown')))}",
+                f"- Home suspensions: {format_text(getattr(row, 'home_suspensions', getattr(row, 'suspensions_home', 'unknown')))}",
+                f"- Away suspensions: {format_text(getattr(row, 'away_suspensions', getattr(row, 'suspensions_away', 'unknown')))}",
+                f"- Home expected lineup: {format_text(getattr(row, 'home_expected_lineup', getattr(row, 'expected_lineup_home', 'unknown')))}",
+                f"- Away expected lineup: {format_text(getattr(row, 'away_expected_lineup', getattr(row, 'expected_lineup_away', 'unknown')))}",
+                f"- Home coach comments: {format_text(getattr(row, 'home_coach_comments', getattr(row, 'coach_comments_home', 'unknown')))}",
+                f"- Away coach comments: {format_text(getattr(row, 'away_coach_comments', getattr(row, 'coach_comments_away', 'unknown')))}",
                 f"- Sources: {source_links}",
-                f"- Reason: {row.reason}",
+                f"- Reason: {refresh_reason_after_odds(row)}",
                 "",
             ]
         )
@@ -606,6 +676,11 @@ def main() -> None:
     result["data"] = today_only(all_data, args.as_of_date)
     result["data"] = add_odds_columns(result["data"], args.odds)
     result["data"] = add_poisson_columns(result["data"])
+    if not result["data"].empty:
+        odds_available = result["data"].apply(odds_values_available, axis=1)
+        result["data"].loc[odds_available, "odds_status"] = result["data"].loc[odds_available, "odds_status"].replace({"missing": "available"})
+        result["data"].loc[odds_available, "reason"] = result["data"].loc[odds_available].apply(refresh_reason_after_odds, axis=1)
+    result["data"] = ensure_daily_intel_alias_columns(result["data"])
     save_worldcup_features(result["data"])
     result["data"].to_csv(INTEL_OUTPUT, index=False, encoding="utf-8")
     result["missing_report"].to_csv(MISSING_OUTPUT, index=False, encoding="utf-8")
