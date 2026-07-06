@@ -159,16 +159,16 @@ def main() -> int:
         return 1
 
     if not changed:
-        message = "no tracked fixtures/results/predictions/intel outputs changed"
-        write_status("daily", "no_update", message)
+        message = "refresh completed; no tracked fixtures/results/predictions/intel outputs changed"
+        write_status("daily", "success", message)
         append_log(f"daily refresh finished without actual update: {message}")
-        return 1
+        return 0
 
     message = "\n".join(part for part in messages if part).strip()
     if fallback_count:
         message = f"{message}\nchanged outputs: {len(changed)}; unresolved knockout fallback rows: {fallback_count}"
-        write_status("daily", "warning", message)
-        append_log(f"daily refresh finished with warning: unresolved knockout fallback rows={fallback_count}")
+        write_status("daily", "success", message)
+        append_log(f"daily refresh finished successfully with warning: unresolved knockout fallback rows={fallback_count}")
         return 0
 
     message = f"{message}\nchanged outputs: {len(changed)}"
