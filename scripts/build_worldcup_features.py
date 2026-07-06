@@ -197,7 +197,7 @@ def merge_required(base: pd.DataFrame, other: pd.DataFrame, kind: str, columns: 
     other = normalize_keys(other)
     required = merge_keys + columns
     other = other[required].drop_duplicates(merge_keys, keep="first")
-    merged = base.merge(other, on=merge_keys, how="left", validate="one_to_one")
+    merged = base.merge(other, on=merge_keys, how="left", validate="many_to_one")
     missing_rows = int(merged[columns].isna().any(axis=1).sum())
     if missing_rows:
         raise ValueError(f"{kind} 合併後仍有 {missing_rows} 筆缺失。")
@@ -284,9 +284,15 @@ def merge_results(schedule: pd.DataFrame, results: pd.DataFrame) -> pd.DataFrame
         return schedule
 
     merge_keys = choose_merge_keys(schedule, results)
+    schedule = schedule.copy()
+    if "date" in merge_keys:
+        schedule["date"] = pd.to_datetime(schedule["date"], errors="coerce").dt.strftime("%Y-%m-%d")
     results = normalize_keys(results)
     results = results[merge_keys + result_columns].drop_duplicates(merge_keys, keep="first")
-    return schedule.merge(results, on=merge_keys, how="left", validate="one_to_one")
+    merged = schedule.merge(results, on=merge_keys, how="left", validate="many_to_one")
+    if "date" in merged.columns:
+        merged["date"] = pd.to_datetime(merged["date"], errors="coerce")
+    return merged
 
 
 def match_points(home_goals: float, away_goals: float) -> tuple[int, int]:
@@ -481,10 +487,22 @@ def build_worldcup_features(
     features = pd.concat([schedule.reset_index(drop=True), context], axis=1)
     features["date"] = features["date"].dt.strftime("%Y-%m-%d")
 
-    features = merge_required(features, market, "market", ["market_H", "market_D", "market_A"])
+    try:
+        features = merge_required(features, market, "market", ["market_H", "market_D", "market_A"])
+    except ValueError as exc:
+        report_rows.append(missing_report_row("market", paths["market"], ["market_H", "market_D", "market_A"], str(exc)))
+        write_missing_report(report_rows, missing_report_path)
+        print(f"World Cup market data is incomplete; falling back to no-odds mode. {missing_report_path}")
+        return None
     features = merge_required(features, model, "model", ["model_H", "model_D", "model_A"])
     features = merge_required(features, poisson, "poisson", ["poisson_home_xg", "poisson_away_xg"])
-    features = merge_required(features, odds, "odds", ["home_odds", "draw_odds", "away_odds"])
+    try:
+        features = merge_required(features, odds, "odds", ["home_odds", "draw_odds", "away_odds"])
+    except ValueError as exc:
+        report_rows.append(missing_report_row("odds", paths["odds"], ["home_odds", "draw_odds", "away_odds"], str(exc)))
+        write_missing_report(report_rows, missing_report_path)
+        print(f"World Cup odds data is incomplete; falling back to no-odds mode. {missing_report_path}")
+        return None
 
     validate_probabilities(features, ["market_H", "market_D", "market_A"], "market", report_rows)
     validate_probabilities(features, ["model_H", "model_D", "model_A"], "model", report_rows)
