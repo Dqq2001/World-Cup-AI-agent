@@ -1624,16 +1624,9 @@ def page_daily_brief() -> None:
 
 def page_prediction_review() -> None:
     st.title("Prediction Review")
-    current_date_text = TODAY.strftime("%Y-%m-%d")
-    st.caption(f"Current date: {current_date_text}")
     if st.button("Run Prediction Review Now", key="run_prediction_review_now"):
         with st.spinner("Evaluating predictions against completed results..."):
-            result = review_service.refresh_prediction_review(as_of_date=current_date_text)
-            if result.ok:
-                st.session_state.pop("refresh_warning", None)
-            else:
-                st.session_state["refresh_warning"] = f"Prediction review failed.\n{result.output[-800:]}"
-            st.cache_data.clear()
+            run_refresh_script("scripts/evaluate_daily_predictions.py")
         st.rerun()
 
     review_payload = review_service.load_prediction_review(today=TODAY)
@@ -1642,10 +1635,6 @@ def page_prediction_review() -> None:
     summary = review_payload["summary"]
     accuracy_analysis = review_payload["accuracy_analysis"]
     risk_signal_accuracy = review_payload["risk_signal_accuracy"]
-    last_updated = review_payload.get("last_updated", "")
-    st.caption(f"Prediction Review last updated: {last_updated or 'Never'}")
-    if st.session_state.get("refresh_warning"):
-        st.warning(st.session_state["refresh_warning"])
 
     if review.empty:
         st.info("No completed prediction review is available yet.")
