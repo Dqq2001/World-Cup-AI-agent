@@ -1,7 +1,7 @@
 import argparse
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -16,6 +16,7 @@ FEEDBACK_OUTPUT = PROJECT_ROOT / "data" / "processed" / "worldcup_prediction_fee
 ANALYSIS_OUTPUT = PROJECT_ROOT / "reports" / "daily_prediction_error_analysis.csv"
 PREDICTION_ACCURACY_OUTPUT = PROJECT_ROOT / "reports" / "error_pattern_analysis.csv"
 RISK_SIGNAL_OUTPUT = PROJECT_ROOT / "reports" / "risk_signal_accuracy.csv"
+REVIEW_DATE_DEBUG_OUTPUT = PROJECT_ROOT / "reports" / "review_date_debug.csv"
 
 TEAM_ALIASES = {
     "Bosnia-Herzegovina": "Bosnia and Herzegovina",
@@ -157,12 +158,15 @@ def model_notes(row: pd.Series, err: str) -> str:
     return "; ".join(pieces)
 
 
-def evaluate(predictions: pd.DataFrame, results: pd.DataFrame) -> pd.DataFrame:
+def evaluate(predictions: pd.DataFrame, results: pd.DataFrame, as_of_date: str | None = None) -> pd.DataFrame:
     if predictions.empty or results.empty:
         return pd.DataFrame()
     predictions = add_keys(predictions)
     results = add_keys(results)
     results = results[results.get("status", "").astype(str).str.lower().isin(["completed", "complete", "final"])]
+    if as_of_date:
+        predictions = predictions[predictions["date"] <= as_of_date]
+        results = results[results["date"] <= as_of_date]
 
     event_results = results[results["_event_key"].ne("")].drop_duplicates("_event_key", keep="last")
     team_results = results.drop_duplicates("_team_key", keep="last")
@@ -340,27 +344,66 @@ def write_error_analysis(evaluated: pd.DataFrame) -> None:
     prediction_analysis.to_csv(ANALYSIS_OUTPUT, index=False, encoding="utf-8")
 
 
+def write_review_date_debug(
+    system_date: str,
+    requested_as_of_date: str,
+    results: pd.DataFrame,
+    evaluated: pd.DataFrame,
+    summary: pd.DataFrame,
+) -> None:
+    def max_date(data: pd.DataFrame) -> str:
+        if data.empty or "date" not in data.columns:
+            return ""
+        values = pd.to_datetime(data["date"], errors="coerce").dropna()
+        return values.max().strftime("%Y-%m-%d") if not values.empty else ""
+
+    as_of = pd.to_datetime(requested_as_of_date, errors="coerce")
+    filter_end_date = as_of.strftime("%Y-%m-%d") if pd.notna(as_of) else requested_as_of_date
+    filter_start_date = (as_of - timedelta(days=1)).strftime("%Y-%m-%d") if pd.notna(as_of) else ""
+    REVIEW_DATE_DEBUG_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    pd.DataFrame(
+        [
+            {
+                "system_date": system_date,
+                "requested_as_of_date": requested_as_of_date,
+                "results_max_date": max_date(results),
+                "review_max_date": max_date(evaluated),
+                "summary_max_date": max_date(summary),
+                "filter_start_date": filter_start_date,
+                "filter_end_date": filter_end_date,
+            }
+        ]
+    ).to_csv(REVIEW_DATE_DEBUG_OUTPUT, index=False, encoding="utf-8")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--predictions", type=Path, default=PREDICTIONS_PATH)
     parser.add_argument("--results", type=Path, default=RESULTS_PATH)
+    parser.add_argument("--as-of-date", default=pd.Timestamp.today().strftime("%Y-%m-%d"))
     args = parser.parse_args()
 
+    parsed_as_of = pd.to_datetime(args.as_of_date, errors="coerce")
+    as_of_date = parsed_as_of.strftime("%Y-%m-%d") if pd.notna(parsed_as_of) else pd.Timestamp.today().strftime("%Y-%m-%d")
     predictions = load_csv(args.predictions)
     results = load_csv(args.results)
-    evaluated = evaluate(predictions, results)
+    evaluated = evaluate(predictions, results, as_of_date=as_of_date)
 
     DAILY_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     output = evaluated.drop(columns=["_match_key", "_features_snapshot"], errors="ignore")
+    summary = summarize(evaluated)
     output.to_csv(DAILY_OUTPUT, index=False, encoding="utf-8")
-    summarize(evaluated).to_csv(SUMMARY_OUTPUT, index=False, encoding="utf-8")
+    summary.to_csv(SUMMARY_OUTPUT, index=False, encoding="utf-8")
     write_feedback(evaluated)
     write_error_analysis(evaluated)
+    write_review_date_debug(pd.Timestamp.today().strftime("%Y-%m-%d"), as_of_date, results, evaluated, summary)
 
+    print(f"as_of_date: {as_of_date}")
     print(f"evaluated matches: {len(evaluated)}")
     print(f"output: {DAILY_OUTPUT}")
     print(f"summary: {SUMMARY_OUTPUT}")
     print(f"feedback: {FEEDBACK_OUTPUT}")
+    print(f"debug: {REVIEW_DATE_DEBUG_OUTPUT}")
     return 0
 
 
