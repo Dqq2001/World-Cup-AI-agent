@@ -40,10 +40,15 @@ MODEL_MISSING_REPORT_OUTPUT = PROJECT_ROOT / "reports" / "worldcup_model_missing
 
 
 def choose_predictions_path() -> Path | None:
-    if DEFAULT_BETTING.exists():
-        return DEFAULT_BETTING
-    if DEFAULT_MODEL_ONLY.exists():
-        return DEFAULT_MODEL_ONLY
+    for path in [DEFAULT_BETTING, DEFAULT_MODEL_ONLY]:
+        if not path.exists() or path.stat().st_size <= 2:
+            continue
+        try:
+            preview = pd.read_csv(path, encoding="utf-8", nrows=1)
+        except pd.errors.EmptyDataError:
+            continue
+        if not preview.empty or len(preview.columns) > 0:
+            return path
     return None
 
 
@@ -444,6 +449,22 @@ def write_poisson_merge_debug(rows: list[dict]) -> None:
 
 
 def save_worldcup_features(data: pd.DataFrame) -> None:
+    if data.empty:
+        FEATURES_SOURCE_DEBUG_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+        pd.DataFrame(
+            [
+                {
+                    "source_dataframe": "run_daily_worldcup_intel.result_data",
+                    "rows": 0,
+                    "columns": len(data.columns),
+                    "saved_to_worldcup_features": False,
+                    "missing_columns": "",
+                    "reason": "skipped_empty_daily_intel_data",
+                }
+            ]
+        ).to_csv(FEATURES_SOURCE_DEBUG_OUTPUT, index=False, encoding="utf-8")
+        print(f"Skipped worldcup_features write because daily intel data is empty: {WORLDCUP_FEATURES_OUTPUT}")
+        return
     features = data.copy()
     if features.empty:
         missing_columns = []
@@ -528,6 +549,7 @@ def save_worldcup_features(data: pd.DataFrame) -> None:
                 "columns": len(features.columns),
                 "saved_to_worldcup_features": True,
                 "missing_columns": ";".join(missing_columns),
+                "reason": "",
             }
         ]
     ).to_csv(FEATURES_SOURCE_DEBUG_OUTPUT, index=False, encoding="utf-8")

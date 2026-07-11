@@ -69,12 +69,19 @@ class IntelligenceAgent:
         output["source_status"] = output["source_status"].where(output["source_status"] != "unknown", "not_run")
         output["intel_has_content"] = output["intel_has_content"].map(self._to_bool)
         output["intel_confidence_level"] = output["intel_confidence_level"].where(output["intel_has_content"], "LOW")
-        risk_details = output.apply(self._intel_risk_details, axis=1, result_type="expand")
-        output["intel_risk"] = risk_details["intel_risk"]
-        output["intel_risk_score"] = risk_details["intel_risk_score"]
-        output["intel_risk_reason"] = risk_details["intel_risk_reason"]
-        output["recommended_action"] = output.apply(self._recommended_action, axis=1)
-        output["reason"] = output.apply(self._reason, axis=1)
+        if output.empty:
+            output["intel_risk"] = pd.Series(dtype=str)
+            output["intel_risk_score"] = pd.Series(dtype=float)
+            output["intel_risk_reason"] = pd.Series(dtype=str)
+            output["recommended_action"] = pd.Series(dtype=str)
+            output["reason"] = pd.Series(dtype=str)
+        else:
+            risk_details = output.apply(self._intel_risk_details, axis=1, result_type="expand")
+            output["intel_risk"] = risk_details["intel_risk"]
+            output["intel_risk_score"] = risk_details["intel_risk_score"]
+            output["intel_risk_reason"] = risk_details["intel_risk_reason"]
+            output["recommended_action"] = output.apply(self._recommended_action, axis=1)
+            output["reason"] = output.apply(self._reason, axis=1)
         missing_report = self._missing_report(output, manual_intel_path, news_intel_path, odds_path)
         return {"data": output, "missing_report": missing_report}
 
@@ -193,7 +200,10 @@ class IntelligenceAgent:
         ]
         if path is None or not path.exists():
             return pd.DataFrame(columns=columns)
-        predictions = pd.read_csv(path, encoding="utf-8")
+        try:
+            predictions = pd.read_csv(path, encoding="utf-8")
+        except pd.errors.EmptyDataError:
+            return pd.DataFrame(columns=columns)
         for column in columns:
             if column not in predictions.columns:
                 predictions[column] = pd.NA
