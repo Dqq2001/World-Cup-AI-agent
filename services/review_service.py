@@ -52,10 +52,10 @@ def choose_display_review(review: pd.DataFrame, today: pd.Timestamp) -> pd.DataF
     display = output[(output["date_dt"] >= start_date) & (output["date_dt"] <= today)].copy()
     if not display.empty:
         return display
-    latest_date = output["date_dt"].dropna().max()
-    if pd.isna(latest_date):
+    dated = output.dropna(subset=["date_dt"]).copy()
+    if dated.empty:
         return output.iloc[0:0].copy()
-    return output[output["date_dt"] == latest_date].copy()
+    return dated.sort_values("date_dt", ascending=False).head(10).sort_values("date_dt").copy()
 
 
 def summarize_display_review(display_review: pd.DataFrame) -> pd.DataFrame:
