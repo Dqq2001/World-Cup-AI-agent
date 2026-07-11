@@ -1,6 +1,7 @@
 import argparse
 import json
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -30,6 +31,7 @@ MODEL_ONLY_OUTPUT_CSV = PROJECT_ROOT / "reports" / "worldcup_model_only_predicti
 DRAW_RISK_SUMMARY_CSV = PROJECT_ROOT / "reports" / "worldcup_draw_risk_summary.csv"
 HIGH_DRAW_RISK_CSV = PROJECT_ROOT / "reports" / "worldcup_high_draw_risk_matches.csv"
 ADJUSTMENT_DEBUG_CSV = PROJECT_ROOT / "reports" / "prediction_adjustment_debug.csv"
+PREDICTION_SNAPSHOTS_CSV = PROCESSED_DATA_DIR / "worldcup_prediction_snapshots.csv"
 NO_ODDS_REASON = "缺少 odds，所以目前不能計算 value / edge；此模式只允許 WATCH 或 PASS。"
 
 
@@ -407,6 +409,84 @@ def write_draw_risk_reports(output: pd.DataFrame) -> None:
     output[output["draw_risk_level"] == "HIGH"].copy().to_csv(HIGH_DRAW_RISK_CSV, index=False, encoding="utf-8")
 
 
+def normalize_team_key(value) -> str:
+    return "" if pd.isna(value) else str(value).strip().casefold()
+
+
+def snapshot_probability(row: pd.Series, side: str):
+    adjusted = pd.to_numeric(row.get(f"adjusted_{side}"), errors="coerce")
+    if pd.notna(adjusted):
+        return adjusted
+    return pd.to_numeric(row.get(f"model_{side}"), errors="coerce")
+
+
+def snapshot_prediction_side(row: pd.Series) -> str:
+    values = {side: snapshot_probability(row, side) for side in ["H", "D", "A"]}
+    values = {side: (float(value) if pd.notna(value) else -1.0) for side, value in values.items()}
+    return max(values, key=values.get)
+
+
+def snapshot_match_key(row: pd.Series) -> str:
+    event_id = str(row.get("event_id", row.get("match_id", ""))).strip()
+    if event_id:
+        return event_id
+    return f"{row.get('date', '')}|{normalize_team_key(row.get('home_team', ''))}|{normalize_team_key(row.get('away_team', ''))}"
+
+
+def append_prediction_snapshots(output: pd.DataFrame, snapshot_path: Path = PREDICTION_SNAPSHOTS_CSV) -> None:
+    if output.empty:
+        return
+    today = pd.Timestamp.today().normalize()
+    created_at = datetime.now(timezone.utc).isoformat()
+    rows = []
+    for _, row in output.iterrows():
+        match_date = pd.to_datetime(row.get("date"), errors="coerce")
+        if pd.isna(match_date) or match_date.normalize() < today:
+            continue
+        if is_waiting_for_teams(row):
+            continue
+        event_id = str(row.get("event_id", row.get("match_id", ""))).strip()
+        probs = {side: snapshot_probability(row, side) for side in ["H", "D", "A"]}
+        valid_probs = [float(value) for value in probs.values() if pd.notna(value)]
+        if not valid_probs:
+            continue
+        rows.append(
+            {
+                "event_id": event_id,
+                "match_key": snapshot_match_key(row),
+                "prediction_date": today.strftime("%Y-%m-%d"),
+                "match_date": match_date.strftime("%Y-%m-%d"),
+                "home_team": row.get("home_team", ""),
+                "away_team": row.get("away_team", ""),
+                "predicted_H": probs["H"],
+                "predicted_D": probs["D"],
+                "predicted_A": probs["A"],
+                "predicted_result": snapshot_prediction_side(row),
+                "confidence": max(valid_probs),
+                "action": row.get("recommended_action", ""),
+                "odds_status": row.get("odds_status", ""),
+                "intel_risk": row.get("intel_risk", ""),
+                "draw_risk": row.get("draw_risk_level", ""),
+                "upset_risk": row.get("upset_risk", ""),
+                "created_at": created_at,
+            }
+        )
+    if not rows:
+        return
+    snapshots = pd.DataFrame(rows)
+    snapshot_path.parent.mkdir(parents=True, exist_ok=True)
+    existing = load_optional_csv(snapshot_path)
+    combined = pd.concat([existing, snapshots], ignore_index=True, sort=False) if not existing.empty else snapshots
+    combined["match_date"] = pd.to_datetime(combined["match_date"], errors="coerce").dt.strftime("%Y-%m-%d")
+    combined["prediction_date"] = pd.to_datetime(combined["prediction_date"], errors="coerce").dt.strftime("%Y-%m-%d")
+    combined["_event_id"] = combined["event_id"].fillna("").astype(str).str.strip()
+    combined["_match_key"] = combined["match_key"].fillna("").astype(str).str.strip()
+    combined["_dedup_key"] = combined["_event_id"].where(combined["_event_id"].ne(""), combined["_match_key"])
+    combined = combined.sort_values(["match_date", "prediction_date", "created_at"]).drop_duplicates("_dedup_key", keep="last")
+    combined.drop(columns=["_event_id", "_match_key", "_dedup_key"], errors="ignore").to_csv(snapshot_path, index=False, encoding="utf-8")
+    print(f"prediction snapshots appended: {snapshot_path} rows={len(snapshots)} total={len(combined)}")
+
+
 def run_model_only_agents(output_csv: Path = MODEL_ONLY_OUTPUT_CSV) -> pd.DataFrame | None:
     try:
         data = build_model_only_data()
@@ -528,6 +608,7 @@ def run_model_only_agents(output_csv: Path = MODEL_ONLY_OUTPUT_CSV) -> pd.DataFr
         output.to_csv(MODEL_ONLY_OUTPUT_CSV, index=False, encoding="utf-8")
     write_adjustment_debug(output)
     write_draw_risk_reports(output)
+    append_prediction_snapshots(output)
     print(f"已輸出 no-odds model-only predictions: {output_csv}")
     print(f"輸出筆數: {len(output)}")
     print(f"已輸出 draw risk summary: {DRAW_RISK_SUMMARY_CSV}")
@@ -561,6 +642,7 @@ def run_agents(features_path: Path, output_csv: Path, report_dir: Path):
     output = agents["report"].run(predictions, output_csv, report_dir)
     write_adjustment_debug(output)
     write_draw_risk_reports(output)
+    append_prediction_snapshots(output)
     print(f"已輸出 World Cup betting predictions: {output_csv}")
     print(f"已輸出逐場報告資料夾: {report_dir}")
     print(f"已輸出 draw risk summary: {DRAW_RISK_SUMMARY_CSV}")

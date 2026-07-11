@@ -26,6 +26,7 @@ TRACKED_OUTPUTS = [
     PROJECT_ROOT / "reports" / "daily_prediction_vs_result.csv",
     PROJECT_ROOT / "reports" / "daily_prediction_summary.csv",
     PROJECT_ROOT / "data" / "processed" / "worldcup_prediction_feedback.csv",
+    PROJECT_ROOT / "data" / "processed" / "worldcup_prediction_snapshots.csv",
 ]
 KNOCKOUT_DEBUG_PATH = PROJECT_ROOT / "reports" / "knockout_bracket_fetch_debug.csv"
 

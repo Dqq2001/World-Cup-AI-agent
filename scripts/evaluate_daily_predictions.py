@@ -8,6 +8,7 @@ import pandas as pd
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+SNAPSHOTS_PATH = PROJECT_ROOT / "data" / "processed" / "worldcup_prediction_snapshots.csv"
 PREDICTIONS_PATH = PROJECT_ROOT / "reports" / "worldcup_betting_predictions.csv"
 RESULTS_PATH = PROJECT_ROOT / "data" / "processed" / "worldcup_results.csv"
 DAILY_OUTPUT = PROJECT_ROOT / "reports" / "daily_prediction_vs_result.csv"
@@ -17,6 +18,9 @@ ANALYSIS_OUTPUT = PROJECT_ROOT / "reports" / "daily_prediction_error_analysis.cs
 PREDICTION_ACCURACY_OUTPUT = PROJECT_ROOT / "reports" / "error_pattern_analysis.csv"
 RISK_SIGNAL_OUTPUT = PROJECT_ROOT / "reports" / "risk_signal_accuracy.csv"
 REVIEW_DATE_DEBUG_OUTPUT = PROJECT_ROOT / "reports" / "review_date_debug.csv"
+MATCH_DEBUG_OUTPUT = PROJECT_ROOT / "reports" / "prediction_review_match_debug.csv"
+UNMATCHED_OUTPUT = PROJECT_ROOT / "reports" / "prediction_review_unmatched.csv"
+COVERAGE_DEBUG_OUTPUT = PROJECT_ROOT / "reports" / "prediction_snapshot_coverage_debug.csv"
 
 TEAM_ALIASES = {
     "Bosnia-Herzegovina": "Bosnia and Herzegovina",
@@ -51,6 +55,8 @@ def load_csv(path: Path) -> pd.DataFrame:
 
 def add_keys(data: pd.DataFrame) -> pd.DataFrame:
     data = data.copy()
+    if "date" not in data.columns and "match_date" in data.columns:
+        data["date"] = data["match_date"]
     data["date"] = pd.to_datetime(data["date"], errors="coerce").dt.strftime("%Y-%m-%d")
     data["_team_key"] = data["date"].astype(str) + "|" + data["home_team"].map(normalize_team) + "|" + data["away_team"].map(normalize_team)
     if "event_id" in data.columns:
@@ -63,9 +69,46 @@ def add_keys(data: pd.DataFrame) -> pd.DataFrame:
     return data
 
 
+def load_prediction_source(path: Path | None = None) -> tuple[pd.DataFrame, str]:
+    if path is not None:
+        data = load_csv(path)
+        is_snapshot = path.resolve() == SNAPSHOTS_PATH.resolve()
+        return normalize_snapshot_predictions(data) if is_snapshot else data, str(path)
+    snapshots = load_csv(SNAPSHOTS_PATH)
+    if not snapshots.empty:
+        return normalize_snapshot_predictions(snapshots), str(SNAPSHOTS_PATH)
+    return load_csv(PREDICTIONS_PATH), str(PREDICTIONS_PATH)
+
+
+def normalize_snapshot_predictions(data: pd.DataFrame) -> pd.DataFrame:
+    if data.empty:
+        return data
+    output = data.copy()
+    if "match_date" in output.columns:
+        output["date"] = output["match_date"]
+    if "predicted_H" in output.columns:
+        output["model_H"] = output["predicted_H"]
+        output["adjusted_H"] = output["predicted_H"]
+    if "predicted_D" in output.columns:
+        output["model_D"] = output["predicted_D"]
+        output["adjusted_D"] = output["predicted_D"]
+    if "predicted_A" in output.columns:
+        output["model_A"] = output["predicted_A"]
+        output["adjusted_A"] = output["predicted_A"]
+    if "action" in output.columns:
+        output["recommended_action"] = output["action"]
+    if "draw_risk" in output.columns:
+        output["draw_risk_level"] = output["draw_risk"]
+    if "event_id" in output.columns and "match_id" not in output.columns:
+        output["match_id"] = output["event_id"]
+    return output
+
+
 def probability(row: pd.Series, adjusted: bool, side: str) -> float:
     prefix = "adjusted" if adjusted else "model"
     value = pd.to_numeric(row.get(f"{prefix}_{side}"), errors="coerce")
+    if pd.isna(value):
+        value = pd.to_numeric(row.get(f"predicted_{side}"), errors="coerce")
     if pd.isna(value) and adjusted:
         value = pd.to_numeric(row.get(f"decision_{side}"), errors="coerce")
     if pd.isna(value):
@@ -158,9 +201,9 @@ def model_notes(row: pd.Series, err: str) -> str:
     return "; ".join(pieces)
 
 
-def evaluate(predictions: pd.DataFrame, results: pd.DataFrame, as_of_date: str | None = None) -> pd.DataFrame:
+def evaluate(predictions: pd.DataFrame, results: pd.DataFrame, as_of_date: str | None = None) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     if predictions.empty or results.empty:
-        return pd.DataFrame()
+        return pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
     predictions = add_keys(predictions)
     results = add_keys(results)
     results = results[results.get("status", "").astype(str).str.lower().isin(["completed", "complete", "final"])]
@@ -168,19 +211,39 @@ def evaluate(predictions: pd.DataFrame, results: pd.DataFrame, as_of_date: str |
         predictions = predictions[predictions["date"] <= as_of_date]
         results = results[results["date"] <= as_of_date]
 
-    event_results = results[results["_event_key"].ne("")].drop_duplicates("_event_key", keep="last")
-    team_results = results.drop_duplicates("_team_key", keep="last")
-
+    event_predictions = predictions[predictions["_event_key"].ne("")].drop_duplicates("_event_key", keep="last")
+    team_predictions = predictions.drop_duplicates("_team_key", keep="last")
     rows = []
-    for _, pred in predictions.iterrows():
-        result = pd.Series(dtype=object)
-        if pred["_event_key"] and pred["_event_key"] in set(event_results["_event_key"]):
-            result = event_results[event_results["_event_key"] == pred["_event_key"]].iloc[0]
+    debug_rows = []
+    unmatched_rows = []
+    for _, result in results.iterrows():
+        pred = pd.Series(dtype=object)
+        matched_by = ""
+        if result["_event_key"] and result["_event_key"] in set(event_predictions["_event_key"]):
+            pred = event_predictions[event_predictions["_event_key"] == result["_event_key"]].iloc[0]
+            matched_by = "event_id"
         else:
-            matched = team_results[team_results["_team_key"] == pred["_team_key"]]
+            matched = team_predictions[team_predictions["_team_key"] == result["_team_key"]]
             if not matched.empty:
-                result = matched.iloc[0]
-        if result.empty:
+                pred = matched.iloc[0]
+                matched_by = "match_date_team"
+        if pred.empty:
+            unmatched = result.drop(labels=[col for col in result.index if col.startswith("_")], errors="ignore").to_dict()
+            unmatched["reason"] = "prediction_snapshot_missing"
+            unmatched_rows.append(unmatched)
+            debug_rows.append(
+                {
+                    "match_date": result.get("date", ""),
+                    "home_team": result.get("home_team", ""),
+                    "away_team": result.get("away_team", ""),
+                    "event_id": result.get("_event_key", ""),
+                    "prediction_snapshot_found": False,
+                    "result_found": True,
+                    "review_found": False,
+                    "matched_by": "",
+                    "reason": "prediction_snapshot_missing",
+                }
+            )
             continue
 
         actual = actual_result(result)
@@ -219,11 +282,24 @@ def evaluate(predictions: pd.DataFrame, results: pd.DataFrame, as_of_date: str |
                 "profit_if_bet": profit_if_bet(pred, pred_side, actual),
                 "error_type": err,
                 "model_notes": model_notes(pred, err),
-                "_match_key": pred["_match_key"],
+                "_match_key": result["_match_key"],
                 "_features_snapshot": json.dumps(pred.drop(labels=[col for col in pred.index if col.startswith("_")]).to_dict(), ensure_ascii=False, default=str),
             }
         )
-    return pd.DataFrame(rows)
+        debug_rows.append(
+            {
+                "match_date": result.get("date", ""),
+                "home_team": result.get("home_team", ""),
+                "away_team": result.get("away_team", ""),
+                "event_id": result.get("_event_key", ""),
+                "prediction_snapshot_found": True,
+                "result_found": True,
+                "review_found": True,
+                "matched_by": matched_by,
+                "reason": "",
+            }
+        )
+    return pd.DataFrame(rows), pd.DataFrame(debug_rows), pd.DataFrame(unmatched_rows)
 
 
 def summarize(evaluated: pd.DataFrame) -> pd.DataFrame:
@@ -377,34 +453,94 @@ def write_review_date_debug(
     ).to_csv(REVIEW_DATE_DEBUG_OUTPUT, index=False, encoding="utf-8")
 
 
+def review_key(data: pd.DataFrame) -> pd.Series:
+    if data.empty:
+        return pd.Series(dtype=str)
+    return (
+        pd.to_datetime(data["date"], errors="coerce").dt.strftime("%Y-%m-%d")
+        + "|"
+        + data["home_team"].map(normalize_team)
+        + "|"
+        + data["away_team"].map(normalize_team)
+    )
+
+
+def append_new_reviews(existing: pd.DataFrame, evaluated: pd.DataFrame) -> pd.DataFrame:
+    output = evaluated.drop(columns=["_match_key", "_features_snapshot"], errors="ignore")
+    if existing.empty:
+        return output
+    if output.empty:
+        return existing
+    existing_keys = set(review_key(existing))
+    new_rows = output[~review_key(output).isin(existing_keys)]
+    if new_rows.empty:
+        return existing
+    return pd.concat([existing, new_rows], ignore_index=True, sort=False)
+
+
+def write_review_debug(match_debug: pd.DataFrame, unmatched: pd.DataFrame, final_review: pd.DataFrame) -> None:
+    debug_columns = [
+        "match_date",
+        "home_team",
+        "away_team",
+        "event_id",
+        "prediction_snapshot_found",
+        "result_found",
+        "review_found",
+        "matched_by",
+        "reason",
+    ]
+    if not match_debug.empty and not final_review.empty:
+        review_keys = set(review_key(final_review))
+        debug_keys = (
+            pd.to_datetime(match_debug["match_date"], errors="coerce").dt.strftime("%Y-%m-%d")
+            + "|"
+            + match_debug["home_team"].map(normalize_team)
+            + "|"
+            + match_debug["away_team"].map(normalize_team)
+        )
+        match_debug = match_debug.copy()
+        match_debug["review_found"] = debug_keys.isin(review_keys)
+    MATCH_DEBUG_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    match_debug.reindex(columns=debug_columns).to_csv(MATCH_DEBUG_OUTPUT, index=False, encoding="utf-8")
+    match_debug.reindex(columns=debug_columns).to_csv(COVERAGE_DEBUG_OUTPUT, index=False, encoding="utf-8")
+    unmatched.to_csv(UNMATCHED_OUTPUT, index=False, encoding="utf-8")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--predictions", type=Path, default=PREDICTIONS_PATH)
+    parser.add_argument("--predictions", type=Path, default=None)
     parser.add_argument("--results", type=Path, default=RESULTS_PATH)
     parser.add_argument("--as-of-date", default=pd.Timestamp.today().strftime("%Y-%m-%d"))
     args = parser.parse_args()
 
     parsed_as_of = pd.to_datetime(args.as_of_date, errors="coerce")
     as_of_date = parsed_as_of.strftime("%Y-%m-%d") if pd.notna(parsed_as_of) else pd.Timestamp.today().strftime("%Y-%m-%d")
-    predictions = load_csv(args.predictions)
+    predictions, prediction_source = load_prediction_source(args.predictions)
     results = load_csv(args.results)
-    evaluated = evaluate(predictions, results, as_of_date=as_of_date)
+    evaluated, match_debug, unmatched = evaluate(predictions, results, as_of_date=as_of_date)
 
     DAILY_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    output = evaluated.drop(columns=["_match_key", "_features_snapshot"], errors="ignore")
-    summary = summarize(evaluated)
+    existing_review = load_csv(DAILY_OUTPUT)
+    output = append_new_reviews(existing_review, evaluated)
+    summary = summarize(output)
     output.to_csv(DAILY_OUTPUT, index=False, encoding="utf-8")
     summary.to_csv(SUMMARY_OUTPUT, index=False, encoding="utf-8")
     write_feedback(evaluated)
-    write_error_analysis(evaluated)
+    write_error_analysis(output)
     write_review_date_debug(pd.Timestamp.today().strftime("%Y-%m-%d"), as_of_date, results, evaluated, summary)
+    write_review_debug(match_debug, unmatched, output)
 
     print(f"as_of_date: {as_of_date}")
+    print(f"prediction_source: {prediction_source}")
     print(f"evaluated matches: {len(evaluated)}")
+    print(f"review rows: {len(output)}")
+    print(f"unmatched completed results: {len(unmatched)}")
     print(f"output: {DAILY_OUTPUT}")
     print(f"summary: {SUMMARY_OUTPUT}")
     print(f"feedback: {FEEDBACK_OUTPUT}")
     print(f"debug: {REVIEW_DATE_DEBUG_OUTPUT}")
+    print(f"coverage_debug: {COVERAGE_DEBUG_OUTPUT}")
     return 0
 
 
