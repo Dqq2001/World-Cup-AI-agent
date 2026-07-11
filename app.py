@@ -1638,7 +1638,8 @@ def page_prediction_review() -> None:
 
     review_payload = review_service.load_prediction_review(today=TODAY)
     review = review_payload["review"]
-    recent = review_payload["recent"]
+    display_review = review_payload["display_review"]
+    recent = display_review
     summary = review_payload["summary"]
     accuracy_analysis = review_payload["accuracy_analysis"]
     risk_signal_accuracy = review_payload["risk_signal_accuracy"]
@@ -1650,6 +1651,16 @@ def page_prediction_review() -> None:
     if review.empty:
         st.info("No completed prediction review is available yet.")
         return
+
+    if not display_review.empty and "date_dt" in display_review.columns:
+        display_dates = display_review["date_dt"].dropna()
+        display_range = f"{display_dates.min().strftime('%Y-%m-%d')} to {display_dates.max().strftime('%Y-%m-%d')}" if not display_dates.empty else "none"
+    else:
+        display_range = "none"
+    st.caption(f"Rows in full review: {len(review)}")
+    st.caption(f"Rows in displayed review: {len(display_review)}")
+    st.caption(f"Displayed date range: {display_range}")
+    st.caption("Pattern rows source: displayed review")
 
     if not summary.empty:
         st.subheader("Summary")
@@ -1680,7 +1691,7 @@ def page_prediction_review() -> None:
         st.dataframe(accuracy_analysis, use_container_width=True, hide_index=True)
 
     if not risk_signal_accuracy.empty:
-        st.subheader("Risk Signal Accuracy")
+        st.subheader("Risk Signal Analysis")
         st.dataframe(risk_signal_accuracy, use_container_width=True, hide_index=True)
 
     if st.toggle("Show raw review table", value=False, key="prediction_review_raw"):
