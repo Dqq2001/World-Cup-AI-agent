@@ -1,8 +1,8 @@
 analysis_type,bucket,matches,accuracy,errors
-odds_status,,85,0.6352941176470588,31
-intel_risk,,85,0.6352941176470588,31
-action,PASS,19,0.3684210526315789,12
-action,WATCH,66,0.7121212121212122,19
-prediction_accuracy_by_draw_risk,HIGH,18,0.3888888888888889,11
-prediction_accuracy_by_draw_risk,LOW,38,0.6842105263157895,12
-prediction_accuracy_by_draw_risk,MEDIUM,29,0.7241379310344828,8
+odds_status,,94,0.648936170212766,33
+intel_risk,,94,0.648936170212766,33
+action,PASS,21,0.42857142857142855,12
+action,WATCH,73,0.7123287671232876,21
+prediction_accuracy_by_draw_risk,HIGH,20,0.45,11
+prediction_accuracy_by_draw_risk,LOW,42,0.6666666666666666,14
+prediction_accuracy_by_draw_risk,MEDIUM,32,0.75,8

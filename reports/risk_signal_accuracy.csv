@@ -1,7 +1,7 @@
 analysis_type,bucket,matches,hit_rate,hits
-draw_risk_level,HIGH,18,0.4444444444444444,8
-draw_risk_level,LOW,38,0.0,0
-draw_risk_level,MEDIUM,29,0.13793103448275862,4
-upset_risk,HIGH,16,0.625,10
-upset_risk,LOW,57,0.0,0
-upset_risk,MEDIUM,12,0.16666666666666666,2
+draw_risk_level,HIGH,20,0.4,8
+draw_risk_level,LOW,42,0.0,0
+draw_risk_level,MEDIUM,32,0.125,4
+upset_risk,HIGH,18,0.6111111111111112,11
+upset_risk,LOW,60,0.0,0
+upset_risk,MEDIUM,16,0.375,6
