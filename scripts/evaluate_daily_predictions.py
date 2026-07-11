@@ -69,6 +69,15 @@ def add_keys(data: pd.DataFrame) -> pd.DataFrame:
     return data
 
 
+def resolved_match_mask(data: pd.DataFrame) -> pd.Series:
+    if data.empty:
+        return pd.Series(dtype=bool)
+    home = data.get("home_team", pd.Series("", index=data.index)).fillna("").astype(str).str.strip().str.upper()
+    away = data.get("away_team", pd.Series("", index=data.index)).fillna("").astype(str).str.strip().str.upper()
+    status = data.get("status", pd.Series("", index=data.index)).fillna("").astype(str).str.strip().str.lower()
+    return home.ne("TBD") & away.ne("TBD") & status.ne("waiting_for_teams")
+
+
 def load_prediction_source(path: Path | None = None) -> tuple[pd.DataFrame, str]:
     if path is not None:
         data = load_csv(path)
@@ -206,6 +215,8 @@ def evaluate(predictions: pd.DataFrame, results: pd.DataFrame, as_of_date: str |
         return pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
     predictions = add_keys(predictions)
     results = add_keys(results)
+    predictions = predictions[resolved_match_mask(predictions)].copy()
+    results = results[resolved_match_mask(results)].copy()
     results = results[results.get("status", "").astype(str).str.lower().isin(["completed", "complete", "final"])]
     if as_of_date:
         predictions = predictions[predictions["date"] <= as_of_date]
@@ -467,6 +478,10 @@ def review_key(data: pd.DataFrame) -> pd.Series:
 
 def append_new_reviews(existing: pd.DataFrame, evaluated: pd.DataFrame) -> pd.DataFrame:
     output = evaluated.drop(columns=["_match_key", "_features_snapshot"], errors="ignore")
+    if not existing.empty:
+        existing = existing[resolved_match_mask(existing)].copy()
+    if not output.empty:
+        output = output[resolved_match_mask(output)].copy()
     if existing.empty:
         return output
     if output.empty:

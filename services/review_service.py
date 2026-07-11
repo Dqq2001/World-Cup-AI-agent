@@ -58,6 +58,16 @@ def choose_display_review(review: pd.DataFrame, today: pd.Timestamp) -> pd.DataF
     return dated.sort_values("date_dt", ascending=False).head(10).sort_values("date_dt").copy()
 
 
+def remove_unresolved_matches(review: pd.DataFrame) -> pd.DataFrame:
+    if review.empty:
+        return review
+    output = review.copy()
+    home = output.get("home_team", pd.Series("", index=output.index)).fillna("").astype(str).str.strip().str.upper()
+    away = output.get("away_team", pd.Series("", index=output.index)).fillna("").astype(str).str.strip().str.upper()
+    status = output.get("status", pd.Series("", index=output.index)).fillna("").astype(str).str.strip().str.lower()
+    return output[home.ne("TBD") & away.ne("TBD") & status.ne("waiting_for_teams")].copy()
+
+
 def summarize_display_review(display_review: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(
         [
@@ -141,6 +151,7 @@ def load_prediction_review(today: pd.Timestamp | None = None) -> dict[str, pd.Da
     if not review.empty and "date" in review.columns:
         review = review.copy()
         review["date_dt"] = pd.to_datetime(review["date"], errors="coerce")
+        review = remove_unresolved_matches(review)
     display_review = choose_display_review(review, today)
     summary = summarize_display_review(display_review)
     accuracy_analysis = build_accuracy_patterns(display_review)
