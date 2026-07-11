@@ -126,6 +126,15 @@ def add_dashboard_merge_key(data: pd.DataFrame) -> pd.DataFrame:
     return data
 
 
+def waiting_mask(data: pd.DataFrame) -> pd.Series:
+    if data.empty:
+        return pd.Series(dtype=bool)
+    home = data.get("home_team", pd.Series("", index=data.index)).fillna("").astype(str).str.strip().str.upper()
+    away = data.get("away_team", pd.Series("", index=data.index)).fillna("").astype(str).str.strip().str.upper()
+    status = data.get("status", pd.Series("", index=data.index)).fillna("").astype(str).str.strip().str.lower()
+    return home.eq("TBD") | away.eq("TBD") | status.eq("waiting_for_teams")
+
+
 def load_predictions() -> pd.DataFrame:
     frames = []
     for path in PREDICTION_CANDIDATES:
@@ -136,7 +145,9 @@ def load_predictions() -> pd.DataFrame:
             frames.append(data)
     if not frames:
         return pd.DataFrame()
-    combined = pd.concat(frames, ignore_index=True, sort=False).sort_values("_prediction_priority")
+    combined = pd.concat(frames, ignore_index=True, sort=False)
+    combined["_is_waiting"] = waiting_mask(combined)
+    combined = combined.sort_values(["_dashboard_merge_key", "_is_waiting", "_prediction_priority"])
     rows = []
     for _, group in combined.groupby("_dashboard_merge_key", sort=False):
         row = group.iloc[0].copy()
@@ -149,7 +160,7 @@ def load_predictions() -> pd.DataFrame:
                 if (pd.isna(value) or str(value).strip().lower() in {"", "unknown", "nan", "none", "<na>"}) and pd.notna(candidate_value):
                     row[column] = candidate_value
         rows.append(row)
-    output = pd.DataFrame(rows).drop(columns=["_prediction_priority"], errors="ignore")
+    output = pd.DataFrame(rows).drop(columns=["_prediction_priority", "_is_waiting"], errors="ignore")
     return output.drop(columns=["_dashboard_merge_key"], errors="ignore")
 
 
@@ -432,14 +443,17 @@ def unified_match_view(data: pd.DataFrame, today: pd.Timestamp | None = None, wi
         return matches
     matches["_has_score"] = matches.apply(has_match_score, axis=1)
     matches["_actual_team_count"] = matches["home_team"].fillna("").astype(str).str.upper().ne("TBD").astype(int) + matches["away_team"].fillna("").astype(str).str.upper().ne("TBD").astype(int)
-    matches["_key"] = matches["date"].astype(str) + "|" + matches["home_team"].astype(str).map(normalize_team_name) + "|" + matches["away_team"].astype(str).map(normalize_team_name)
-    matches = matches.sort_values(["_key", "_has_score", "_actual_team_count"], ascending=[True, False, False])
+    match_id = matches.get("match_id", pd.Series("", index=matches.index)).fillna("").astype(str).str.strip()
+    fallback_key = matches["date"].astype(str) + "|" + matches["home_team"].astype(str).map(normalize_team_name) + "|" + matches["away_team"].astype(str).map(normalize_team_name)
+    matches["_key"] = match_id.where(match_id.ne(""), fallback_key)
+    matches["_is_waiting"] = waiting_mask(matches)
+    matches = matches.sort_values(["_key", "_is_waiting", "_has_score", "_actual_team_count"], ascending=[True, True, False, False])
     matches = matches.drop_duplicates("_key", keep="first")
     matches["display_mode"] = matches.apply(display_mode_for_match, axis=1)
     matches["_sort_rank"] = matches.apply(unified_sort_rank, axis=1)
     matches = matches.sort_values(["_sort_rank", "date_dt", "match_id", "home_team", "away_team"], ascending=[True, True, True, True, True])
     write_unified_match_view_debug(matches)
-    return matches.drop(columns=["_sort_rank", "_has_score", "_actual_team_count", "_key"], errors="ignore")
+    return matches.drop(columns=["_sort_rank", "_has_score", "_actual_team_count", "_is_waiting", "_key"], errors="ignore")
 
 
 def standardize_recent_source(data: pd.DataFrame, competition_default: str = "") -> pd.DataFrame:
